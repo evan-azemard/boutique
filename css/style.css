@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section
+{
+    background-color: rgb(203, 138, 138);
+}
+
+h1{
+    color: gray;
+    font-size: 5vh;
+}
+
+input{
+    color: #0a11d4;
+    background-color: #e3deff;
+}
+textarea{
+    color: silver;
+    background-color: #e3deff;
+}
+label{
+    background-color: silver;
+}
+
+a{
+    text-decoration: none;
+    color: #ffba00;
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+header{
+    background-color: rgba(248, 172, 172, 0.6);
+}
+footer{
+    background-color: rgba(248, 172, 172, 0.6);
+}
+
+.card{
+    background-color: #9996ab;
+    height: 40vh;
+    width: 95%;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr ;
+    grid-row-gap: 20px;
+    width: 100%;
+}
+
+.articlegrid h1{
+    margin-top: 5%;
+}
+.articlegrid{
+    display: flex;
+    flex-direction: column;
+}
+
+#flexcard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
