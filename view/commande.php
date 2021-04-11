@@ -11,7 +11,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 //on inclus la class qui permet de gérer le panier
 // require_once "chemin/vers/le/fichier/cart.class.php";
-require_once "cart.class.php";
+/*require_once "cart.class.php";*/
 
 //on initialise l'objet panier :
 $oPanier = new cart();

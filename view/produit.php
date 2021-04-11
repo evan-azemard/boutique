@@ -1,4 +1,4 @@
-<!--Affiche produit par section-->
+
 <section>
     <a href="accueil">accueil</a>
     <h1>Découvrer nos smartphones</h1>
