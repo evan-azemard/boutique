@@ -17,7 +17,6 @@ if(isset($_POST["submit"]))
 }
 ?>
 <?php include 'error.php'; ?>
-<a href="accueil">accueil</a>
 <section>
     <form name="ajout" method="post">
         <label for="nom">Nom</label>
