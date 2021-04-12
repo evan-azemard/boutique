@@ -8,7 +8,6 @@ if ($_GET['id']) {
 }
 ?>
 <?php include 'error.php'; ?>
-<a href="accueil">accueil</a>
 <section>
     <div class="CardArticle">
         <h1><?= $_SESSION['marque'] ?></h1>
