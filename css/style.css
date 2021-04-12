@@ -129,6 +129,43 @@ header{
 header input{
     border: none;
 }
+#déroul{
+    display: flex;
+    flex-direction: column;
+
+}
+.DEL .fermer {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.DEL a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #527B9E;
+}
+.colorlien{
+    margin-bottom: 5vh;
+}
+.DEL a:hover{
+    color: #9EB5CC;
+
+}
+.DEL {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #DAE2ED;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+
+}
 #header_submit{
     background-color: transparent;
     color: transparent;
@@ -136,9 +173,11 @@ header input{
     text-align: center;
 }
  input[type="text"], input[type="submit"]{
-    outline: none;
-
+     outline: none;
  }
+ input[type="text"] {
+    margin-left: -21%;
+}
 header form{
     display: flex;
     justify-content: space-between;
@@ -172,6 +211,7 @@ footer{
     grid-template-rows: 50% 50%;
     padding-top: 6px;
 }
+/*Logo */
 #footer_div1{
     letter-spacing: 20px;
     border-bottom: solid black 1px;
@@ -184,6 +224,7 @@ footer{
 #footer_div1 i:hover{
     color: #9EB5CC;
 }
+/*mention*/
 #footer_div2{
     font-size: 1.3rem;
     color: #7B7F86;

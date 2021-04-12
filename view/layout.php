@@ -14,7 +14,31 @@
 <body>
 <!--Header-->
 <header>
-    <div id="header_menu"><i class="fa fa-user-circle fa-4x" aria-hidden="true"></i></div>
+    <div id="header_menu">
+        <div class="sectiondiv">
+            <div id="déroul" class="DEL">
+                <a href="#" class="fermer" onclick="closeNav()">×</a>
+                <a class="colorlien" href="register">Register</a>
+                <a class="colorlien" href="login">Login</a>
+                <a class="colorlien" href="profil">profil</a>
+                <a class="colorlien" href="disconnect">Disconect</a>
+                <a class="colorlien" href="ajout">Ajouter un article si vous êtes vendeur</a>
+                <a class="colorlien" href="produit">Découvrer nos produits</a>
+            </div>
+            <span style="font-size:30px;" onclick="openNav()">
+                <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+            </span>
+            <script>
+                function openNav() {
+                    document.getElementById("déroul").style.width = "250px";
+                }
+                function closeNav() {
+                    document.getElementById("déroul").style.width = "0";
+                }
+            </script>
+        </div>
+    </div>
+
     <div id="header_title">
         <div id="header_title_img">
             <img src=img_docs/logo.png>
@@ -39,6 +63,7 @@
         <i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
     </div>
 </header>
+
 <!--Main-->
 <main>
     <!--Template-->
@@ -54,10 +79,9 @@
             <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
         </div>
         <div>
-        <i class="fa fa-paypal fa-3x" aria-hidden="true"></i>
-        <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
-        <i class="fa fa-cc-mastercard fa-3x" aria-hidden="true"></i>
-
+            <i class="fa fa-paypal fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-cc-mastercard fa-3x" aria-hidden="true"></i>
         </div>
     </div>
     <div id="footer_div2">
