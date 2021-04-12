@@ -9,7 +9,6 @@ if(isset($_POST["submit"])){
 ?>
 <?php include 'error.php'; ?>
 
-<a href="accueil">accueil</a>
 <div class="bg__inscription">
     <main>
         <section>

@@ -18,6 +18,7 @@
         <div class="sectiondiv">
             <div id="déroul" class="DEL">
                 <a href="#" class="fermer" onclick="closeNav()">×</a>
+                <a class="colorlien" href="accueil">accueil</a>
                 <a class="colorlien" href="register">Register</a>
                 <a class="colorlien" href="login">Login</a>
                 <a class="colorlien" href="profil">profil</a>
@@ -51,24 +52,24 @@
                 <i id="header_absolute" class="fa fa-search" aria-hidden="true">
                     <input id="header_submit" type="submit">
                 </i>
-                <input type="text" id="recherche">
+                <input type="search" id="recherche">
                 <label for="recherche">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </label>
             </form>
         </div>
         <div id="header_lien_button">
-            <button><a href="#">Déconexion</a> </button>
+            <button><a href="disconnect">Déconexion</a> </button>
         </div>
         <i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
     </div>
 </header>
 
 <!--Main-->
-<main>
+
     <!--Template-->
     <?php include $template. '.php' ?>
-</main>
+
 <!--Footer-->
 <footer>
     <div id="footer_div1">

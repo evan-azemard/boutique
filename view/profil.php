@@ -9,7 +9,6 @@ if(isset($_POST["submit"])){
 }
 ?>
 
-<a href="accueil">accueil</a>
 <section class="main-sec">
     <h1></h1>
     <form method="POST" action="profil.php">

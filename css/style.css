@@ -22,7 +22,7 @@ a{
 }
 a:visited{
     text-decoration: none;
-    color: black;
+    color: #E1E9F4;
 }
 h1{
     font-family: 'Sanchez', serif;
@@ -39,9 +39,24 @@ p{
     line-height: 30px;
     margin: 10px 10px ;
 }
+/*Classe button*/
+.button{
+    outline: none;
+    color: #E1E9F4;
+    border: 1px solid #527B9E;
+    background-color: #527B9E;
+    border-radius: 50px;
+    padding: 3px 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    min-height: 3.5vh;
+    min-width: 1vw;
+}
 button{
-    color: #9EB5CC;
-    border: 1px solid black;
+    outline: none;
+    color: #E1E9F4;
+    border: 1px solid #527B9E;
     background-color: #527B9E;
     border-radius: 50px;
     padding: 3px 3px;
@@ -147,24 +162,24 @@ header input{
     color: #527B9E;
 }
 .colorlien{
-    margin-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 .DEL a:hover{
     color: #9EB5CC;
-
+    background-color: #527B9E;
+    transition: 0.3s;
 }
 .DEL {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 80px;
     left: 0;
     background-color: #DAE2ED;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
-
 }
 #header_submit{
     background-color: transparent;
@@ -172,11 +187,8 @@ header input{
     width: 5px;
     text-align: center;
 }
- input[type="text"], input[type="submit"]{
-     outline: none;
- }
- input[type="text"] {
-    margin-left: -21%;
+input[type="text"], input[type="submit"]{
+    outline: none;
 }
 header form{
     display: flex;
@@ -232,51 +244,214 @@ footer{
     display: grid;
     grid-template-columns: 10% 80% 10%;
 }
-.card{
-    background-color: #9996ab;
-    height: 40vh;
-    width: 95%;
-    margin-left: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+
+main{
+    flex-grow: 1;
+}
+/*-------------------------------------------*\
+                 Page ACCUEIL
+\*-------------------------------------------*/
+
+#accueil_main{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
+}
+/*promo printemps*/
+#accueil_section1{
+    background-repeat: inherit;
+    background-size: contain;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 220px;
+}
+/*Phrase*/
+#accueil_section1_article1{
+    background-color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*Code promo*/
+.promo{
+    color: #DAE2ED !important;
+}
+.nompromo{
+    color: #527B9E;
+    font-size: 2rem;
+}
+#accueil_section1_article1 h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.6rem;
+    background-color: #E9E9EA;
+    width: 30vw;
+    height: 10vh;
+    border-radius: 18px;
+    color: #525863 !important;
 }
 
-.grid{
+#accueil_section1_article2{
+    background-image: url("../img_docs/bois.png");
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.traimoyen{
+    background-color: black;
+    height: 1px;
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 25vw;
+}
+/*Contient les smartphones populaire*/
+#accueil_section2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;!important;
+    text-align: center;
+}
+#accueil_section2{
+    width: 100%;
+    padding-left: 14vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 1fr ;
     grid-row-gap: 20px;
+}
+/*Les card*/
+.accueil_card:hover{
+    margin-top: -2%;
+    transition: 0.5s;
+}
+.accueil_card{
+    height: 48vh;
+    width: 20vw;
+    background-color: #E1E1E1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-25px 67px 54px rgba(196, 194, 194, 0.68));
+    border-radius: 33px;
+}
+.card_img{
+    margin-bottom: 3%;
+}
+.card_img img{
+    width: 100%;
+    border-radius: 32px 32px 0 3px;
+}
+.card_description{
+    display: flex;
+    flex-direction: column;
+    color: #527B9E;
+}
+.accueil_card h3{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Sanchez, Arial, serif;
+    font-weight: 1;
+}
+.logo_card{
+    border-top: solid #525863 1px;
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     width: 100%;
 }
-
-.articlegrid h1{
-    margin-top: 5%;
+.logo_card p{
+    color: #527B9E;
+    font-size: 2rem;
 }
-.articlegrid{
+.logo_card input{
+    margin-left: 5%;
+    width: 3vw;
+    height: 3vh;
+    background-color: #527B9E;
+    color: #F2F2F2;
+}
+.number::placeholder{
+    color: #F2F2F2;
+}
+.logo_card i{
+    color: #527B9E;
+}
+
+/*Titre du main*/
+#accueil_main h2{
+    color: #527B9E;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+/*Contient le form*/
+#accueil_section3_article-form{
+    height: 50vh;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+/*Formulaire*/
+#form_contacte{
+    height: 45vh;
+    width: 30%;
+    background-color: #DAE2ED;
+    border-radius: 40px;
     display: flex;
     flex-direction: column;
 }
 
-#flexcard{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
+#form_contacte input,textarea{
+    width: 13vw;
+    margin-left: 3%;
 }
-
-
-
-/*-------------------------------------------*\
-                  Header
-\*-------------------------------------------*/
-
-
-
-
-
-
-
+/*1er input*/
+#accueil_form1{
+    margin-bottom: 5%;
+}
+/*2 e input*/
+#accueil_form2{
+    display: flex;
+    justify-content: center;
+    color: #527B9E;
+    font-size: 1.7rem;
+    margin-bottom: 5%;
+}
+/*textarea*/
+#accueil_form3{
+    display: flex;
+    justify-content: center;
+    color: #527B9E;
+    font-size: 1.7rem;
+    margin-bottom: 5%;
+}
+/*button*/
+#accueil_form4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    color: #527B9E;
+    font-size: 1.7rem;
+    margin-bottom: 5%;
+}
+/*Textarea*/
+#contient_textarea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#textare{
+    height: 7vh;
+    width: 20vw;
+    margin-top: 1.3%;
+}

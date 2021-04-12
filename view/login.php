@@ -9,7 +9,6 @@ if(isset($_POST["submit"])){
 }
 ?>
 <?php include 'error.php'; ?>
-<a href="accueil">accueil</a>
 <section>
     <form class="form__login" method="POST">
         <fieldset class="shadow__block container__conn">
