@@ -46,8 +46,25 @@
 </main>
 <!--Footer-->
 <footer>
-<p>1</p>
-    <div id="trai">3</div>
+    <div id="footer_div1">
+
+        <div>
+            <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+        </div>
+        <div>
+        <i class="fa fa-paypal fa-3x" aria-hidden="true"></i>
+        <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
+        <i class="fa fa-cc-mastercard fa-3x" aria-hidden="true"></i>
+
+        </div>
+    </div>
+    <div id="footer_div2">
+        <p>Evan Azemard</p>
+        <p>Copyright 2021 © Smart Your Future</p>
+        <p>Clément Nahmens</p>
+    </div>
 </footer>
 </body>
 </html>

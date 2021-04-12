@@ -116,8 +116,8 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50% 50%;
-
 }
+/*Contient barre recherche, logo, button*/
 #header_lien_grid1{
     grid-column: span 2;
     display: flex;
@@ -125,6 +125,7 @@ header{
     justify-content: center;
     align-items: center;
 }
+/*barre recherche*/
 header input{
     border: none;
 }
@@ -162,13 +163,34 @@ header i{
 #header_panier{
     margin-left: 5vw;
 }
-
+/*-------------------------------------------*\
+                  Footer
+\*-------------------------------------------*/
 footer{
-
     background: #DAE2ED;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding-top: 6px;
 }
-
-
+#footer_div1{
+    letter-spacing: 20px;
+    border-bottom: solid black 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #527B9E;
+    padding-bottom: 5px;
+}
+#footer_div1 i:hover{
+    color: #9EB5CC;
+}
+#footer_div2{
+    font-size: 1.3rem;
+    color: #7B7F86;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
 .card{
     background-color: #9996ab;
     height: 40vh;
