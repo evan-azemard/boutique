@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
     <section id="section_profil">
         <form method="POST" id="profil_form">
             <article id="register_form_article1">
-                <h2>Profil</h2>
+                <h2>Profil de Exemple</h2>
             </article>
             <article id="register_form_article2">
                 <div class="register_form_contient">

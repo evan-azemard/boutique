@@ -46,7 +46,7 @@
         <div id="header_title_img">
             <img src=img_docs/logo.png>
         </div>
-        <div id="header_h1"><h1>Smart Your Future</h1></div>
+        <a href="accueil"><div id="header_h1"><h1>Smart Your Future</h1></div></a>
     </div>
     <div id="header_lien">
         <div id="header_lien_grid1">

@@ -1,6 +1,6 @@
 <main id="produit_main">
     <!--Affiche produit par section-->
-    <div class="produit_h1">
+    <div class="produit_h1 banderole">
         <h1>Découvrer nos smartphones</h1>
     </div>
     <section>

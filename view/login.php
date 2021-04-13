@@ -14,7 +14,7 @@ if(isset($_POST["submit"])){
         <form method="post" id="login_form">
             <article class="login_article_button">
                 <div class="login_labput_button">
-                    <p id="lolo">Login de Lucas</p>
+                    <p id="lolo">Login</p>
                 </div>
             </article>
             <article class="login_article">
