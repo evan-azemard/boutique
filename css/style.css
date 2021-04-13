@@ -582,3 +582,96 @@ main{
     font-size: 1.6rem;
     color: #315d7b;
 }
+/*-------------------------------------------*\
+                 Page Login
+\*-------------------------------------------*/
+#login_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section_login{
+    display: flex;
+    justify-content: center;
+}
+
+/*Form login*/
+#login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    height: 50vh;
+    background-color: #DAE2ED;
+    border-radius: 45px;
+}
+/*Article contenant input, label*/
+.login_article{
+    display: flex;
+    justify-content: center;
+}
+.login_article_button{
+    display: flex;
+    justify-content: center;
+}
+/*Contient le label et input*/
+.login_labput{
+    width: 12.2vw;
+}
+.login_labput2{
+    width: 12.2vw;
+    margin-left: -6%;
+}
+.login_labput input {
+    height: 3vh;
+    width: 12vw;
+    background-color: #EBF7FC;
+    border: none;
+}
+.login_labput input:focus{
+    border: rgba(20, 157, 211, 0.42) solid 1px;
+}
+
+.login_labput label{
+    font-size: 1.6rem;
+    color: #315d7b;
+}
+#lolo{
+    font-size: 2.3rem;
+    color: #315d7b;
+}
+.lolo2{
+    font-size: 1.6rem;
+    color: #315d7b;
+    margin-left: 0;
+}
+/*Les input radio*/
+#login_labput_radio{
+    height: 5vw;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+/*Les input radio*/
+.radio{
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+}
+.lolo3{
+    height: 2.8vh;
+    width: 10vw;
+    background-color: #EBF7FC;
+    border: none;
+}
+/*Les label radio*/
+.centre_radio2{
+    width: 8vw;
+    text-align: center;
+    align-items: center;
+}
+/*-------------------------------------------*\
+                 Page Profil
+\*-------------------------------------------*/

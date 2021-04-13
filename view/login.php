@@ -9,32 +9,72 @@ if(isset($_POST["submit"])){
 }
 ?>
 <?php include 'error.php'; ?>
-<section>
-    <form class="form__login" method="POST">
-        <fieldset class="shadow__block container__conn">
-            <legend class="connexion__legend">
-                Login
-            </legend>
-            <small>* Tous les champs sont obligatoires</small>
-            <div>
-                <label class="connexion__label" for="login">Login</label>
-                <input type="text" name="login" class="form-control" id="login" placeholder="Login" autocomplete="on" required />
-            </div>
+<main id="login_main">
+    <section id="section_login">
+        <form method="post" id="login_form">
+            <article class="login_article_button">
+                <div class="login_labput_button">
+                    <p id="lolo">Login de Lucas</p>
+                </div>
+            </article>
+            <article class="login_article">
+                <div class="login_labput">
+                    <label for="pseudo">Pseudo</label>
+                </div>
+                <div class="login_labput">
+                    <input type="text" id="pseudo" required>
+                </div>
+            </article>
+            <article class="login_article">
+                <div class="login_labput">
+                    <label for="password">Password</label>
 
-            <div>
-                <label class="connexion__label" for="password">Mot de passe</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Mot de passe" required />
-            </div>
+                </div>
+                <div class="login_labput">
+                    <input type="password" id="password" required>
 
-            <div>
-                <input type="radio" id="seller" name="gender" value="2"  />
-                <label for="seller">Seller</label><br>
-                <input type="radio" id="user" name="gender" value="1" checked />
-                <label for="user">User</label><br>
-            </div>
+                </div>
+            </article>
+            <article class="login_article">
+                <div class="login_labput">
+                    <label for="adresse">Adresse compléte</label>
 
-            <button class="index__button" type="submit" name="submit" value="submit">Envoyer</button>
+                </div>
+                <div class="login_labput">
+                    <input type="text" id="adresse" required>
 
-        </fieldset>
-    </form>
-</section>
+                </div>
+            </article>
+            <article class="login_article">
+                <div class="login_labput2">
+                    <p class="lolo2">Type de comtpe </p>
+                </div>
+                <div id="login_labput_radio">
+                    <div class="radio">
+                        <div class="centre_radio">
+                            <label class="lolo2" for="choix1">Vendeur</label>
+                        </div>
+                        <div class="centre_radio2">
+                            <input  class="lolo3" type="radio" required value="Vendeur" name="choix" id="choix1" placeholder="">
+                        </div>
+                    </div>
+                    <div class="radio">
+                        <div class="centre_radio">
+                            <label  class="lolo2" for="choix2">Utilisateur</label>
+                        </div>
+                        <div class="centre_radio2">
+                            <input class="lolo3" type="radio" required value="Utilisateur"  name="choix" id="choix2">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="login_article_button">
+                <div class="login_labput_button">
+                    <input type="submit" class="button" value="Valider les choix" name="register_submit">
+                </div>
+            </article>
+        </form>
+    </section>
+</main>
+
+
