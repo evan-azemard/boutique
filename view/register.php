@@ -22,15 +22,72 @@ if(isset($_POST["submit"])){
                     mondiale pour l’utilisation des contenus de propriété intellectuelle que vous </p>
 
                 <p>
-                publiez sur Smart Your Future ou en relation avec Smart Your Future (licence de propriété intellectuelle).<br><br>
-                Cette licence de propriété intellectuelle se termine lorsque vous supprimez vos contenus de propriété intellectuelle ou votre
-                compte, sauf si votre contenu a été partagé avec d’autres personnes qui ne l’ont pas supprimé.<span id="register_g2">"</span></p>
+                    publiez sur Smart Your Future ou en relation avec Smart Your Future (licence de propriété intellectuelle).<br><br>
+                    Cette licence de propriété intellectuelle se termine lorsque vous supprimez vos contenus de propriété intellectuelle ou votre
+                    compte, sauf si votre contenu a été partagé avec d’autres personnes qui ne l’ont pas supprimé.<span id="register_g2">"</span></p>
             </article>
         </section>
         <section id="register_section2">
-                <form method="post" id="register_form">
-                    2
-                </form>
+            <form method="post" id="register_form">
+                <article id="register_form_article1">
+                    <h2>Register</h2>
+                </article>
+                <article id="register_form_article2">
+                    <div class="register_form_contient">
+                        <div class="register_labput">
+                            <label for="pseudo">Pseudo</label>
+                            <input type="text" id="pseudo" required>
+                        </div>
+                        <div class="register_labput">
+                            <label for="téléphone">Téléphone</label>
+                            <input type="number" id="téléphone" required>
+                        </div>
+                    </div>
+                    <div class="register_form_contient">
+                        <div class="register_labput">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <div class="register_labput">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="register_form_contient">
+                        <div class="register_labput">
+                            <label for="confirme_password">Confirmer password</label>
+                            <input type="password" id="confirme_password" required>
+                        </div>
+                        <div class="register_labput">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" required>
+                        </div>
+                    </div>
+                    <div class="register_form_contient">
+                        <div class="register_labput">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" required>
+                        </div>
+                        <div class="register_labput">
+                            <label for="adresse">Adresse compléte</label>
+                            <input type="text" id="adresse" required>
+                        </div>
+                    </div>
+                    <div class="register_form_contient">
+                        <div class="register_labput">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" required>
+                        </div>
+                        <div class="register_labput">
+                            <label for="choix">Type de compte</label>
+                            <input type="radio" required value="Vendeur" name="choix" id="choix">
+                            <input type="radio" required value="Utilisateur"  name="choix" id="choix">
+                        </div></div>
+                </article>
+                <article id="register_form_article3">
+                    <input type="submit" class="button" value="Valider les choix" name="register_submit">
+                </article>
+            </form>
         </section>
     </main>
 </div>

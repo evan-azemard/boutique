@@ -198,6 +198,7 @@ header form{
     padding-bottom: 2px;
     padding-top: 2px;
     width: 15vw;
+    height: 2.2vh!important;
 }
 /*logo i*/
 header i{
@@ -514,20 +515,70 @@ main{
 /*Section du formulaire*/
 #register_section2{
     background-color: #FAFBFC;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     padding-top: 2%;
-    padding-bottom: 2%;
+    margin-bottom: -3%;
 }
 
 /*Formulaire*/
 #register_form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 60%;
-    height: 100%;
+    height: 80%;
     background-color: #DAE2ED;
     align-items: center;
+    border-radius: 45px;
+}
+/*Titre form*/
+#register_form_article1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    color: #315d7b;
+}
+/*input*/
+#register_form_article2{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4%;
+}
+/*Contient les input et label*/
+.register_form_contient{
+    width: 100%;
+    min-height: 6vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register_labput{
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+.register_labput input {
+    height: 3vh;
+    width: 12vw;
+    background-color: #EBF7FC;
+    border: none;
+}
+.register_labput input:focus{
+    border: rgba(20, 157, 211, 0.42) solid 1px;
+}
+.register_form_contient label,input{
+    margin-right: 7%;
+}
+.register_labput label{
+    padding-right: 3%;
+    font-size: 1.6rem;
+    color: #315d7b;
 }
