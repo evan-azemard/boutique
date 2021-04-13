@@ -714,3 +714,51 @@ main{
 /*-------------------------------------------*\
                  Page Article
 \*-------------------------------------------*/
+#produit_main{
+    min-height: 20vh;
+}
+/*La ligne d'un produit*/
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr ;
+    grid-row-gap: 20px;
+    width: 100%;
+    margin-left: 10%;
+}
+/*La section d'une marque*/
+.articlegrid{
+    display: flex;
+    flex-direction: column;
+}
+.articlegrid h1{
+    margin-top: 5%;
+}
+/*Du flex pour centrer le grid*/
+#flexcard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+/*Card*/
+.produit_card{
+    height: 48vh;
+    width: 20vw;
+    background-color: #E1E1E1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-25px 67px 54px rgba(196, 194, 194, 0.68));
+    border-radius: 33px;
+    margin-bottom: 10%;
+}
+.titre_produit{
+    font-size: 2.3rem;
+    color: #527B9E;
+    text-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+}
+.produit_h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #527B9E;
+    text-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+}
