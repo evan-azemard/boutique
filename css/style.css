@@ -323,6 +323,9 @@ main{
     grid-template-rows: 1fr ;
     grid-row-gap: 20px;
 }
+/*-------------------------------------------*\
+                Card ACCUEIL
+\*-------------------------------------------*/
 /*Les card*/
 .accueil_card:hover{
     margin-top: -2%;
@@ -390,6 +393,9 @@ main{
     margin-top: 1%;
 }
 
+/*-------------------------------------------*\
+                 Formulaire ACCUEIL
+\*-------------------------------------------*/
 /*Contient le form*/
 #accueil_section3_article-form{
     height: 50vh;
@@ -454,4 +460,74 @@ main{
     height: 7vh;
     width: 20vw;
     margin-top: 1.3%;
+}
+
+/*-------------------------------------------*\
+                 Page REGISTER
+\*-------------------------------------------*/
+#register_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+#register_section1{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 3%;
+    color: #527B9E;
+}
+#register_titre h1{
+    font-size: 2.6rem;
+}
+/*Paragraphe*/
+#register_text1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#register_text1 p{
+    width: 15vw;
+}
+#register_g1{
+    position: absolute;
+    top: 0;
+    left: 80px;
+    font-size: 6rem;
+    rotation: 6deg;
+    font-family: 'Secular One', sans-serif;
+    color: #E1E9F4;
+}
+#register_g2{
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    font-size: 6rem;
+    rotation: 6deg;
+    font-family: 'Secular One', sans-serif;
+    color: #E1E9F4;
+}
+
+/*Section du formulaire*/
+#register_section2{
+    background-color: #FAFBFC;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/*Formulaire*/
+#register_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background-color: #DAE2ED;
+    align-items: center;
 }
