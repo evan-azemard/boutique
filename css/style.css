@@ -582,6 +582,11 @@ main{
     font-size: 1.6rem;
     color: #315d7b;
 }
+#labelcompte{
+    font-size: 1.5rem;
+    width: 1000vw;
+    color: #315d7b;
+}
 /*-------------------------------------------*\
                  Page Login
 \*-------------------------------------------*/
@@ -674,4 +679,38 @@ main{
 }
 /*-------------------------------------------*\
                  Page Profil
+\*-------------------------------------------*/
+#profil_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section_profil{
+    display: flex;
+    justify-content: center;
+}
+
+/*Form login*/
+#profil_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    height: 50vh;
+    background-color: #DAE2ED;
+    border-radius: 45px;
+}
+
+#register_form_article3_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.marg{
+    margin-right: 0;
+}
+/*-------------------------------------------*\
+                 Page Article
 \*-------------------------------------------*/

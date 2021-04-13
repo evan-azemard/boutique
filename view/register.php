@@ -79,9 +79,11 @@ if(isset($_POST["submit"])){
                             <input type="text" id="nom" required>
                         </div>
                         <div class="register_labput">
-                            <label for="choix">Type de compte</label>
-                            <input type="radio" required value="Vendeur" name="choix" id="choix">
-                            <input type="radio" required value="Utilisateur"  name="choix" id="choix">
+                            <p id="labelcompte">Type de compte</p>
+                            <label for="choix1">Vendeur</label>
+                            <input type="radio" required value="Vendeur" name="choix" id="choix1">
+                            <label for="choix2">Utilisateur</label>
+                            <input type="radio" required value="Utilisateur"  name="choix" id="choix2">
                         </div></div>
                 </article>
                 <article id="register_form_article3">

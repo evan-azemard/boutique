@@ -8,28 +8,62 @@ if(isset($_POST["submit"])){
     $errors = array();
 }
 ?>
-
-<section class="main-sec">
-    <h1></h1>
-    <form method="POST" action="profil.php">
-        <fieldset>
-            <legend class="main__title__global">
-                Modification profil
-            </legend>
-
-            <div>
-                <label class="connexion__label" for="login">Nouveau login</label>
-                <input type="text" name="n_login" class="main-sec-inp" id="login" onFocus="this.value='';" autocomplete="off" />
-            </div>
-
-            <div>
-                <label class="connexion__label" for="password1">Nouveau mot de passe</label>
-                <input type="password" name="n_password" class="main-sec-inp" id="password" placeholder="Mot de passe" />
-            </div>
-
-            <button class="index__button" type="submit" name="submit" value="Submit">Envoyer</button>
-            <br />
-            <small>Mettre à jour vos informations vous déconnectera</small>
-        </fieldset>
-    </form>
-</section>
+<main id="profil_main">
+    <section id="section_profil">
+        <form method="POST" id="profil_form">
+            <article id="register_form_article1">
+                <h2>Profil</h2>
+            </article>
+            <article id="register_form_article2">
+                <div class="register_form_contient">
+                    <div class="register_labput">
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" id="pseudo" required>
+                    </div>
+                    <div class="register_labput">
+                        <label for="téléphone">Téléphone</label>
+                        <input type="number" id="téléphone" required>
+                    </div>
+                </div>
+                <div class="register_form_contient">
+                    <div class="register_labput">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="register_labput">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="register_form_contient">
+                    <div class="register_labput">
+                        <label for="confirme_password">Confirmer password</label>
+                        <input type="password" id="confirme_password" required>
+                    </div>
+                    <div class="register_labput">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" required>
+                    </div>
+                </div>
+                <div class="register_form_contient">
+                    <div class="register_labput">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" required>
+                    </div>
+                    <div class="register_labput">
+                        <label for="adresse">Adresse compléte</label>
+                        <input type="text" id="adresse" required>
+                    </div>
+                </div>
+                <div class="register_form_contient">
+                    <div class="register_labput">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" required>
+                    </div>
+            </article>
+            <article id="register_form_article3_button">
+                <input type="submit" class="button marg" value="Valider les choix" name="register_submit">
+            </article>
+        </form>
+    </section>
+</main>
