@@ -158,8 +158,24 @@
             </p>
         </article>
     </section>
+    <div class="traimoyen"></div>
     <section id="article_section3">
-        <p>3</p>
+        <article id="art1_art1">
+            <label for="select_art">Donner une notte</label>
+        </article>
+        <article id="art1_art2">
+            <form method="post">
+                <select id="select_art">
+                    <option value="1">* très mauvais</option>
+                    <option value="2">** mauvais</option>
+                    <option value="3">*** bon</option>
+                    <option value="4">**** très bon</option>
+                </select>
+            </form>
+        </article>
+        <article id="art1_art3">
+            <p>La notte de cette article est de  <span id="artcouleurgrs">90/100</span></p>
+        </article>
     </section>
 </main>
 
