@@ -1,12 +1,12 @@
 <!--Afficher article prècis-->
 <?php
-/*if ($_GET['id']) {
+if ($_GET['id']) {
     $user = new C_article();
     $errors = $user->article($_GET['id']);
 }else{
     $errors = array();
 }
-*/?>
+?>
 <?php include 'error.php'; ?>
 
 
@@ -22,11 +22,7 @@
                     <h1>LG WING</h1>
                 </div>
                 <div id="art1_textp">
-                    <p>Le LG Wing est un smartphone annoncé le 14
-                        septembre 2020 qui possède un écran rotatif
-                        (de 6.8 pouces poled)
-                        laissant apparaître un deuxième écran de 3.9
-                        pouces goled.</p>
+                    <p><?= $_SESSION['resum'] ?></p>
                 </div>
             </article>
         </div>
@@ -51,19 +47,19 @@
     <section id="article_section2">
         <article id="art_section2_1">
             <div class="art_section2_1_ligne">
-                <p>marque_model	</p>
-                <p class="des">#E7EDF0#E7EDF0#E7EDF0#E7EDF0#E7E</p>
+                <p>marque du model</p>
+                <p class="des"><?= $_SESSION['marque'] ?></p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>nom_model</p>
-                <p class="des">2</p>
+                 <p>nom du model</p>
+                <p class="des"><?= $_SESSION['nom'] ?></p>
             </div>
             <div class="art_section2_1_ligne">
                  <p>systeme</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>puce_graphique</p>
+                 <p>puce graphique</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
@@ -123,7 +119,7 @@
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>frequence du processeur	</p>
+                 <p>frequence du processeur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
@@ -189,6 +185,3 @@
 
 
 
-        <h1><?/*= $_SESSION['marque'] */?></h1>
-        <h1><?/*= $_SESSION['nom'] */?></h1>
-        <p><?/*= $_SESSION['resum'] */?></p>-->

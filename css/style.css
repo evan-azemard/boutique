@@ -950,7 +950,8 @@ main{
 }
 /*Description des caractéristique*/
 .des{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 /*Description compléte*/
 #art_section2_2{
@@ -1013,4 +1014,118 @@ main{
 #artcouleurgrs{
     background-color: #c6cece;
     font-size: 2rem;
+}/*-------------------------------------------*\
+                 Page ajout
+\*-------------------------------------------*/
+#ajout_main{
+    background-color: #FDFEFE;
+    min-height: 105vh;
+    align-items: center;
 }
+/*Titre*/
+#ajout_main h1{
+    font-style: normal;
+    font-weight: normal;
+    color: #527B9E;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+/*Contient tout*/
+#ajout_main section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+/*Contient form*/
+#ajout_main form{
+    padding-top: 2%;
+    width: 80%;
+    height: 100%;
+    border-radius: 45px;
+    background-color: #DAE2ED;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*Les lignes*/
+.ajout_article{
+    height: 5vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+/*Rectangle*/
+.article_rectangle{
+    background-color: white;
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.article_rectangle input{
+    border: #daeaea solid 0.2px;
+}
+.article_rectangle input:focus{
+    border: cadetblue solid 1.5px;
+}
+#div_button_article{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#button_article_div{
+    margin: 0;
+    font-size: 1.6rem;
+}
+.ajout_1{
+    width: 45%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ajout_2{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ajout_2 input,textarea,select,option{
+    width: 100%;
+    height: 100%;
+    border: #daeaea solid 0.2px;
+    outline: none;
+}
+.ajout_2 input,textarea,select,option:focus {
+    border: #daeaea solid 0.2px;
+}
+.ajout_2 input[type="number"]{
+    border: #daeaea solid 0.2px;
+    outline: none;
+}
+.ajout_2 input[type="file"]{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#image_ajout{
+    width: 100%;
+    height: 100%;
+}
+
+.ajout_2 input[type="number"]:focus{
+    border: #daeaea solid 0.2px;
+    outline: none;
+}
+/*-------------------------------------------*\
+                 Page admin
+ cv------------------------------------------*/
