@@ -25,8 +25,9 @@
                 <a class="colorlien" href="login">Login</a>
                 <a class="colorlien" href="profil">profil</a>
                 <a class="colorlien" href="disconnect">Disconect</a>
-                <a class="colorlien" href="ajout">Ajouter un article si vous êtes vendeur</a>
+                <a class="colorlien" href="ajout">Ajouter un article</a>
                 <a class="colorlien" href="produit">Découvrer nos produits</a>
+                <a class="colorlien" href="admin">Admin</a>
             </div>
             <span style="font-size:30px;" onclick="openNav()">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>

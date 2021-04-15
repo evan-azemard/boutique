@@ -13,6 +13,7 @@ require('controllers/Register.php');
 require('controllers/Ajout.php');
 require('controllers/Produit.php');
 require('controllers/article.php');
+require('controllers/admin.php');
 //switche d'une page à une autre
 
 if (isset($_GET['page']))
@@ -42,6 +43,9 @@ if (isset($_GET['page']))
             break;
         case 'article';
             article();
+            break;
+        case 'admin';
+            admin();
             break;
     }
 }else

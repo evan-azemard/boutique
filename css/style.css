@@ -1129,3 +1129,89 @@ main{
 /*-------------------------------------------*\
                  Page admin
  cv------------------------------------------*/
+#admin_main{
+    background-color: white;
+    min-height: 50vh;
+}
+/*Contient tout*/
+.admin_div{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #DAE2ED;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.admin_cont1{
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+/*les info du user*/
+.admin_cont1_text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*Nom des champs*/
+.admin_label{
+    align-items: center;
+    font-size: 2rem;
+    color: #527B9E;
+}
+/*couleur texte info*/
+.admin_gray{
+    color: #5A606B;
+}
+/*coté texte du client*/
+.admin_cont1_textarea {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin_cont_texta{
+    background-color: #D5DBE4;
+    height: 90%;
+    width: 90%;
+    color: #5A606B;
+    font-size: 1.8rem;
+    overflow: auto;
+}
+/*section du form*/
+.admin_cont2{
+    height: 45%;
+}
+/*form*/
+.admin_form{
+    margin-top: 1%;
+    width: 90%;
+    height: 70%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+/*textarea*/
+.admin_textarea{
+    width: 50%;
+    margin: 0;
+}
+/*trais*/
+.traimoyen_admin {
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    margin-left: 25vw;
+}
+/*button*/
+.admin_button{
+    width: 30%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
