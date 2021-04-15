@@ -28,6 +28,7 @@
                 <a class="colorlien" href="ajout">Ajouter un article</a>
                 <a class="colorlien" href="produit">Découvrer nos produits</a>
                 <a class="colorlien" href="admin">Admin</a>
+                <a class="colorlien" href="gerant">Gérant</a>
             </div>
             <span style="font-size:30px;" onclick="openNav()">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>

@@ -32,6 +32,8 @@ RewriteRule ^ajout index.php?page=ajout [L]
 
 RewriteRule ^admin index.php?page=admin [L]
 
+RewriteRule ^gerant index.php?page=gerant [L]
+
 RewriteRule ^produit index.php?page=produit [L]
 
 

@@ -14,6 +14,7 @@ require('controllers/Ajout.php');
 require('controllers/Produit.php');
 require('controllers/article.php');
 require('controllers/admin.php');
+require('controllers/gerant.php');
 //switche d'une page à une autre
 
 if (isset($_GET['page']))
@@ -46,6 +47,9 @@ if (isset($_GET['page']))
             break;
         case 'admin';
             admin();
+            break;
+        case 'gerant';
+            gerant();
             break;
     }
 }else

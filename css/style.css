@@ -150,7 +150,6 @@ header input{
 #déroul{
     display: flex;
     flex-direction: column;
-
 }
 .DEL .fermer {
     position: absolute;
@@ -158,23 +157,27 @@ header input{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+
+
 }
 .DEL a {
     text-decoration: none;
     font-size: 1.8rem;
     color: #527B9E;
+
 }
 .colorlien{
     height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto;
 }
 .DEL a:hover{
     color: #9EB5CC;
     background-color: #527B9E;
     transition: 0.3s;
+
+
 }
 .DEL {
     height: 100%;
@@ -1214,4 +1217,87 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+/*-------------------------------------------*\
+                 Page gérant
+ cv------------------------------------------*/
+#gerant_main{
+    background-color:#FAFDFF ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 60vh;
+}
+.gerant_section1{
+    margin-top: 6%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*h1*/
+.gerant_section1 h1{
+    color: #315d7b;
+}
+/*table*/
+#gerant_tabl{
+    min-height: 10vh;
+    width: 80%;
+    margin-top: 2%;
+}
+#gerant_tabl th{
+    background-color: #c5c1c1;
+    color: white;
+    font-size: 2rem;
+}
+#gerant_tabl tbody{
+    background-color: #E7EDF0;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #9ea2b1;
+}
+.gerant_section2{
+    height: 40vh;
+}
+.gerant_section2 article{
+    height: 80%;
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 10%;
+    text-align: center;
+}
+.gerant_section2 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2.3rem;
+    color: #37749b;
+}
+/*Input nummber*/
+.gerant_section2 form input[type="number"]{
+    height: 5vh;
+    width: 12vw;
+    background-color: #E2E0E0;
+    border: none;
+    font-size: 2rem;
+    color: #9ea2b1;
+}
+/*Button*/
+.button_gerant{
+    outline: none;
+    color: #E1E9F4;
+    border: 1px solid #527B9E;
+    background-color: #527B9E;
+    border-radius: 15px;
+    padding: 3px 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    min-height: 3.5vh;
+    min-width: 1vw;
+    font-size: 2.5rem;
 }
