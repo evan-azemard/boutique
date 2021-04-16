@@ -36,6 +36,8 @@ RewriteRule ^gerant index.php?page=gerant [L]
 
 RewriteRule ^produit index.php?page=produit [L]
 
+RewriteRule ^panier index.php?page=panier [L]
+
 RewriteRule ^historique_vendeur index.php?page=historique_vendeur [L]
 
 

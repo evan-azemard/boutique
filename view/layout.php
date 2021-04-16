@@ -29,6 +29,7 @@
                 <a class="colorlien" href="produit">Découvrer nos produits</a>
                 <a class="colorlien" href="admin">Admin</a>
                 <a class="colorlien" href="gerant">Gérant</a>
+                <a class="colorlien" href="panier">Panier</a>
                 <a class="colorlien" href="historique_vendeur">Historique_vendeur</a>
             </div>
             <span style="font-size:30px;" onclick="openNav()">
