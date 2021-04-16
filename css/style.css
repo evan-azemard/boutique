@@ -1017,7 +1017,8 @@ main{
 #artcouleurgrs{
     background-color: #c6cece;
     font-size: 2rem;
-}/*-------------------------------------------*\
+}
+/*-------------------------------------------*\
                  Page ajout
 \*-------------------------------------------*/
 #ajout_main{
@@ -1131,7 +1132,7 @@ main{
 }
 /*-------------------------------------------*\
                  Page admin
- cv------------------------------------------*/
+\*--------------------------------------------*/
 #admin_main{
     background-color: white;
     min-height: 50vh;
@@ -1220,7 +1221,7 @@ main{
 }
 /*-------------------------------------------*\
                  Page gérant
- cv------------------------------------------*/
+\*-------------------------------------------*/
 #gerant_main{
     background-color:#FAFDFF ;
     display: flex;
@@ -1300,4 +1301,137 @@ main{
     min-height: 3.5vh;
     min-width: 1vw;
     font-size: 2.5rem;
+}
+/*-------------------------------------------*\
+                 Page  historique_vendeur
+\*-------------------------------------------*/
+#historiquev_main{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*Contient titre et argent*/
+#historiquev_main_info{
+    width: 100%;
+    margin-top: 7%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+#historiquev_main_info_titre{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    color: #494040;
+}
+#historiquev_main_info_argent{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    color: #121313;
+}
+#historiquev_argent{
+    color: #9A9B9E;
+}
+/*background texte prix*/
+#historiquev_color{
+    background-color: #DAE2ED;
+    width: 15vw;
+}
+
+/*Section des cards*/
+#historiquev_main section{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*la card*/
+
+.card_historiquev{
+    height: 30vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 40px 15px 15px 40px;
+    background-color: #DAE2ED;
+}
+/*img de la card*/
+.card_historiquev_img{
+    height: 100%;
+    width: 25vw;
+    border-radius: 40px 0 0 40px;
+}
+/*img  redimentioné*/
+.card_historiquev_img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 40px 0 0 40px;
+}
+.card_historiquev form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card_historiquev_text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card_historiquev_text_div{
+    display: flex;
+    justify-content: space-around;
+}
+.card_historiquev_text_div1{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(78, 82, 103, 0.3);
+}
+.card_historiquev_text_div2{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(55, 72, 143, 0.13);
+}
+/*h2*/
+.card_historiquev_text_div h2{
+    color: #315d7b;
+}
+/*label*/
+.card_label_historique_vendeur{
+    background-color: #C4C4C4;
+    color: white;
+    font-size: 2rem;
+}
+/*label*/
+.card_label_historique_vendeur2{
+    background-color: #aab8d1;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+/*button*/
+.card_historiquev_text_div input[type="submit"]{
+    font-size: 2rem;
+    border-radius: 5px!important;
+}
+
+.traimoyen3{
+    background-color: black;
+    height: 1px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    margin-left: 25vw;
 }

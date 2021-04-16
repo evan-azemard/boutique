@@ -18,7 +18,7 @@
 <header>
     <div id="header_menu">
         <div class="sectiondiv">
-            <div id="déroul" class="DEL">
+            <div id="déroul" class="DEL" style="overflow: auto; height: 85%;">
                 <a href="#" class="fermer" onclick="closeNav()">×</a>
                 <a class="colorlien" href="accueil">accueil</a>
                 <a class="colorlien" href="register">Register</a>
@@ -29,6 +29,7 @@
                 <a class="colorlien" href="produit">Découvrer nos produits</a>
                 <a class="colorlien" href="admin">Admin</a>
                 <a class="colorlien" href="gerant">Gérant</a>
+                <a class="colorlien" href="historique_vendeur">Historique_vendeur</a>
             </div>
             <span style="font-size:30px;" onclick="openNav()">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
