@@ -16,6 +16,7 @@ require('controllers/article.php');
 require('controllers/admin.php');
 require('controllers/gerant.php');
 require('controllers/panier.php');
+require('controllers/paiment.php');
 require('controllers/historique_vendeur.php');
 require('controllers/historique_commende.php');
 //switche d'une page à une autre
@@ -62,6 +63,9 @@ if (isset($_GET['page']))
             break;
         case 'historique_commende';
             historique_commende();
+            break;
+        case 'paiment';
+            paiment();
             break;
     }
 }else

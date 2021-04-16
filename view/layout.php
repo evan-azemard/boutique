@@ -30,6 +30,7 @@
                 <a class="colorlien" href="admin">Admin</a>
                 <a class="colorlien" href="gerant">Gérant</a>
                 <a class="colorlien" href="panier">Panier</a>
+                <a class="colorlien" href="paiment">Paiment</a>
                 <a class="colorlien" href="historique_commende">Historique des commendes</a>
                 <a class="colorlien" href="historique_vendeur">Historique de vente</a>
             </div>
