@@ -30,7 +30,8 @@
                 <a class="colorlien" href="admin">Admin</a>
                 <a class="colorlien" href="gerant">Gérant</a>
                 <a class="colorlien" href="panier">Panier</a>
-                <a class="colorlien" href="historique_vendeur">Historique_vendeur</a>
+                <a class="colorlien" href="historique_commende">Historique des commendes</a>
+                <a class="colorlien" href="historique_vendeur">Historique de vente</a>
             </div>
             <span style="font-size:30px;" onclick="openNav()">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>

@@ -17,6 +17,7 @@ require('controllers/admin.php');
 require('controllers/gerant.php');
 require('controllers/panier.php');
 require('controllers/historique_vendeur.php');
+require('controllers/historique_commende.php');
 //switche d'une page à une autre
 
 if (isset($_GET['page']))
@@ -58,6 +59,9 @@ if (isset($_GET['page']))
             break;
         case 'panier';
             panier();
+            break;
+        case 'historique_commende';
+            historique_commende();
             break;
     }
 }else
