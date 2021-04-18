@@ -577,6 +577,20 @@ main{
     align-items: center;
     text-align: center;
 }
+.register_labput5{
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #315d7b;
+
+}
+.register_labput5 input[type="radio"]{
+    background-color: #103256;
+
+}
 .register_labput input {
     height: 3vh;
     width: 12vw;

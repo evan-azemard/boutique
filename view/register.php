@@ -2,7 +2,8 @@
 <?php
 if(isset($_POST["submit"])){
     $user = new Utilisateurs();
-    $errors = $user->register($_POST['login'], $_POST['password'], $_POST['r_password'], $_POST['gender']);
+    $errors = $user->register($_POST['pseudo'],$_POST['tel'],$_POST['password'],$_POST['email'],
+        $_POST['r_password'],$_POST['age'],$_POST['prenom'],$_POST['nom'],$_POST['choix'], $_POST['adresse']);
 } else {
     $errors = array();
 }
@@ -36,58 +37,58 @@ if(isset($_POST["submit"])){
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="pseudo">Pseudo</label>
-                            <input type="text" id="pseudo" required>
+                            <input type="text" name="pseudo" id="pseudo" required>
                         </div>
                         <div class="register_labput">
                             <label for="téléphone">Téléphone</label>
-                            <input type="number" id="téléphone" required>
+                            <input type="number" name="tel" id="téléphone" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="password">Password</label>
-                            <input type="password" id="password" required>
+                            <input type="password" name="password" id="password" required>
                         </div>
                         <div class="register_labput">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <input type="email" name="email" id="email" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="confirme_password">Confirmer password</label>
-                            <input type="password" id="confirme_password" required>
+                            <input type="password" name="r_password" id="confirme_password" required>
                         </div>
                         <div class="register_labput">
                             <label for="age">Age</label>
-                            <input type="number" id="age" required>
+                            <input type="number" name="age" id="age" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" required>
+                            <input type="text" name="prenom" id="prenom" required>
                         </div>
                         <div class="register_labput">
                             <label for="adresse">Adresse compléte</label>
-                            <input type="text" id="adresse" required>
+                            <input type="text"  name="adresse" id="adresse" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="nom">Nom</label>
-                            <input type="text" id="nom" required>
+                            <input type="text" name="nom" id="nom" required>
                         </div>
-                        <div class="register_labput">
+                        <div class="register_labput5">
                             <p id="labelcompte">Type de compte</p>
                             <label for="choix1">Vendeur</label>
-                            <input type="radio" required value="Vendeur" name="choix" id="choix1">
+                            <input type="radio" required value="2" name="choix" id="choix1">
                             <label for="choix2">Utilisateur</label>
-                            <input type="radio" required value="Utilisateur"  name="choix" id="choix2">
-                        </div></div>
+                            <input type="radio" required value="1"  name="choix" id="choix2">
+                        </div>
                 </article>
                 <article id="register_form_article3">
-                    <input type="submit" class="button" value="Valider les choix" name="register_submit">
+                    <input type="submit" class="button" value="Valider les choix" name="submit">
                 </article>
             </form>
         </section>
