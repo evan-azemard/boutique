@@ -3,20 +3,22 @@
 //Enregistre users
 function RegisterA($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse)
 {
+    $time = date('Y-m-d H:i:s');
     $bdd =  db_connect();
     $rank = 1;
-    $sql = $bdd->prepare("INSERT INTO users (pseudo, password, tel, email, age, prenom, nom, adresse, rank) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $sql->execute(array($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse,$rank));
+    $sql = $bdd->prepare("INSERT INTO users (pseudo, password, tel, email, age, prenom, nom, adresse, rank,registration_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
+    $sql->execute(array($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse,$rank,$time));
 }
 
 
 //Enregistre sellers
 function RegisterB($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse)
 {
+    $time = date('Y-m-d H:i:s');
     $bdd =  db_connect();
     $rank = 2;
-    $sql = $bdd->prepare("INSERT INTO sellers (pseudo, password, tel, email, age, prenom, nom, adresse, rank) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $sql->execute(array($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse,$rank));
+    $sql = $bdd->prepare("INSERT INTO sellers (pseudo, password, tel, email, age, prenom, nom, adresse, rank,registration_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $sql->execute(array($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse,$rank,$time));
 }
 
 

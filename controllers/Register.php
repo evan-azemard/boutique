@@ -177,14 +177,20 @@ function register()
                     $sel = select();
 
                     foreach ($sel as $row) {
-                        if ($row["pseudo"] == $this->pseudo) {
-                            array_push($errors, "Le pseudo est déja utilisé");
-                        }
-                        if ($row["email"] == $this->email) {
-                            array_push($errors, "Cette email est déja utilisé");
-                        }
-                        if ($row["prenom"] == $this->prenom && $row['nom'] == $this->nom) {
-                            array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
+                        if (isset($rows))
+                        {
+                            if ($row["pseudo"] == $this->pseudo) {
+                                array_push($errors, "Le pseudo est déja utilisé");
+                            }
+                            if ($row["tel"] == $this->tel) {
+                                array_push($errors, "Ce numéro est déjà utilisé");
+                            }
+                            if ($row["email"] == $this->email) {
+                                array_push($errors, "Cette email est déja utilisé");
+                            }
+                            if ($row["prenom"] == $this->prenom && $row['nom'] == $this->nom) {
+                                array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
+                            }
                         }
                     }
                 }
@@ -193,18 +199,22 @@ function register()
                     $selle = select2();
 
                     foreach ($selle as $rows) {
-                        if ($rows["pseudo"] == $this->pseudo) {
-                            array_push($errors, "Le pseudo est déja utilisé");
-                        }
-                        if ($rows["email"] == $this->email) {
-                            array_push($errors, "Cette email est déja utilisé");
-                        }
-                        if ($rows["prenom"] == $this->prenom && $rows['nom'] == $this->nom) {
-                            array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
+                        if (isset($rows))
+                        {
+                            if ($rows["pseudo"] == $this->pseudo) {
+                                array_push($errors, "Le pseudo est déja utilisé");
+                            }
+                            if ($rows["tel"] == $this->tel) {
+                                array_push($errors, "Ce numéro est déjà utilisé");
+                            }
+                            if ($rows["email"] == $this->email) {
+                                array_push($errors, "Cette email est déja utilisé");
+                            }
+                            if ($rows["prenom"] == $this->prenom && $rows['nom'] == $this->nom) {
+                                array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
+                            }
                         }
                     }
-                } else {
-                    array_push($errors, "Veuillez remplir tous les champs");
                 }
             }
             if (count($errors) < 1) {
@@ -214,6 +224,8 @@ function register()
                 } else if ($this->choix = 2 && $this->choix != 1) {
                     RegisterB($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
                 }
+                header('Location: login');
+
             } else {
                 return $errors;
             }

@@ -575,6 +575,10 @@ main{
     justify-content: space-around;
     margin-bottom: 4%;
 }
+#telregister{
+    color: #315d7b;
+}
+
 /*Contient les input et label*/
 .register_form_contient{
     width: 100%;

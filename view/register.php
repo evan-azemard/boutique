@@ -27,20 +27,7 @@ if(isset($_POST["submit"])){
                     compte, sauf si votre contenu a été partagé avec d’autres personnes qui ne l’ont pas supprimé.<span id="register_g2">"</span></p>
             </article>
         </section>
-
-        <?php
-        $vide = [];
-        if ($errors  != $vide) {  ?>
-            <div class="error_ins2" >
-                 <?php
-            foreach ($errors as $error) {
-                echo "<div id='error_ins'>";
-                echo "• " . $error . "<br>";
-                echo "</div>";
-            }
-        ?></div>
-        <?php } ?>
-
+            <?php include 'error.php'; ?>
         <section id="register_section2">
             <form method="post" id="register_form">
                 <article id="register_form_article1">
@@ -50,27 +37,28 @@ if(isset($_POST["submit"])){
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="pseudo">Pseudo</label>
-                            <input type="text" name="pseudo" id="pseudo" required>
+                            <input type="text" name="pseudo" minlength="4" maxlength="12" id="pseudo" required>
                         </div>
                         <div class="register_labput">
                             <label for="téléphone">Téléphone</label>
-                            <input type="number" name="tel"  id="téléphone" required>
+                            <div id="telregister"><p>+33</p></div>
+                            <input type="number" name="tel" maxlength="9" minlength="9" id="téléphone" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="password">Password</label>
-                            <input type="password" name="password"  id="password" required>
+                            <input type="password" name="password"  minlength="12"  id="password" required>
                         </div>
                         <div class="register_labput">
                             <label for="email">Email</label>
-                            <input type="email" name="email"  id="email" required>
+                            <input type="email" name="email" minlength="9"  id="email" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="confirme_password">Confirmer password</label>
-                            <input type="password" name="r_password"  id="confirme_password" required>
+                            <input type="password" name="r_password" minlength="12"  id="confirme_password" required>
                         </div>
                         <div class="register_labput">
                             <label for="age">Age</label>
@@ -80,17 +68,17 @@ if(isset($_POST["submit"])){
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="prenom">Prénom</label>
-                            <input   type="text" name="prenom" id="prenom" required>
+                            <input   type="text" name="prenom" maxlength="12" min="3" id="prenom" required>
                         </div>
                         <div class="register_labput">
                             <label for="adresse">Adresse compléte</label>
-                            <input type="text"   name="adresse" id="adresse" required>
+                            <input type="text" minlength="20"   name="adresse" id="adresse" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="nom">Nom</label>
-                            <input type="text"  name="nom" id="nom" required>
+                            <input type="text"  name="nom" maxlength="15" min="3" id="nom" required>
                         </div>
                         <div class="register_labput5">
                             <p id="labelcompte">Type de compte</p>
