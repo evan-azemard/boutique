@@ -28,15 +28,19 @@ if(isset($_POST["submit"])){
             </article>
         </section>
 
-        <div class="error_ins2">
+        <?php
+        $vide = [];
+        if ($errors  != $vide) {  ?>
+            <div class="error_ins2" >
                  <?php
             foreach ($errors as $error) {
                 echo "<div id='error_ins'>";
                 echo "• " . $error . "<br>";
                 echo "</div>";
             }
-            ?>
-        </div>
+        ?></div>
+        <?php } ?>
+
         <section id="register_section2">
             <form method="post" id="register_form">
                 <article id="register_form_article1">
