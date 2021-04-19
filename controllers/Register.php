@@ -187,7 +187,7 @@ function register()
                             array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
                         }
                     }
-                } else {
+                } else  {
                     array_push($errors, "Veuillez remplir tous les champs");
                 }
 
