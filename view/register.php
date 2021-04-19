@@ -2,13 +2,12 @@
 <?php
 if(isset($_POST["submit"])){
     $user = new Utilisateurs();
-    $errors = $user->register($_POST['pseudo'],$_POST['tel'],$_POST['password'],$_POST['email'],
-        $_POST['r_password'],$_POST['age'],$_POST['prenom'],$_POST['nom'],$_POST['choix'], $_POST['adresse']);
+    $errors = $user->Register($_POST['pseudo'],$_POST['tel'],$_POST['password'],$_POST['email'], $_POST['r_password'],$_POST['age'],$_POST['prenom'],$_POST['nom'],$_POST['choix'], $_POST['adresse']);
 } else {
     $errors = array();
 }
+
 ?>
-<?php include 'error.php'; ?>
 
 <div class="bg__inscription">
     <main id="register_main">
@@ -28,6 +27,16 @@ if(isset($_POST["submit"])){
                     compte, sauf si votre contenu a été partagé avec d’autres personnes qui ne l’ont pas supprimé.<span id="register_g2">"</span></p>
             </article>
         </section>
+
+        <div class="error_ins2">
+                 <?php
+            foreach ($errors as $error) {
+                echo "<div id='error_ins'>";
+                echo "• " . $error . "<br>";
+                echo "</div>";
+            }
+            ?>
+        </div>
         <section id="register_section2">
             <form method="post" id="register_form">
                 <article id="register_form_article1">
@@ -41,43 +50,43 @@ if(isset($_POST["submit"])){
                         </div>
                         <div class="register_labput">
                             <label for="téléphone">Téléphone</label>
-                            <input type="number" name="tel" id="téléphone" required>
+                            <input type="number" name="tel"  id="téléphone" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="password"  id="password" required>
                         </div>
                         <div class="register_labput">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email"  id="email" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="confirme_password">Confirmer password</label>
-                            <input type="password" name="r_password" id="confirme_password" required>
+                            <input type="password" name="r_password"  id="confirme_password" required>
                         </div>
                         <div class="register_labput">
                             <label for="age">Age</label>
-                            <input type="number" name="age" id="age" required>
+                            <input type="number" name="age"  id="age" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="prenom">Prénom</label>
-                            <input type="text" name="prenom" id="prenom" required>
+                            <input   type="text" name="prenom" id="prenom" required>
                         </div>
                         <div class="register_labput">
                             <label for="adresse">Adresse compléte</label>
-                            <input type="text"  name="adresse" id="adresse" required>
+                            <input type="text"   name="adresse" id="adresse" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="nom">Nom</label>
-                            <input type="text" name="nom" id="nom" required>
+                            <input type="text"  name="nom" id="nom" required>
                         </div>
                         <div class="register_labput5">
                             <p id="labelcompte">Type de compte</p>
@@ -94,3 +103,4 @@ if(isset($_POST["submit"])){
         </section>
     </main>
 </div>
+

@@ -1,7 +1,9 @@
 <?php
 /*Rgister*/
 
+
 require ('model/register.php');
+$errors = array();
 
 function register()
 {
@@ -108,7 +110,8 @@ function register()
         {
             $this->choix = $choix;
         }
-           public function getAdresse()
+
+        public function getAdresse()
         {
             return $this->adresse;
         }
@@ -118,7 +121,7 @@ function register()
             $this->adresse = $adresse;
         }
 
-        public function register($pseudo, $tel, $password, $email, $r_password, $age, $prenom, $nom, $choix,$adresse)
+        public function Register($pseudo, $tel, $password, $email, $r_password, $age, $prenom, $nom, $choix, $adresse)
         {
             $this->setPseudo($pseudo);
             $this->setTel($tel);
@@ -130,7 +133,6 @@ function register()
             $this->setNom($nom);
             $this->setChoix($choix);
             $this->setAdresse($adresse);
-
             $errors = array();
             $hpass = password_hash($this->password, PASSWORD_DEFAULT);
             if ($this->pseudo && $this->tel && $this->password && $this->email && $this->r_password && $this->age && $this->prenom && $this->prenom && $this->nom && $this->choix) {
@@ -169,41 +171,60 @@ function register()
                 }
                 if ($this->age < 18) {
                     array_push($errors, "Il faut avoir 18 ans !");
-                } else {
-                    array_push($errors, "Veuillez remplir tous les champs");
                 }
+                if ($this->choix = 1 && $this->choix != 2)
+                {
+                    $sel = select();
 
-                $sel = [];
-                select();
-
-                foreach ($sel as $row) {
-                    if ($row["pseudo"] == $this->pseudo) {
-                        array_push($errors, "Le pseudo est déja utilisé");
-                    }
-                    if ($row["email"] == $this->email) {
-                        array_push($errors, "Cette email est déja utilisé");
-                    }
-                    if ($row["prenom"] == $this->prenom && $row['nom'] == $this->nom) {
-                        array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
-                    }
-                }
-                if (count($errors) < 1) {
-                    if ($this->choix = 1 && $this->choix != 2) {
-                        RegisterA($this->pseudo, $hpass);
-                        /*2 = sellers*/
-                    } else if ($this->choix = 2 && $this->choix != 1) {
-                        RegisterB($this->pseudo, $hpass);
+                    foreach ($sel as $row) {
+                        if ($row["pseudo"] == $this->pseudo) {
+                            array_push($errors, "Le pseudo est déja utilisé");
+                        }
+                        if ($row["email"] = $this->email) {
+                            array_push($errors, "Cette email est déja utilisé");
+                        }
+                        if ($row["prenom"] == $this->prenom && $row['nom'] == $this->nom) {
+                            array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
+                        }
                     }
                 } else {
                     array_push($errors, "Veuillez remplir tous les champs");
                 }
 
+                if ($this->choix = 2 && $this->choix != 1) {
+                    $selle = select2();
+
+                    foreach ($selle as $rows) {
+                        if ($rows["pseudo"] == $this->pseudo) {
+                            array_push($errors, "Le pseudo est déja utilisé");
+                        }
+                        if ($rows["email"] = $this->email) {
+                            array_push($errors, "Cette email est déja utilisé");
+                        }
+                        if ($rows["prenom"] == $this->prenom && $rows['nom'] == $this->nom) {
+                            array_push($errors, "Un utilisateur porte déjà ce nom et prénom");
+                        }
+                    }
+                } else {
+                    array_push($errors, "Veuillez remplir tous les champs");
+                }
+            }
+            if (count($errors) < 1) {
+                if ($this->choix = 1 && $this->choix != 2) {
+                    RegisterA($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                    /*2 = sellers*/
+                } else if ($this->choix = 2 && $this->choix != 1) {
+                    RegisterB($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                }
+            } else {
+                return $errors;
             }
         }
     }
-        //Template
+
+    //Template
     $template = 'register';
-        //Layout (contient header , footer)
+    //Layout (contient header , footer)
     include('view/layout.php');
-    }
+}
 
