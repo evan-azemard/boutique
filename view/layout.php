@@ -74,8 +74,7 @@
     </div>
     <div>
         <p>
-            <?php echo  $_SESSION["pseudo"] ;
-            ?>
+            <?php echo  $_SESSION["pseudo"] ; ?>
         </p>
     </div>
 </header>

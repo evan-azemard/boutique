@@ -48,21 +48,21 @@ if(isset($_POST["submit"])){
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="password">Password</label>
-                            <input type="password" name="password"  minlength="12"  id="password" required>
+                            <input type="password" name="password"  minlength="12" maxlength="40"  id="password" required>
                         </div>
                         <div class="register_labput">
                             <label for="email">Email</label>
-                            <input type="email" name="email" minlength="9"  id="email" required>
+                            <input type="email" name="email" minlength="9"  maxlength="35" id="email" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="confirme_password">Confirmer password</label>
-                            <input type="password" name="r_password" minlength="12"  id="confirme_password" required>
+                            <input type="password" name="r_password" minlength="12" maxlength="40"  id="confirme_password" required>
                         </div>
                         <div class="register_labput">
-                            <label for="age">Age</label>
-                            <input type="number" name="age"  id="age" required>
+                            <label for="age">Âge</label>
+                            <input type="number" name="age" minlength="13" maxlength="115"  id="age" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
@@ -72,7 +72,7 @@ if(isset($_POST["submit"])){
                         </div>
                         <div class="register_labput">
                             <label for="adresse">Adresse compléte</label>
-                            <input type="text" minlength="20"   name="adresse" id="adresse" required>
+                            <input type="text" minlength="20" maxlength="80"   name="adresse" id="adresse" required>
                         </div>
                     </div>
                     <div class="register_form_contient">

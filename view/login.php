@@ -8,8 +8,7 @@ if(isset($_POST["submit"])){
 }
 ?>
 <?php include 'error.php'; ?>
-<?php echo  $_SESSION["pseudo"] ;
-var_dump($_SESSION["pseudo"] );
+<?php echo  $_SESSION["pseudo"];
 ?>
 <main id="login_main">
     <section id="section_login">

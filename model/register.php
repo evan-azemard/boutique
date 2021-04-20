@@ -23,7 +23,7 @@ function RegisterB($pseudo, $hpass, $tel, $email, $age, $prenom, $nom, $adresse)
 
 
 /*Pour vérifier que le pseudo n'est pas dèjà pris */
-function select ()
+function selectusers ()
 {
     $bdd =  db_connect();
 
@@ -33,7 +33,7 @@ function select ()
     return $sel;
 }
 /*sellers*/
-function select2 ()
+function selectsellers ()
 {
     $bdd =  db_connect();
 

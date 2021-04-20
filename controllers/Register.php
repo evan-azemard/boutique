@@ -1,7 +1,6 @@
 <?php
 /*Rgister*/
 
-
 require ('model/register.php');
 $errors = array();
 
@@ -174,7 +173,7 @@ function register()
                 }
                 if ($this->choix = 1 && $this->choix != 2)
                 {
-                    $sel = select();
+                    $sel = selectusers();
 
                     foreach ($sel as $row) {
                         if (isset($row))
@@ -196,7 +195,7 @@ function register()
                 }
 
                 if ($this->choix = 2 && $this->choix != 1) {
-                    $selle = select2();
+                    $selle = selectsellers();
 
                     foreach ($selle as $rows) {
                         if (isset($rows))
