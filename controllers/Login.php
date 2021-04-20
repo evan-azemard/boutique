@@ -105,11 +105,20 @@ function login()
 
                 }
 
+
                 if (count($errors) < 1) {
                     $_SESSION["user"] = $tab;
-                     $_SESSION["id"] = $tab["id_user"];
-                    $_SESSION["rank"] = $tab["rank"];
+
+                    $_SESSION["id"] = $tab["id_user"];
                     $_SESSION["pseudo"] = ucfirst(strtolower($tab["pseudo"]));
+                    $_SESSION["rank"] = $tab["rank"];
+                    $_SESSION["tel"] = $tab["tel"];
+                    $_SESSION["email"] = $tab["email"];
+                    $_SESSION["age"] = $tab["age"];
+                    $_SESSION["prenom"] = $tab["prenom"];
+                    $_SESSION["nom"] = $tab["nom"];
+                    $_SESSION["adresse"] = $tab["adresse"];
+
                     header('Location: accueil');
                 } else {
                     return $errors;

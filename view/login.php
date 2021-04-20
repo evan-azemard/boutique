@@ -7,10 +7,10 @@ if(isset($_POST["submit"])){
     $errors = array();
 }
 ?>
-<?php include 'error.php'; ?>
 <?php echo  $_SESSION["pseudo"];
 ?>
 <main id="login_main">
+<?php include 'error.php'; ?>
     <section id="section_login">
         <form method="post" id="login_form">
             <article class="login_article_button">

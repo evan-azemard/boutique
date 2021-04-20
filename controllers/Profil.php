@@ -17,7 +17,6 @@ function profil()
         private $age;
         private $prenom;
         private $nom;
-        private $choix;
         private $adresse;
 
 
@@ -101,15 +100,6 @@ function profil()
             $this->nom = $nom;
         }
 
-        public function getChoix()
-        {
-            return $this->choix;
-        }
-
-        public function setChoix($choix)
-        {
-            $this->choix = $choix;
-        }
 
         public function getAdresse()
         {
@@ -121,7 +111,7 @@ function profil()
             $this->adresse = $adresse;
         }
 
-        public function Update($pseudo, $tel, $password, $email, $r_password, $age, $prenom, $nom, $choix, $adresse)
+        public function Update($pseudo, $tel, $password, $email, $r_password, $age, $prenom, $nom, $adresse)
         {
             $this->setPseudo($pseudo);
             $this->setTel($tel);
@@ -131,11 +121,10 @@ function profil()
             $this->setAge($age);
             $this->setPrenom($prenom);
             $this->setNom($nom);
-            $this->setChoix($choix);
             $this->setAdresse($adresse);
             $errors = array();
             $hpass = password_hash($this->password, PASSWORD_DEFAULT);
-            if ($this->pseudo && $this->tel && $this->password && $this->email && $this->r_password && $this->age && $this->prenom && $this->prenom && $this->nom && $this->choix) {
+            if ($this->pseudo && $this->tel && $this->password && $this->email && $this->r_password && $this->age && $this->prenom && $this->prenom && $this->nom) {
 
                 if (strlen($this->pseudo) > 12) {
                     array_push($errors, "Le pseudo est trop long");
@@ -172,13 +161,14 @@ function profil()
                 if ($this->age < 18) {
                     array_push($errors, "Il faut avoir 18 ans !");
                 }
-                if ($this->choix = 1 && $this->choix != 2)
+                if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2)
                 {
                     $sel = select();
 
                     foreach ($sel as $row) {
                         if (isset($row))
                         {
+
                             if ($row["pseudo"] == $this->pseudo) {
                                 array_push($errors, "Le pseudo est déja utilisé");
                             }
@@ -195,7 +185,7 @@ function profil()
                     }
                 }
 
-                if ($this->choix = 2 && $this->choix != 1) {
+                if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1) {
                     $selle = select2();
 
                     foreach ($selle as $rows) {
@@ -216,15 +206,19 @@ function profil()
                         }
                     }
                 }
-            }else{
-                array_push($errors,"Veuillez remplire tout les champs !");
             }
             if (count($errors) < 1) {
-                if ($this->choix = 1 && $this->choix != 2) {
+                if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2 && $this->password != 1) {
                     UpdateA($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
                     /*2 = sellers*/
-                } else if ($this->choix = 2 && $this->choix != 1) {
+                } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1  &&$this->password != 1) {
                     UpdateB($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                }
+                if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2 && $this->password = 1) {
+                    UpdateAA($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                    /*2 = sellers*/
+                } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1  &&$this->password = 1) {
+                    UpdateBB($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
                 }
                session_unset();
                 header("Location: login");
