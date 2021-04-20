@@ -1,13 +1,4 @@
-<?php
 
-if(isset($_SESSION['id'])){
-    echo($_SESSION["rank"]);
-    echo "<br>";
-    echo $_SESSION['login'];
-
-}else{
-    echo '';
-}?>
 <!--Accueil-->
 <main id="accueil_main">
     <!--Affiche de promotion-->

@@ -3,15 +3,9 @@
 
 if(isset($_POST["submit"])){
     $user = new C_profil();
-    $errors = $user->Update(!empty($_POST['pseudo']) ? $_POST['pseudo'] : $_SESSION['pseudo'],
-                !empty($_POST['tel']) ? $_POST['tel'] : $_SESSION['tel'],
-                $_POST['password'],
-                !empty($_POST['email']) ? $_POST['email'] : $_SESSION['email'],
-                $_POST['r_password'],
-                !empty($_POST['age']) ? $_POST['age'] : $_SESSION['age'],
-                !empty($_POST['prenom']) ? $_POST['prenom'] : $_SESSION['prenom'],
-                !empty($_POST['nom']) ? $_POST['nom'] : $_SESSION['nom'],
-                !empty($_POST['adresse']) ? $_POST['adresse'] : $_SESSION['adresse']);
+    $errors = $user->Update(!empty($_POST['pseudo']) ? $_POST['pseudo'] : $_SESSION['pseudo'], !empty($_POST['tel']) ? $_POST['tel'] : $_SESSION['tel'], $_POST['password'],
+                !empty($_POST['email']) ? $_POST['email'] : $_SESSION['email'], $_POST['r_password'], !empty($_POST['age']) ? $_POST['age'] : $_SESSION['age'],
+                !empty($_POST['prenom']) ? $_POST['prenom'] : $_SESSION['prenom'], !empty($_POST['nom']) ? $_POST['nom'] : $_SESSION['nom'], !empty($_POST['adresse']) ? $_POST['adresse'] : $_SESSION['adresse']);
 } else {
     $errors = array();
 }
@@ -39,7 +33,7 @@ if(isset($_POST["submit"])){
                 <div class="register_form_contient">
                     <div class="register_labput">
                         <label for="password">Password</label>
-                        <input type="password"   name="password" minlength="12" maxlength="40"  id="password" >
+                        <input type="password"  placeholder="password"  name="password" minlength="12" maxlength="40"  id="password" >
                     </div>
                     <div class="register_labput">
                         <label for="email">Email</label>
@@ -49,7 +43,7 @@ if(isset($_POST["submit"])){
                 <div class="register_form_contient">
                     <div class="register_labput">
                         <label for="confirme_password">Confirmer password</label>
-                        <input type="password" name="r_password" minlength="12" maxlength="40"   id="confirme_password" >
+                        <input type="password" placeholder="confirmer password" name="r_password" minlength="12" maxlength="40"   id="confirme_password" >
                     </div>
                     <div class="register_labput">
                         <label for="age">Âge</label>

@@ -72,11 +72,6 @@
         </div>
         <i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
     </div>
-    <div>
-        <p>
-            <?php echo  $_SESSION["pseudo"] ; ?>
-        </p>
-    </div>
 </header>
 
 <!--Main-->

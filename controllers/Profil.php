@@ -126,7 +126,7 @@ function profil()
 
             var_dump($this->password);
             $hpass = password_hash($this->password, PASSWORD_DEFAULT);
-            if ($this->pseudo && $this->tel && $this->password && $this->email && $this->r_password && $this->age && $this->prenom && $this->prenom && $this->nom) {
+            if ($this->pseudo || $this->tel || $this->password || $this->email || $this->r_password || $this->age || $this->prenom || $this->nom || $this->adresse) {
 
                 if (strlen($this->pseudo) > 12) {
                     array_push($errors, "Le pseudo est trop long");
@@ -146,10 +146,16 @@ function profil()
                 if (strlen($this->prenom) < 3) {
                     array_push($errors, "Le prénom est trop court");
                 }
-                if ($this->password !== $this->r_password) {
-                    array_push($errors, "Le mot de passe répété n'est pas le même");
+                if (!empty($this->password) && empty($this->r_password)) {
+                    array_push($errors, "Veuillez confirmer le password !");
                 }
-                if ($this->pseudo == $this->password) {
+                if (!empty($this->password) && !empty($this->r_password))
+                {
+                    if ($this->password !== $this->r_password) {
+                        array_push($errors, "Le mot de passe répété n'est pas le même");
+                    }
+                }
+                if ($this->pseudo === $this->password) {
                     array_push($errors, "Le pseudo et le mot de passe ne doivent pas être identique");
                 }
                 $password_required = preg_match('%^(?=[^A-Z]*+.)(?=[^a-z]*+.)(?=[^0-9]*+.)(?=[^\W]*+.)%', $this->password);
@@ -166,7 +172,6 @@ function profil()
                 if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2)
                 {
                     $sel = select();
-
 
                     foreach ($sel as $row) {
                         if (isset($row))
@@ -188,7 +193,8 @@ function profil()
                     }
                 }
 
-                if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1) {
+                if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1)
+                {
                     $selle = select2();
 
                     foreach ($selle as $rows) {
@@ -210,9 +216,9 @@ function profil()
                     }
                 }
             }
-            if (count($errors) < 1) {
 
-                var_dump($this->password);
+
+            if (count($errors) < 1) {
                 if (!empty($this->password)){
                     if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2) {
                         UpdateA($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
@@ -228,7 +234,6 @@ function profil()
                     } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1  && $this->password = "vide") {
                         UpdateBB($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
                     }
-
                 }
                 session_unset();
                 header("Location: login");
