@@ -602,6 +602,12 @@ main{
     align-items: center;
     text-align: center;
 }
+
+.register_labput_login label{
+    font-size: 1.5rem!important;
+    margin-left: -10%;
+}
+
 .register_labput5{
     width: 48%;
     display: flex;

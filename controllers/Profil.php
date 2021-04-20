@@ -123,6 +123,8 @@ function profil()
             $this->setNom($nom);
             $this->setAdresse($adresse);
             $errors = array();
+
+            var_dump($this->password);
             $hpass = password_hash($this->password, PASSWORD_DEFAULT);
             if ($this->pseudo && $this->tel && $this->password && $this->email && $this->r_password && $this->age && $this->prenom && $this->prenom && $this->nom) {
 
@@ -164,6 +166,7 @@ function profil()
                 if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2)
                 {
                     $sel = select();
+
 
                     foreach ($sel as $row) {
                         if (isset($row))
@@ -208,21 +211,27 @@ function profil()
                 }
             }
             if (count($errors) < 1) {
-                if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2 && $this->password != 1) {
-                    UpdateA($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
-                    /*2 = sellers*/
-                } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1  &&$this->password != 1) {
-                    UpdateB($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
-                }
-                if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2 && $this->password = 1) {
-                    UpdateAA($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
-                    /*2 = sellers*/
-                } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1  &&$this->password = 1) {
-                    UpdateBB($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
-                }
-               session_unset();
-                header("Location: login");
 
+                var_dump($this->password);
+                if (!empty($this->password)){
+                    if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2) {
+                        UpdateA($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                        /*2 = sellers*/
+                    } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1) {
+                        UpdateB($this->pseudo, $hpass, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                    }
+                }
+                if (empty($this->password)){
+                    if ($_SESSION["rank"] = 1 && $_SESSION["rank"] != 2 && $this->password = "vide") {
+                        UpdateAA($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                        /*2 = sellers*/
+                    } else if ($_SESSION["rank"] = 2 && $_SESSION["rank"] != 1  && $this->password = "vide") {
+                        UpdateBB($this->pseudo, $this->tel, $this->email, $this->age, $this->prenom, $this->nom, $this->adresse);
+                    }
+
+                }
+                session_unset();
+                header("Location: login");
             } else {
                 return $errors;
             }

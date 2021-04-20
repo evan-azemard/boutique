@@ -107,8 +107,8 @@ function login()
 
 
                 if (count($errors) < 1) {
+                    $_SESSION['password'] = "vide";
                     $_SESSION["user"] = $tab;
-
                     $_SESSION["id"] = $tab["id_user"];
                     $_SESSION["pseudo"] = ucfirst(strtolower($tab["pseudo"]));
                     $_SESSION["rank"] = $tab["rank"];
