@@ -75,7 +75,7 @@
     <div>
         <p>
             <?php echo  $_SESSION["pseudo"] ;
-           ?>
+            ?>
         </p>
     </div>
 </header>
