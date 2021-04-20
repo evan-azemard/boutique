@@ -6,19 +6,20 @@ function login()
     class C_Login
     {
         //ATTRIBUTES
-        private $login;
+        private $pseudo;
         private $password;
-        private $gender;
+        private $email;
+        private $choix;
 
 
-        public function getLogin()
+        public function getPseudo()
         {
-            return $this->login;
+            return $this->pseudo;
         }
 
-        public function setLogin($login)
+        public function setPseudo($pseudo)
         {
-            $this->login = $login;
+            $this->pseudo = $pseudo;
         }
 
         public function getPassword()
@@ -31,58 +32,95 @@ function login()
             $this->password = $password;
         }
 
-        public function getGender()
+        public function getChoix()
         {
-            return $this->gender;
+            return $this->choix;
         }
 
-        public function setGender($gender)
+        public function setChoix($choix)
         {
-            $this->gender = $gender;
+            $this->choix = $choix;
         }
 
-        public function loginF($login, $password, $gender)
+        public function getEmail()
+        {
+            return $this->email;
+        }
+
+        public function setEmail($email)
+        {
+            $this->email = $email;
+        }
+
+        public function loginF($pseudo, $password, $email, $choix)
         {
 
-            $this->setLogin($login);
+            $this->setPseudo($pseudo);
             $this->setPassword($password);
-            $this->setGender($gender);
+            $this->setEmail($email);
+            $this->setChoix($choix);
             $errors = array();
-            if ($this->login && $this->password ) {
 
-                if ($this->gender = 1 && $this->gender != 2){
-                    $tab = F_login($this->login);
-                    /*2 = seller*/
-                }else if ($this->gender = 2 && $this->gender != 1){
-                    $tab = F_login2($this->login);
+            if ($this->pseudo && $this->password && $this->choix && $this->email) {
+
+                if ($this->choix = 1 && $this->choix != 2)
+                {
+                    $tab = F_login($this->pseudo);
+
+                    $hpass = $tab["password"];
+
+                    if (!password_verify($this->password, $hpass)) {
+                        array_push($errors, 'Mot de passe invalide par rapport à ce pseudo');
+                    }
+                    $mail = (filter_var($this->email, FILTER_VALIDATE_EMAIL));
+
+                    if (!$mail) {
+                        array_push($errors, 'Rentrer une adresse email valide ');
+                    }
+                    if ($this->email != $tab['email']) {
+                        array_push($errors, 'Email invalide par rapport à ce pseudo');
+                    }
                 }
 
-                $hpass = $tab["password"];
+                if ($this->choix = 2 && $this->choix != 1)
+                {
+                    $tab = F_login2($this->pseudo);
 
-                if (!password_verify($this->password, $hpass)) {
-                    array_push($errors, 'Mot de passe invalide');
+                    $hpass = $tab["password"];
+
+                    if (!password_verify($this->password, $hpass)) {
+
+                        array_push($errors, 'Mot de passe invalide par rapport à ce pseudo');
+                    }
+
+                    $mail = (filter_var($this->email, FILTER_VALIDATE_EMAIL));
+
+                    if (!$mail) {
+                        array_push($errors, 'Rentrer une adresse email valide ');
+                    }
+
+                    if ($this->email != $tab['email']) {
+                        array_push($errors, 'Email invalide par rapport à ce pseudo');
+                    }
+
                 }
 
                 if (count($errors) < 1) {
-                    if ($tab['rank'] == 1){
-                        $_SESSION["users"] = $tab['rank'];
-                    }elseif ($tab['rank'] == 2){
-                        $_SESSION["sellers"] = $tab['rank'];
-                    }
-                    $_SESSION["rank"] = $tab['rank'];
-                    $_SESSION["rank"] = $tab['rank'];
                     $_SESSION["user"] = $tab;
-                    $_SESSION["id"] = $tab["id_user"];
-                    $_SESSION["login"] = ucfirst(strtolower($tab["pseudo"]));
+                    $_SESSION["rank"] = $tab["rank"];
+                    $_SESSION["pseudo"] = ucfirst(strtolower($tab["pseudo"]));
+                    header('Location: accueil');
                 } else {
                     return $errors;
                 }
 
+            }else
+            {
+                array_push($errors,'Veuillez remplire tout les champs !');
             }
-
         }
-
     }
+
 
     //Template
     $template = 'login';

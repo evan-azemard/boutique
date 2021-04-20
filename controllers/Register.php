@@ -177,7 +177,7 @@ function register()
                     $sel = select();
 
                     foreach ($sel as $row) {
-                        if (isset($rows))
+                        if (isset($row))
                         {
                             if ($row["pseudo"] == $this->pseudo) {
                                 array_push($errors, "Le pseudo est déja utilisé");
@@ -216,6 +216,8 @@ function register()
                         }
                     }
                 }
+            }else{
+                array_push($errors,"Veuillez remplire tout les champs !");
             }
             if (count($errors) < 1) {
                 if ($this->choix = 1 && $this->choix != 2) {

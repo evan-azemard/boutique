@@ -1,6 +1,6 @@
 <!--Ajouter un produit-->
 <?php
-session_start();
+
 if(isset($_POST["submit"]))
 {
     if (isset($_SESSION['sellers']))

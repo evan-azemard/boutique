@@ -1,6 +1,6 @@
 <!--Page profil-->
 <?php
-session_start();
+
 if(isset($_POST["submit"])){
     $user = new C_profil();
     $errors = $user->profil($_POST['n_login'],$_POST['n_password']);

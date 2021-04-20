@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!--Template for full page -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -70,6 +71,12 @@
             <button><a href="disconnect">Déconexion</a> </button>
         </div>
         <i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+    </div>
+    <div>
+        <p>
+            <?php echo  $_SESSION["pseudo"] ;
+           ?>
+        </p>
     </div>
 </header>
 
