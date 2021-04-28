@@ -1,4 +1,4 @@
-<main id="panier_main">
+<!-- <main id="panier_main">
     <section id="panier_section">
         <article id="panier_h1">
             <h1>Votre panier</h1>
@@ -43,7 +43,7 @@
             </form>
         </article>
     </section>
-</main>
+</main> -->
 
 
 
