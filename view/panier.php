@@ -46,135 +46,6 @@
 </main> -->
 
 
-
-
-<?php
-
-//fonction creation panier
-
-function creationPanier()
-{
-    if (!isset($_SESSION['panier'])) {
-        $_SESSION['panier'] = array();
-        $_SESSION['panier']['libelleProduit'] = array();
-        $_SESSION['panier']['qteProduit'] = array();
-        $_SESSION['panier']['prixProduit'] = array();
-        $_SESSION['panier']['verrou'] = false;
-    }
-    return true;
-}
-
-// fonction verouillage des articles 
-
-function isVerrouille()
-{
-    if (isset($_SESSION['panier']) && $_SESSION['panier']['verrou'])
-        return true;
-    else
-        return false;
-}
-
-//fonction ajouter un article
-
-function ajouterArticle($libelleProduit, $qteProduit, $prixProduit)
-{
-
-    //Si le panier existe
-    if (creationPanier() && !isVerrouille()) {
-
-        //Si le produit existe déjà on ajoute seulement la quantité
-        $positionProduit = array_search($libelleProduit,  $_SESSION['panier']['libelleProduit']);
-
-        if ($positionProduit !== false) {
-            $_SESSION['panier']['qteProduit'][$positionProduit] += $qteProduit;
-        } else {
-            //Sinon on ajoute le produit
-            array_push($_SESSION['panier']['libelleProduit'], $libelleProduit);
-            array_push($_SESSION['panier']['qteProduit'], $qteProduit);
-            array_push($_SESSION['panier']['prixProduit'], $prixProduit);
-        }
-    } else
-        echo "Un problème est survenu veuillez contacter l'administrateur du site.";
-}
-
-
-//fonction supprimer un article 
-
-function supprimerArticle($libelleProduit)
-{
-    //Si le panier existe
-    if (creationPanier() && !isVerrouille()) {
-        //Nous allons passer par un panier temporaire
-        $tmp = array();
-        $tmp['libelleProduit'] = array();
-        $tmp['qteProduit'] = array();
-        $tmp['prixProduit'] = array();
-        $tmp['verrou'] = $_SESSION['panier']['verrou'];
-
-        for ($i = 0; $i < count($_SESSION['panier']['libelleProduit']); $i++) {
-            if ($_SESSION['panier']['libelleProduit'][$i] !== $libelleProduit) {
-                array_push($tmp['libelleProduit'], $_SESSION['panier']['libelleProduit'][$i]);
-                array_push($tmp['qteProduit'], $_SESSION['panier']['qteProduit'][$i]);
-                array_push($tmp['prixProduit'], $_SESSION['panier']['prixProduit'][$i]);
-            }
-        }
-        //On remplace le panier en session par notre panier temporaire à jour
-        $_SESSION['panier'] =  $tmp;
-        //On efface notre panier temporaire
-        unset($tmp);
-    } else
-        echo "Un problème est survenu veuillez contacter l'administrateur du site.";
-}
-
-// fonction modifié nombre article 
-
-function modifierQTeArticle($libelleProduit, $qteProduit)
-{
-    //Si le panier existe
-    if (creationPanier() && !isVerrouille()) {
-        //Si la quantité est positive on modifie sinon on supprime l'article
-        if ($qteProduit > 0) {
-            //Recherche du produit dans le panier
-            $positionProduit = array_search($libelleProduit,  $_SESSION['panier']['libelleProduit']);
-
-            if ($positionProduit !== false) {
-                $_SESSION['panier']['qteProduit'][$positionProduit] = $qteProduit;
-            }
-        } else
-            supprimerArticle($libelleProduit);
-    } else
-        echo "Un problème est survenu veuillez contacter l'administrateur du site.";
-}
-
-// fonction affiche montant total
-
-function MontantGlobal()
-{
-    $total = 0;
-    for ($i = 0; $i < count($_SESSION['panier']['libelleProduit']); $i++) {
-        $total += $_SESSION['panier']['qteProduit'][$i] * $_SESSION['panier']['prixProduit'][$i];
-    }
-    return $total;
-}
-
-// fonction compter article
-
-function compterArticles()
-{
-    if (isset($_SESSION['panier']))
-        return count($_SESSION['panier']['libelleProduit']);
-    else
-        return 0;
-}
-
-// fonction supprimer article du panier
-
-function supprimePanier()
-{
-    unset($_SESSION['panier']);
-}
-?>
-
 <?php
 session_start();
 include_once("fonctions-panier.php");
@@ -230,10 +101,14 @@ if (!$erreur) {
 }
 
 echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votre panier</title>
 </head>
 
