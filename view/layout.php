@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!--Template for full page -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,7 +19,7 @@
 <header>
     <div id="header_menu">
         <div class="sectiondiv">
-            <div id="déroul" class="DEL" style="overflow: auto; height: 85%;">
+            <div id="déroul" class="DEL" style="overflow: auto; min-height: 85%;">
                 <a href="#" class="fermer" onclick="closeNav()">×</a>
                 <a class="colorlien" href="accueil">accueil</a>
                 <a class="colorlien" href="register">Register</a>

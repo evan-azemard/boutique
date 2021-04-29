@@ -1,13 +1,4 @@
-<?php
-session_start();
-if(isset($_SESSION['id'])){
-    echo($_SESSION["rank"]);
-    echo "<br>";
-    echo $_SESSION['login'];
 
-}else{
-    echo '';
-}?>
 <!--Accueil-->
 <main id="accueil_main">
     <!--Affiche de promotion-->
@@ -176,7 +167,7 @@ if(isset($_SESSION['id'])){
                     <input type="submit" value="Envoyer" class="button">
                 </div>
                   <div id="accueil_form6">
-                      <p>*Champs non obligaotire</p>
+                      <p>*Champs non obligatoire</p>
                   </div>
             </form>
         </article>

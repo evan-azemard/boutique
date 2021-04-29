@@ -7,15 +7,13 @@ if ($_GET['id']) {
     $errors = array();
 }
 ?>
-<?php include 'error.php'; ?>
-
 
 
 <main id="article_main">
     <section id="article_section1">
         <div id="art_section1_article1">
             <article id="art_sec1_art1_img">
-                <img id="art1_img" src="img_docs/exemple.png.jpg">
+                <?= $_SESSION['img'] ?>
             </article>
             <article id="art_sec1_art1_txt">
                 <div id="art1_texth1">

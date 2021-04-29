@@ -2,7 +2,6 @@
 /*Pour ce déconnecter*/
 function disco()
 {
-
     session_start();
 
     if (isset($_SESSION["user"])) {

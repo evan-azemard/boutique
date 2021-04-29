@@ -1,15 +1,16 @@
 <!--lOGIN PAGE-->
 <?php
-session_start();
 if(isset($_POST["submit"])){
     $user = new C_Login();
-    $errors = $user->loginF($_POST['login'], $_POST['password'], $_POST['gender']);
+    $errors = $user->loginF($_POST['pseudo'], $_POST['password'], $_POST['email'],$_POST['choix']);
 } else {
     $errors = array();
 }
 ?>
-<?php include 'error.php'; ?>
+<?php echo  $_SESSION["pseudo"];
+?>
 <main id="login_main">
+<?php include 'error.php'; ?>
     <section id="section_login">
         <form method="post" id="login_form">
             <article class="login_article_button">
@@ -22,7 +23,7 @@ if(isset($_POST["submit"])){
                     <label for="pseudo">Pseudo</label>
                 </div>
                 <div class="login_labput">
-                    <input type="text" id="pseudo" required>
+                    <input type="text" name="pseudo" id="pseudo" required>
                 </div>
             </article>
             <article class="login_article">
@@ -31,17 +32,17 @@ if(isset($_POST["submit"])){
 
                 </div>
                 <div class="login_labput">
-                    <input type="password" id="password" required>
+                    <input type="password" name="password" autocomplete="on" id="password" required>
 
                 </div>
             </article>
             <article class="login_article">
                 <div class="login_labput">
-                    <label for="adresse">Adresse compléte</label>
+                    <label for="email">Email</label>
 
                 </div>
                 <div class="login_labput">
-                    <input type="text" id="adresse" required>
+                    <input type="email" name="email" id="email" required>
 
                 </div>
             </article>
@@ -55,7 +56,7 @@ if(isset($_POST["submit"])){
                             <label class="lolo2" for="choix1">Vendeur</label>
                         </div>
                         <div class="centre_radio2">
-                            <input  class="lolo3" type="radio" required value="Vendeur" name="choix" id="choix1" placeholder="">
+                            <input  class="lolo3" type="radio" required value="2" name="choix" id="choix1" placeholder="">
                         </div>
                     </div>
                     <div class="radio">
@@ -63,14 +64,14 @@ if(isset($_POST["submit"])){
                             <label  class="lolo2" for="choix2">Utilisateur</label>
                         </div>
                         <div class="centre_radio2">
-                            <input class="lolo3" type="radio" required value="Utilisateur"  name="choix" id="choix2">
+                            <input class="lolo3" type="radio" required value="1"  name="choix" id="choix2">
                         </div>
                     </div>
                 </div>
             </article>
             <article class="login_article_button">
                 <div class="login_labput_button">
-                    <input type="submit" class="button" value="Valider les choix" name="register_submit">
+                    <input type="submit" class="button" value="Valider les choix" name="submit">
                 </div>
             </article>
         </form>

@@ -6,9 +6,31 @@
   list-style: none;
 }
 
+* input ,textarea ,select{
+    border: none;
+    outline: none;
+}
+* input:focus,select:focus,textarea:focus{
+    border: 1px cadetblue solid;
+}
+
+/*error*/
+.error_ins2{
+    background-color: rgba(148, 25, 25, 0.38);
+    font-size: 2.5vh;
+    width: 100%;
+    font-weight: 900;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a42d2d;
+}
 /*-------------------------------------------*\
                 Body
 \*-------------------------------------------*/
+
 body {
   display: flex;
   flex-direction: column;
@@ -38,6 +60,37 @@ h2 {
 p {
   line-height: 30px;
   margin: 10px 10px;
+=======
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+a{
+    color: #BACBDD;
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+    color: #E1E9F4;
+}
+h1{
+    font-family: 'Sanchez', serif;
+    font-size: 3.4rem;
+    font-weight: 200;
+}
+h2{
+    font-family: 'Sanchez', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+p{
+    line-height: 30px;
+    margin: 10px 10px ;
+>>>>>>> evan
 }
 /*Classe button*/
 .button {
@@ -523,6 +576,7 @@ textarea {
 }
 
 /*Section du formulaire*/
+
 #register_section2 {
   background-color: #fafbfc;
   height: 60vh;
@@ -541,6 +595,26 @@ textarea {
   background-color: #dae2ed;
   align-items: center;
   border-radius: 45px;
+=======
+#register_section2{
+    background-color: #FAFBFC;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    margin-bottom: 3%;
+}
+
+/*Formulaire*/
+#register_form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-height: 80%;
+    background-color: #DAE2ED;
+    align-items: center;
+    border-radius: 45px;
+>>>>>>> evan
 }
 /*Titre form*/
 #register_form_article1 {
@@ -552,6 +626,7 @@ textarea {
   color: #315d7b;
 }
 /*input*/
+
 #register_form_article2 {
   width: 100%;
   height: 60%;
@@ -559,7 +634,20 @@ textarea {
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 4%;
+=======
+#register_form_article2{
+    width: 100%;
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4%;
+>>>>>>> evan
 }
+#telregister{
+    color: #315d7b;
+}
+
 /*Contient les input et label*/
 .register_form_contient {
   width: 100%;
@@ -575,11 +663,32 @@ textarea {
   align-items: center;
   text-align: center;
 }
+
+.register_labput_login label{
+    font-size: 1.5rem!important;
+    margin-left: -10%;
+}
+
+.register_labput5{
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #315d7b;
+
+}
+.register_labput5 input[type="radio"]{
+    background-color: #103256;
+
+}
 .register_labput input {
   height: 3vh;
   width: 12vw;
   background-color: #ebf7fc;
   border: none;
+   min-height: 3vh;
 }
 .register_labput input:focus {
   border: rgba(20, 157, 211, 0.42) solid 1px;
@@ -608,9 +717,16 @@ input {
   margin-top: 5%;
 }
 
+
 #section_login {
   display: flex;
   justify-content: center;
+=======
+#section_login{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+>>>>>>> evan
 }
 
 /*Form login*/
@@ -699,9 +815,15 @@ input {
   margin-top: 5%;
 }
 
+
 #section_profil {
   display: flex;
   justify-content: center;
+}
+#section_profil{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
 }
 
 /*Form login*/
@@ -721,8 +843,28 @@ input {
   justify-content: center;
 }
 
+
 .marg {
-  margin-right: 0;
+          margin-right: 0;
+        }
+.profil_labput5{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #315d7b;
+
+}
+.marg{
+    margin-right: 0;
+>>>>>>> evan
+}
+.button_profil_text{
+    width: 100%;
+    display: flex;
+    justify-content: center
 }
 /*-------------------------------------------*\
                 Page Poduit
@@ -774,14 +916,14 @@ input {
 .titre_produit {
   font-size: 2.3rem;
   color: #527b9e;
-  text-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 23px rgba(0, 0, 0, 0.25);
 }
 .produit_h1 {
   width: 100%;
   display: flex;
   justify-content: center;
   color: #527b9e;
-  text-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 23px rgba(0, 0, 0, 0.25);
   margin-bottom: 2%;
 }
 .banderole {

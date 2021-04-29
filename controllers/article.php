@@ -30,6 +30,7 @@ function article()
                         $_SESSION['marque']  = $articles['marque_model'];
                         $_SESSION['nom']  = $articles['nom_model'];
                         $_SESSION['resum']  = $articles['resum'];
+                        $_SESSION['img']  = $articles['img'];
 
 
         }

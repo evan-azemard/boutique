@@ -6,7 +6,7 @@ ini_set('display_startup_errors', TRUE);
 
 // Démarrage des sessions si pas déjà démarrées
 if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+
 }
 
 //on inclus la class qui permet de gérer le panier
