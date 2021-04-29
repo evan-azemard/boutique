@@ -175,7 +175,7 @@ if(isset($_POST["submit"]))
                          <label for="type_ecran">Type d'écran :</label>
                      </div>
                     <div class="ajout_2">
-                        <input type="text" required minlength="35" maxlength="35"  name="type_ecran" id="type_ecran">
+                        <input type="text" required minlength="3" maxlength="35"  name="type_ecran" id="type_ecran">
                     </div>
                 </div>
             </article>
