@@ -1,4 +1,4 @@
-<!-- <main id="panier_main">
+ <main id="panier_main">
     <section id="panier_section">
         <article id="panier_h1">
             <h1>Votre panier</h1>
@@ -43,11 +43,9 @@
             </form>
         </article>
     </section>
-</main> -->
-
+</main>
 
 <?php
-session_start();
 include_once("fonctions-panier.php");
 
 $erreur = false;
@@ -99,20 +97,12 @@ if (!$erreur) {
             break;
     }
 }
-
 echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre panier</title>
-</head>
 
-<body>
+
+<main id="main_panier">
 
     <form method="post" action="panier.php">
         <table style="width: 400px">
@@ -157,6 +147,4 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
             ?>
         </table>
     </form>
-</body>
-
-</html>
+</main>
