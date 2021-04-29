@@ -11,11 +11,12 @@ if(isset($_POST["submit"]))
             $pst = $_POST;
             $user = new C_ajout();
             $errors = $user->ajouter($img['name'],$img['size'],$img['type'],file_get_contents($img['tmp_name']),
-            $pst['resum'],$pst['description'],$pst['systeme'],$pst['interface_utilisateur'],$pst['processeur'],
+            $pst['resum'],$pst['description'],$pst['systeme'],$pst['interface_utilisateur'],
             $pst['ratio'],$pst['luminosite'],$pst['puce_graphique'],$pst['ram'],
             $pst['memoire_flash'],$pst['dast'],$pst['dastr'],$pst['dasm'],$pst['double_sim'],
             $pst['taile'],$pst['type_ecran'],$pst['definition_ecran'],$pst['batterie'],
-            $pst['nb_capteur'],$pst['taile_gravure'],$pst['nom'],$pst['marque'],$pst['number'],$pst['prix']);
+            $pst['nb_capteur'],$pst['taile_gravure'],$pst['nom'],$pst['marque'],$pst['number'],$pst['prix'],$_SESSION['id'],
+            $pst['resolution_ecran']);
         }
     } else
     {
@@ -70,10 +71,10 @@ if(isset($_POST["submit"]))
             <article class="ajout_article">
                 <div class="article_rectangle">
                     <div class="ajout_1">
-                        <label for="processeur">Processeur :</label>
+                        <label for="resolution_ecran">Resolution_ecran :</label>
                     </div>
                     <div class="ajout_2">
-                        <input type="text" name="processeur" id="processeur">
+                        <input type="text" name="resolution_ecran" id="resolution_ecran">
                     </div>
                 </div>
                 <div class="article_rectangle">
@@ -153,7 +154,7 @@ if(isset($_POST["submit"]))
                          <label for="double_sim">Double sim :</label>
                      </div>
                     <div class="double_sim">
-                        <select name="select" id="double_sim">
+                        <select name="double_sim" id="double_sim">
                             <option name="double_sim" value="oui">Oui</option>
                             <option name="double_sim" value="non">Non</option>
                         </select>

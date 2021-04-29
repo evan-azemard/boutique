@@ -8,7 +8,6 @@ function ajout()
 
     class C_Ajout
     {
-
         private $imgname;
         private $imgsize;
         private $imgtype;
@@ -17,7 +16,6 @@ function ajout()
         private $description;
         private $systeme;
         private $interface_utilisateur;
-        private $processeur;
         private $ratio;
         private $luminosite;
         private $puce_graphique;
@@ -37,6 +35,8 @@ function ajout()
         private $marque;
         private $number;
         private $prix;
+        private $iduser;
+        private $resolution_ecran;
 
         public function getImgname()
         {
@@ -70,85 +70,89 @@ function ajout()
         {
             return $this->interface_utilisateur;
         }
-         public function getProcesseur()
-        {
-            return $this->processeur;
-        }
-         public function getRatio()
+        public function getRatio()
         {
             return $this->ratio;
         }
-         public function getLuminosite()
+        public function getLuminosite()
         {
             return $this->luminosite;
         }
-         public function getPuce_graphique()
+        public function getPuce_graphique()
         {
             return $this->puce_graphique;
         }
-         public function getRam()
+        public function getRam()
         {
             return $this->ram;
         }
-         public function getMemoire_flash()
+        public function getMemoire_flash()
         {
             return $this->memoire_flash;
         }
-         public function getDast()
+        public function getDast()
         {
             return $this->dast;
         }
-         public function getIDastr()
+        public function getIDastr()
         {
             return $this->dastr;
         }
-         public function getDasm()
+        public function getDasm()
         {
             return $this->dasm;
         }
-         public function getDouble_sim()
+        public function getDouble_sim()
         {
             return $this->double_sim;
         }
-         public function getTaille()
+        public function getTaille()
         {
             return $this->taille;
         }
-         public function getType_ecran()
+        public function getType_ecran()
         {
             return $this->type_ecran;
         }
-         public function getDefinition_ecran()
+        public function getDefinition_ecran()
         {
             return $this->definition_ecran;
         }
-         public function getBatterie()
+        public function getBatterie()
         {
             return $this->batterie;
         }
-         public function getNb_capteur()
+        public function getNb_capteur()
         {
             return $this->nb_capteur;
         }
-         public function getTaile_gravure()
+        public function getTaile_gravure()
         {
             return $this->taile_gravure;
         }
-         public function getNom()
+        public function getNom()
         {
             return $this->nom;
         }
-         public function getMarque()
+        public function getMarque()
         {
             return $this->marque;
         }
-         public function getNumber()
+        public function getNumber()
         {
             return $this->number;
         }
-         public function getPrix()
+        public function getPrix()
         {
             return $this->prix;
+        }
+         public function getIduser()
+        {
+            return $this->iduser;
+        }
+        public function getResolution_ecran()
+        {
+            return $this->getResolution_ecran();
         }
 
 
@@ -169,108 +173,112 @@ function ajout()
         {
             $this->interface_utilisateur = $interface_utilisateur;
         }
-          public function setProcesseur($processeur)
-        {
-            $this->processeur = $processeur;
-        }
-           public function setRatio($ratio)
+
+        public function setRatio($ratio)
         {
             $this->ratio = $ratio;
         }
-           public function setLuminosite($luminosite)
+        public function setLuminosite($luminosite)
         {
             $this->luminosite = $luminosite;
         }
-           public function setPuce_graphique($puce_graphique)
+        public function setPuce_graphique($puce_graphique)
         {
             $this->puce_graphique = $puce_graphique;
         }
-           public function setram($ram)
+        public function setram($ram)
         {
             $this->ram = $ram;
         }
-           public function setMemoire_flash($memoire_flash)
+        public function setMemoire_flash($memoire_flash)
         {
             $this->memoire_flash = $memoire_flash;
         }
-           public function setDast($dast)
+        public function setDast($dast)
         {
             $this->dast = $dast;
         }
-           public function setDastr($dastr)
+        public function setDastr($dastr)
         {
             $this->dastr = $dastr;
         }
-           public function setDasm($dasm)
+        public function setDasm($dasm)
         {
             $this->dasm = $dasm;
         }
-           public function setDouble_sim($double_sim)
+        public function setDouble_sim($double_sim)
         {
             $this->double_sim = $double_sim;
         }
-           public function setTaille($taille)
+        public function setTaille($taille)
         {
             $this->taille = $taille;
         }
-           public function setType_ecran($type_ecran)
+        public function setType_ecran($type_ecran)
         {
             $this->type_ecran = $type_ecran;
         }
-           public function setDefinition_ecran($definition_ecran)
+        public function setDefinition_ecran($definition_ecran)
         {
             $this->definition_ecran = $definition_ecran;
         }
-           public function setBatterie($batterie)
+        public function setBatterie($batterie)
         {
             $this->batterie = $batterie;
         }
-           public function setNb_capteur($nb_capteur)
+        public function setNb_capteur($nb_capteur)
         {
             $this->nb_capteur = $nb_capteur;
         }
-           public function setTaile_gravure($taile_gravure)
+        public function setTaile_gravure($taile_gravure)
         {
             $this->taile_gravure = $taile_gravure;
         }
-           public function setNom($nom)
+        public function setNom($nom)
         {
             $this->nom = $nom;
         }
-           public function setMarque($marque)
+        public function setMarque($marque)
         {
             $this->marque = $marque;
         }
-           public function setNumber($number)
+        public function setNumber($number)
         {
             $this->number = $number;
         }
-           public function setPrix($prix)
+        public function setPrix($prix)
         {
             $this->prix = $prix;
         }
-           public function setImgname($imgname)
+        public function setImgname($imgname)
         {
             $this->imgname = $imgname;
         }
-           public function setImgsize($imgsize)
+        public function setImgsize($imgsize)
         {
             $this->imgsize = $imgsize;
         }
-           public function setImgtype($imgtype)
+        public function setImgtype($imgtype)
         {
             $this->imgtype = $imgtype;
         }
-           public function setImgtmp($imgtmp)
+        public function setImgtmp($imgtmp)
         {
             $this->imgtmp = $imgtmp;
         }
+          public function setIduser($iduser)
+        {
+            $this->iduser = $iduser;
+        }
+        public function setResolution_ecran($resolution_ecran)
+        {
+            $this->resolution_ecran = $resolution_ecran;
+        }
 
 
-
-        public function ajouter($imgname,$imgsize,$imgtype,$imgtmp,$resum,$description,$systeme,$interface_utilisateur,$processeur,
+        public function ajouter($imgname,$imgsize,$imgtype,$imgtmp,$resum,$description,$systeme,$interface_utilisateur,
                                 $ratio,$luminosite,$puce_graphique,$ram,$memoire_flash,$dast,$dastr,$dasm,$double_sim,$taille,
-                                $type_ecran,$definition_ecran,$batterie,$nb_capteur,$taile_gravure,$nom,$marque,$number,$prix,)
+                                $type_ecran,$definition_ecran,$batterie,$nb_capteur,$taile_gravure,$nom,$marque,$number,$prix,$iduser,$resolution_ecran)
         {
             $this->setImgname($imgname);
             $this->setImgsize($imgsize);
@@ -280,7 +288,6 @@ function ajout()
             $this->setDescription($description);
             $this->setSysteme($systeme);
             $this->setInterface_utilisateur($interface_utilisateur);
-            $this->setProcesseur($processeur);
             $this->setRatio($ratio);
             $this->setLuminosite($luminosite);
             $this->setPuce_graphique($puce_graphique);
@@ -292,7 +299,7 @@ function ajout()
             $this->setDouble_sim($double_sim);
             $this->setTaille($taille);
             $this->setType_ecran($type_ecran);
-            $this->setDescription($definition_ecran);
+            $this->setDefinition_ecran($definition_ecran);
             $this->setBatterie($batterie);
             $this->setNb_capteur($nb_capteur);
             $this->setTaile_gravure($taile_gravure);
@@ -300,6 +307,8 @@ function ajout()
             $this->setMarque($marque);
             $this->setNumber($number);
             $this->setPrix($prix);
+            $this->setIduser($iduser);
+            $this->setResolution_ecran($resolution_ecran);
 
             $errors = array();
             $size = 650000;
@@ -315,7 +324,11 @@ function ajout()
 
             if (count($errors) < 1) {
                 /*                    $this->marque = strtoupper($this->marque);*/
-                ajouter($this->imgname,$this->imgsize,$this->imgtype,$this->imgtmp);
+                ajouter($this->imgname,$this->imgsize,$this->imgtype,$this->imgtmp,$this->resum,$this->description
+                    ,$this->systeme,$this->interface_utilisateur,$this->ratio,$this->luminosite,
+                    $this->puce_graphique, $this->ram,$this->memoire_flash,$this->dast,$this->dastr,$this->dasm,$this->double_sim,$this->taille
+                    ,$this->type_ecran,$this->definition_ecran,$this->batterie,$this->nb_capteur,$this->taile_gravure,$this->nom,
+                    $this->marque,$this->number,$this->prix,$this->iduser,$this->resolution_ecran);
             }else {
                 return $errors;
             }
