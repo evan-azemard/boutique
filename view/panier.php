@@ -39,7 +39,7 @@
                 <p>1400 € TTC</p>
             </div>
             <form name="panier_valider" method="post">
-                <input type="submit" value="Passer au paiment" class="button_panier">
+                <input type="submit" value="Passer au paiement" class="button_panier">
             </form>
         </article>
     </section>
