@@ -3,7 +3,7 @@
 if ($_GET['id']) {
     $user = new C_article();
     $errors = $user->article($_GET['id']);
-}else{
+} else {
     $errors = array();
 }
 ?>
@@ -49,87 +49,87 @@ if ($_GET['id']) {
                 <p class="des"><?= $_SESSION['marque'] ?></p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>nom du model</p>
+                <p>nom du model</p>
                 <p class="des"><?= $_SESSION['nom'] ?></p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>systeme</p>
+                <p>système</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>puce graphique</p>
+                <p>puce graphique</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>batterie</p>
+                <p>batterie</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>nombre de capteur</p>
+                <p>nombre de capteur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>qualitée photo principal</p>
+                <p>qualité photo principal</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>qualitée vidéo principal</p>
+                <p>qualité vidéo principal</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>type d'écran</p>
+                <p>type d'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>resolution d'écran</p>
+                <p>resolution d'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>definition d'écran</p>
+                <p>définition d'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>Fréquence de l'écran</p>
+                <p>Fréquence de l'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>nombre de coeur</p>
+                <p>nombre de coeur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>interface utilisateur</p>
+                <p>interface utilisateur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>memoire flash</p>
+                <p>memoire flash</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>ram</p>
+                <p>ram</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>memoire flash</p>
+                <p>memoire flash</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>DAS</p>
+                <p>DAS</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>frequence du processeur</p>
+                <p>fréquence du processeur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>processeur</p>
-                <p class="des">2</p>
-            </div>
-             <div class="art_section2_1_ligne">
-                 <p>taile de la gravure</p>
+                <p>processeur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                 <p>taile</p>
+                <p>taile de la gravure</p>
+                <p class="des">2</p>
+            </div>
+            <div class="art_section2_1_ligne">
+                <p>taille</p>
                 <p class="des">2</p>
             </div>
         </article>
@@ -155,7 +155,7 @@ if ($_GET['id']) {
     <div class="traimoyen"></div>
     <section id="article_section3">
         <article id="art1_art1">
-            <label for="select_art">Donner une notte</label>
+            <label for="select_art">Donner une note</label>
         </article>
         <article id="art1_art2">
             <form method="post">
@@ -168,18 +168,9 @@ if ($_GET['id']) {
             </form>
         </article>
         <article id="art1_art3">
-            <p>La notte de cette article est de  <span id="artcouleurgrs">90/100</span></p>
+            <p>La note de cette article est de <span id="artcouleurgrs">90/100</span></p>
         </article>
     </section>
 </main>
 
 <!--
-
-
-
-
-
-
-
-
-
