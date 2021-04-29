@@ -1,62 +1,55 @@
 <main id="main_paiment">
     <div id="titre_paiment">
-        <h1>Paiment Sécurisé</h1>
+        <h1>Paiement Sécurisé</h1>
     </div>
     <section id="section_form_paiment">
         <form method="post">
-            <div class="paiment_div1"><p>Paiment possible par PayPal</p></div>
             <div id="paiment_div2">
-                <div class="traimoyen4"></div>
-                    <i class="fa fa-paypal fa-3x" aria-hidden="true"></i>
-                <div class="traimoyen4"></div>
-            </div>
-            <div class="paiment_div1">
-                <p id="paimentparcarte">Paiment par carte</p>
-            </div>
-            <div class="paiment_div_labput">
-                <div class="paiment_label">
-                    <label for="titulaire">Titulaire de la carte</label>
-                </div>
-                <div class="paiment_input">
-                    <input type="number"  required id="titulaire">
-                </div>
-            </div>
-            <div class="paiment_div_labput">
-                <div class="paiment_label">
-                    <label for="carte">Numéro de la carte</label>
-                </div>
-                <div class="paiment_input">
-                    <input type="number" required id="carte">
-                </div>
-            </div>
-            <div id="paiment_div4">
-                <div id="paimentdd1">
-                    <p>Expire le :</p>
-                </div>
-                <div class="paimentlabput">
-                    <div>
-                        <label for="mois">Mois :</label>
-                    </div>
-                    <div>
-                        <input type="number" required id="mois">
+                <div id="smart-button-container">
+                    <div style="text-align: center;">
+                        <div id="paypal-button-container"></div>
                     </div>
                 </div>
-                <div class="paimentlabput">
-                    <div>
-                        <label for="annee">Année :</label>
-                    </div>
-                    <div>
-                        <input type="number" required id="annee">
-                    </div>
-                </div>
+                <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
+                <script>
+                    function initPayPalButton() {
+                        paypal.Buttons({
+                            style: {
+                                shape: 'rect',
+                                color: 'gold',
+                                layout: 'vertical',
+                                label: 'paypal',
+
+                            },
+
+                            createOrder: function(data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        "amount": {
+                                            "currency_code": "EUR",
+                                            "value": 1
+                                        }
+                                    }]
+                                });
+                            },
+
+                            onApprove: function(data, actions) {
+                                return actions.order.capture().then(function(details) {
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                });
+                            },
+
+                            onError: function(err) {
+                                console.log(err);
+                            }
+                        }).render('#paypal-button-container');
+                    }
+                    initPayPalButton();
+                </script>
+
+
             </div>
-            <div id="paiment_div_txt">
-                <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-cc-mastercard fa-3x" aria-hidden="true"></i>
-            </div>
-            <div id="paiment_div">
-                <input type="submit" value="Valider le paiment" id="button_paiment">
-            </div>
+
         </form>
     </section>
 
