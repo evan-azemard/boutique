@@ -133,7 +133,8 @@
                     un deuxième écran de 3.9 pouces goled.</p>
             </div>
             <div class="logo_card">
-                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '', 
+'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -171,4 +172,5 @@
             </form>
         </article>
     </section>
+
 </main>
