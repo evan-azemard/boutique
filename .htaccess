@@ -40,6 +40,8 @@ RewriteRule ^panier index.php?page=panier [L]
 
 RewriteRule ^paiment index.php?page=paiment [L]
 
+
+
 RewriteRule ^historique_commende index.php?page=historique_commende [L]
 
 RewriteRule ^historique_vendeur index.php?page=historique_vendeur [L]

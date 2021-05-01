@@ -22,8 +22,36 @@
                                     <img src="img_docs/exemple.png.jpg" alt="exemple">
                                 </div>
                                 <div class="card_description">
-                                    <h3><?= $article['nom_model']?></h3>
-                                    <p><?= $article['resum']?></p>
+                                    <h3>
+                                        <?php
+                                        $str = strlen($article['nom_model']);
+                                        if (strlen($str > 12))
+                                            {
+                                            $tt = substr($article['nom_model'],0,12) . '...';
+                                            echo  $tt;
+                                            } else {
+                                            echo $article['nom_model'];
+                                        }?>
+                                    </h3>
+                                    <p>
+                                        <?php
+
+                                        $t = strlen($article['resum']);
+                                        var_dump($t);
+                                        if ($t > 150){
+                                           $tt = substr($article['resum'],0,120) . '[...]';
+                                        }
+
+                                       $a = substr($tt,0,40);
+                                       $b = substr($tt,40,40);
+                                       $c = substr($tt,80,40);
+                                       $d = substr($tt,120,40);
+                                       $e = substr($tt,160,40);
+
+                                        echo $a. "<br/>" . $b."<br/>".$c."<br/>".$d."<br/>".$e."<br/>";
+
+                                        ?>
+                                    </p>
                                 </div>
                                 <div class="logo_card">
                                     <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>

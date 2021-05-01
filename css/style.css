@@ -382,6 +382,8 @@ main{
     display: flex;
     flex-direction: column;
     color: #527B9E;
+    max-height: 10vw;
+
 }
 .accueil_card h3{
     text-transform: uppercase;
@@ -1119,6 +1121,12 @@ main{
     flex-direction: column;
     justify-content: space-around;
 }
+
+#ajout_main form[typeof="value"]{
+    color: red;
+}
+
+
 /*Les lignes*/
 .ajout_article{
     height: 5vh;

@@ -333,143 +333,146 @@ function ajout()
                 if (!empty($this->systeme))
                 {
                     if (strlen($this->systeme) < 3) {
-                        array_push($errors, "Le nom du système est trop court");
+                        array_push($errors, "Le nom du système est trop court:$this->systeme");
                     }
                 }
                 if (strlen($this->systeme) > 50) {
-                    array_push($errors, "Le nom du système est trop grand");
+                    array_push($errors, "Le nom du système est trop grand:$this->systeme");
                 }
                 if (!empty($this->interface_utilisateur))
                 {
                     if (strlen($this->interface_utilisateur) < 3) {
-                        array_push($errors, "Le nom de l'interface utilisateur est trop court");
+                        array_push($errors, "Le nom de l'interface utilisateur est trop court:$this->interface_utilisateur");
                     }
                 }
                 if (strlen($this->interface_utilisateur) > 50) {
-                    array_push($errors, "Le nom de l'interface utilisateur est trop grand");
+                    array_push($errors, "Le nom de l'interface utilisateur est trop grand:$this->interface_utilisateur");
                 }
                 if (!empty($this->ratio))
                 {
                     if (strlen($this->ratio) < 15) {
-                        array_push($errors, "Le ratio taille écran est trop petit");
+                        array_push($errors, "Le ratio taille écran est trop petit:$this->ratio");
                     }
                 }
                 if (strlen($this->ratio) > 200) {
-                    array_push($errors, "Le ratio taille écran est trop grand");
+                    array_push($errors, "Le ratio taille écran est trop grand:$this->ratio");
                 }
-                if (strlen($this->luminosite) < 200) {
-                    array_push($errors, "La valeur de la luminosité est trop faible");
+                if ($this->luminosite < 200) {
+                    array_push($errors, "La valeur de la luminosité est trop faible:$this->luminosite");
                 }
-                if (strlen($this->luminosite) > 1600) {
-                    array_push($errors, "La valeur de la luminosité est trop grande");
+                if ($this->luminosite > 1600) {
+                    array_push($errors, "La valeur de la luminosité est trop grande:$this->luminosite");
                 }
                 if (strlen($this->puce_graphique) < 3) {
-                    array_push($errors, "Le nom de la puce graphique est trop petit");
+                    array_push($errors, "Le nom de la puce graphique est trop petit:$this->puce_graphique");
                 }
                 if (strlen($this->puce_graphique) > 40) {
-                    array_push($errors, "Le nom de la puce graphique est trop grand");
+                    array_push($errors, "Le nom de la puce graphique est trop grand:$this->puce_graphique");
                 }
-                if (strlen($this->ram) < 3) {
-                    array_push($errors, "La valeur de la ram est trop faible");
+                if ($this->ram < 3) {
+                    array_push($errors, "La valeur de la ram est trop faible:$this->ram");
                 }
-                if (strlen($this->ram) > 35) {
-                    array_push($errors, "La valeur de la ram est trop grande");
+                if ($this->ram > 35) {
+                    array_push($errors, "La valeur de la ram est trop grande:$this->ram");
                 }
-                if (strlen($this->memoire_flash) <  30) {
-                    array_push($errors, "La valeur de la memoire flash est trop faible");
+                if ($this->memoire_flash <  30) {
+                    array_push($errors, "La valeur de la memoire flash est trop faible:$this->memoire_flash");
                 }
-                if (strlen($this->memoire_flash) > 2000) {
-                    array_push($errors, "La valeur de la memoire flash est trop grande");
+                if ($this->memoire_flash > 2000) {
+                    array_push($errors, "La valeur de la memoire flash est trop grande:$this->memoire_flash");
                 }
                 if (strlen($this->dast) < 0) {
-                    array_push($errors, "La valeur du DAS tête est trop faible");
+                    array_push($errors, "La valeur du DAS tête est trop faible:$this->dast");
                 }
-                if (strlen($this->dast) > 2) {
-                    array_push($errors, "La valeur du DAS tête est trop grande");
+                if (strlen($this->dast) > 4) {
+                    array_push($errors, "La valeur du DAS tête est trop grande:$this->dast");
                 }
                 if (strlen($this->dastr) < 0) {
-                    array_push($errors, "La valeur du DAS tronc est trop faible");
+                    array_push($errors, "La valeur du DAS tronc est trop faible:$this->dastr");
                 }
-                if (strlen($this->dast) > 2) {
-                    array_push($errors, "La valeur du DAS tronc est trop grande");
+                if (strlen($this->dast) > 4) {
+                    array_push($errors, "La valeur du DAS tronc est trop grande:$this->dastr");
                 }
                 if (strlen($this->dasm) < 0) {
-                    array_push($errors, "La valeur du DAS membre est trop faible");
+                    array_push($errors, "La valeur du DAS membre est trop faible:$this->dasm");
                 }
-                if (strlen($this->dasm) > 4) {
-                    array_push($errors, "La valeur du DAS membre est trop grande");
+                if (strlen($this->dasm) > 7) {
+                    array_push($errors, "La valeur du DAS membre est trop grande:$this->dasm");
                 }
-                if (strlen($this->taille) < 3.3) {
-                    array_push($errors, "La taille est trop faible pour un smartphone");
+                if ($this->taille < 3.3) {
+                    array_push($errors, "La taille est trop faible pour un smartphone:$this->taille");
                 }
-                if (strlen($this->taille) > 8.5) {
-                    array_push($errors, "La taille est trop grande pour un smartphone");
+                if ($this->taille > 8.5) {
+                    array_push($errors, "La taille est trop grande pour un smartphone:$this->taille");
                 }
                 if (strlen($this->type_ecran) < 3) {
-                    array_push($errors, "Le nom du type d'écran est trop court");
+                    array_push($errors, "Le nom du type d'écran est trop court:$this->type_ecran");
                 }
                 if (strlen($this->type_ecran) > 35) {
-                    array_push($errors, "Le nom du type d'écran est top long");
+                    array_push($errors, "Le nom du type d'écran est top long:$this->type_ecran");
                 }
                 if (strlen($this->definition_ecran) < 2) {
-                    array_push($errors, "La valeur de la définition de l'écran est trop faible");
+                    array_push($errors, "La valeur de la définition de l'écran est trop faible:$this->definition_ecran");
                 }
                 if (strlen($this->definition_ecran) > 6) {
-                    array_push($errors, "La valeur de la définition de l'écran est trop grande");
+                    array_push($errors, "La valeur de la définition de l'écran est trop grande:$this->definition_ecran");
                 }
-                if (strlen($this->batterie) < 1500) {
-                    array_push($errors, "La valeur de la batterie est trop faible");
+                if ($this->batterie < 1500) {
+                    array_push($errors, "La valeur de la batterie est trop faible:$this->batterie");
                 }
-                if (strlen($this->batterie) > 18000) {
-                    array_push($errors, "La valeur de la batterie est trop grande");
+                if ($this->batterie > 18000) {
+                    array_push($errors, "La valeur de la batterie est trop grande:$this->batterie");
                 }
                 if (!empty($this->nb_capteur))
                 {
                     if (strlen($this->nb_capteur) < 1) {
-                        array_push($errors, "La valeur du nombre de capteur est trop faible");
+                        array_push($errors, "La valeur du nombre de capteur est trop faible:$this->nb_capteur");
                     }
                 }
                 if (strlen($this->nb_capteur) > 15) {
-                    array_push($errors, "La valeur du nombre de capteur est trop grande");
+                    array_push($errors, "La valeur du nombre de capteur est trop grande:$this->nb_capteur");
                 }
                 if (!empty($this->taile_gravure))
                 {
                     if (strlen($this->taile_gravure) < 1) {
-                        array_push($errors, "La valeur de la taille de la gravure est trop faible");
+                        array_push($errors, "La valeur de la taille de la gravure est trop faible:$this->taile_gravure");
                     }
                 }
                 if (strlen($this->taile_gravure) > 15) {
-                    array_push($errors, "La valeur de la taille de la gravure est trop élevé");
+                    array_push($errors, "La valeur de la taille de la gravure est trop élevé:$this->taile_gravure");
                 }
                 if (strlen($this->nom) < 3) {
-                    array_push($errors, "La nom est trop petit");
+                    array_push($errors, "La nom est trop petit:$this->nom");
                 }
                 if (strlen($this->nom) > 40) {
-                    array_push($errors, "La nom est trop grand");
+                    array_push($errors, "La nom est trop grand:$this->nom");
                 }
                 if (strlen($this->marque) < 3) {
-                    array_push($errors, "La nom de la marque est trop petit");
+                    array_push($errors, "La nom de la marque est trop :$this->marque");
                 }
                 if (strlen($this->marque) > 40) {
-                    array_push($errors, "La nom de la marque est trop grand");
+                    array_push($errors, "La nom de la marque est trop grand:$this->marque");
                 }
-                if (strlen($this->prix) < 25) {
-                    array_push($errors, "La prix est trop petit");
+                if ($this->prix < 25) {
+                    array_push($errors, "La prix est trop petit:$this->prix");
                 }
-                if (strlen($this->prix) > 3500) {
-                    array_push($errors, "La prix est trop grand");
+                if ($this->prix > 3500) {
+                    array_push($errors, "La prix est trop grand:$this->prix");
                 }
                 if (strlen($this->number) < 1) {
-                    array_push($errors, "Vous devez avoir au moins 1 produit en stock!");
+                    array_push($errors, "Vous devez avoir au moins 1 produit en stock!:$this->number");
                 }
                 if (strlen($this->number) > 40000) {
-                    array_push($errors, "Vous ne pouvez pas avoir plus de quarante-mille produit en stock!");
+                    array_push($errors, "Vous ne pouvez pas avoir plus de quarante-mille produit en stock!:$this->number");
                 }
-                if (strlen($this->resolution_ecran) < 2) {
-                    array_push($errors, "La résolution de l'écran est trop faible");
+                 if (!empty($this->resolution_ecran))
+                {
+                    if (strlen($this->resolution_ecran) < 6) {
+                        array_push($errors, "La résolution de l'écran est trop faible:$this->resolution_ecran");
+                 }
                 }
-                if (strlen($this->resolution_ecran) > 20) {
-                    array_push($errors, "La raisonlution de l'écran est trop haute");
+                if (strlen($this->resolution_ecran) > 18) {
+                    array_push($errors, "La raisonlution de l'écran est trop haute:$this->resolution_ecran");
                 }
 
             }else{
@@ -483,6 +486,8 @@ function ajout()
                     $this->puce_graphique, $this->ram,$this->memoire_flash,$this->dast,$this->dastr,$this->dasm,$this->double_sim,$this->taille
                     ,$this->type_ecran,$this->definition_ecran,$this->batterie,$this->nb_capteur,$this->taile_gravure,$this->nom,
                     $this->marque,$this->number,$this->prix,$this->iduser,$this->resolution_ecran);
+
+                header('Location: accueil');
             }else {
                 return $errors;
             }

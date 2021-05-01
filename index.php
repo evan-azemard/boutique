@@ -19,6 +19,7 @@ require('controllers/panier.php');
 require('controllers/paiment.php');
 require('controllers/historique_vendeur.php');
 require('controllers/historique_commende.php');
+
 //switche d'une page à une autre
 
 if (isset($_GET['page']))
