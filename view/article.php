@@ -45,47 +45,47 @@ if ($_GET['id']) {
     <section id="article_section2">
         <article id="art_section2_1">
             <div class="art_section2_1_ligne">
-                <p>marque du model</p>
+                <p>Marque du model</p>
                 <p class="des"><?= $_SESSION['marque'] ?></p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>nom du model</p>
+                <p>Nom du model</p>
                 <p class="des"><?= $_SESSION['nom'] ?></p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>système</p>
+                <p>Système</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>puce graphique</p>
+                <p>Puce graphique</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>batterie</p>
+                <p>Batterie</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>nombre de capteur</p>
+                <p>Nombre de capteur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>qualité photo principal</p>
+                <p>Qualité photo principal</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>qualité vidéo principal</p>
+                <p>Qualité vidéo principal</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>type d'écran</p>
+                <p>Type d'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>resolution d'écran</p>
+                <p>Résolution d'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>définition d'écran</p>
+                <p>Définition d'écran</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
@@ -93,23 +93,23 @@ if ($_GET['id']) {
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>nombre de coeur</p>
+                <p>Nombre de coeur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>interface utilisateur</p>
+                <p>Interface utilisateur</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>memoire flash</p>
+                <p>Mémoire flash</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>ram</p>
+                <p>Ram</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>memoire flash</p>
+                <p>Mémoire flash</p>
                 <p class="des">2</p>
             </div>
             <div class="art_section2_1_ligne">
