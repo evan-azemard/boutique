@@ -416,6 +416,63 @@ main {
 .logo_card i {
   color: #527b9e;
 }
+.accueil_card:hover{
+    margin-top: -2%;
+    transition: 0.5s;
+}
+.accueil_card{
+    height: 48vh;
+    width: 20vw;
+    background-color: #E1E1E1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(-25px 67px 54px rgba(196, 194, 194, 0.68));
+    border-radius: 33px;
+}
+.card_img{
+    margin-bottom: 3%;
+}
+.card_img img{
+    width: 100%;
+    border-radius: 32px 32px 0 3px;
+}
+.card_description{
+    display: flex;
+    flex-direction: column;
+    color: #527B9E;
+    max-height: 10vw;
+
+}
+.accueil_card h3{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Sanchez, Arial, serif;
+    font-weight: 1;
+}
+.logo_card{
+    border-top: solid #525863 1px;
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.logo_card p{
+    color: #527B9E;
+    font-size: 2rem;
+}
+.logo_card input{
+    margin-left: 5%;
+    width: 3vw;
+    height: 3vh;
+    background-color: #527B9E;
+    color: #F2F2F2;
+}
+.number::placeholder{
+    color: #F2F2F2;
+}
+.logo_card i{
+    color: #527B9E;
+}
 
 /*Titre du main*/
 #accueil_main h2 {
@@ -837,14 +894,14 @@ input {
 .titre_produit {
   font-size: 2.3rem;
   color: #527b9e;
-  text-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 23px rgba(0, 0, 0, 0.25);
 }
 .produit_h1 {
   width: 100%;
   display: flex;
   justify-content: center;
   color: #527b9e;
-  text-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 23px rgba(0, 0, 0, 0.25);
   margin-bottom: 2%;
 }
 .banderole {
@@ -881,6 +938,10 @@ input {
 /*Article de l'image*/
 #art_sec1_art1_img {
   width: 30%;
+}
+#art_sec1_art1_img img{
+    height: 100%;
+    margin-left: 20%;
 }
 /*div de l'image*/
 #art1_img {
@@ -1117,6 +1178,12 @@ input {
   flex-direction: column;
   justify-content: space-around;
 }
+
+#ajout_main form[typeof="value"]{
+    color: red;
+}
+
+
 /*Les lignes*/
 .ajout_article {
   height: 5vh;

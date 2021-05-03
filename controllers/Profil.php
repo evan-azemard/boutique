@@ -124,7 +124,6 @@ function profil()
             $this->setAdresse($adresse);
             $errors = array();
 
-            var_dump($this->password);
             $hpass = password_hash($this->password, PASSWORD_DEFAULT);
             if ($this->pseudo || $this->tel || $this->password || $this->email || $this->r_password || $this->age || $this->prenom || $this->nom || $this->adresse) {
 
