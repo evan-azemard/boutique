@@ -1,19 +1,19 @@
 <!--lOGIN PAGE-->
 <?php
-if(isset($_POST["submit"])){
+if (isset($_POST["submit"])) {
     $user = new C_Login();
-    $errors = $user->loginF($_POST['pseudo'], $_POST['password'], $_POST['email'],$_POST['choix']);
+    $errors = $user->loginF($_POST['pseudo'], $_POST['password'], $_POST['email'], $_POST['choix']);
 } else {
     $errors = array();
 }
 ?>
 <main id="login_main">
-<?php include 'error.php'; ?>
+    <?php include 'error.php'; ?>
     <section id="section_login">
         <form method="post" id="login_form">
             <article class="login_article_button">
                 <div class="login_labput_button">
-                    <p id="lolo">Login</p>
+                    <p id="lolo">Connexion</p>
                 </div>
             </article>
             <article class="login_article">
@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
             </article>
             <article class="login_article">
                 <div class="login_labput">
-                    <label for="password">Password</label>
+                    <label for="password">Mot de passe</label>
 
                 </div>
                 <div class="login_labput">
@@ -54,15 +54,15 @@ if(isset($_POST["submit"])){
                             <label class="lolo2" for="choix1">Vendeur</label>
                         </div>
                         <div class="centre_radio2">
-                            <input  class="lolo3" type="radio" required value="2" name="choix" id="choix1" placeholder="">
+                            <input class="lolo3" type="radio" required value="2" name="choix" id="choix1" placeholder="">
                         </div>
                     </div>
                     <div class="radio">
                         <div class="centre_radio">
-                            <label  class="lolo2" for="choix2">Utilisateur</label>
+                            <label class="lolo2" for="choix2">Utilisateur</label>
                         </div>
                         <div class="centre_radio2">
-                            <input class="lolo3" type="radio" required value="1"  name="choix" id="choix2">
+                            <input class="lolo3" type="radio" required value="1" name="choix" id="choix2">
                         </div>
                     </div>
                 </div>
@@ -75,5 +75,3 @@ if(isset($_POST["submit"])){
         </form>
     </section>
 </main>
-
-

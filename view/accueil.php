@@ -1,4 +1,3 @@
-
 <!--Accueil-->
 <main id="accueil_main">
     <!--Affiche de promotion-->
@@ -32,7 +31,7 @@
             </div>
             <!--Les option de la card-->
             <div class="logo_card">
-                <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -51,7 +50,7 @@
                     un deuxième écran de 3.9 pouces goled.</p>
             </div>
             <div class="logo_card">
-                <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -70,7 +69,7 @@
                     un deuxième écran de 3.9 pouces goled.</p>
             </div>
             <div class="logo_card">
-                <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -80,7 +79,7 @@
 
 
     <div class="traimoyen"></div>
-    <h2>Derniers ajoué</h2>
+    <h2>Derniers produits ajoutés</h2>
 
     <section id="accueil_section2">
 
@@ -96,7 +95,7 @@
                     un deuxième écran de 3.9 pouces goled.</p>
             </div>
             <div class="logo_card">
-                <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -115,7 +114,7 @@
                     un deuxième écran de 3.9 pouces goled.</p>
             </div>
             <div class="logo_card">
-                <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -134,7 +133,7 @@
                     un deuxième écran de 3.9 pouces goled.</p>
             </div>
             <div class="logo_card">
-                <i  class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                 <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                 <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
                 <p>700 €</p>
@@ -147,10 +146,10 @@
         <article id="accueil_section3_article-form">
             <form method="post" id="form_contacte">
                 <div id="accueil_form1">
-                    <h2>Contacte</h2>
+                    <h2>Contact</h2>
                 </div>
                 <div id="accueil_form2">
-                    <label for="email">Adresse email</label>
+                    <label for="email">Email</label>
                     <input id="email" type="email">
                 </div>
                 <div id="accueil_form3">
@@ -159,21 +158,18 @@
                 </div>
                 <div id="accueil_form4">
                     <label for="textare">Message</label>
-                  <div id="contient_textarea">
-                    <textarea id="textare"></textarea>
-                  </div>
-                  </div>
+                    <div id="contient_textarea">
+                        <textarea id="textare"></textarea>
+                    </div>
+                </div>
                 <div id="accueil_form5">
                     <input type="submit" value="Envoyer" class="button">
                 </div>
-                  <div id="accueil_form6">
-                      <p>*Champs non obligatoire</p>
-                  </div>
+                <div id="accueil_form6">
+                    <p>*Champs non obligatoire</p>
+                </div>
             </form>
         </article>
     </section>
 </main>
 <!--la v50-->
-
-
-
