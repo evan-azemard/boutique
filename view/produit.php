@@ -26,7 +26,7 @@
                                     <p><?= $article['resum'] ?></p>
                                 </div>
                                 <div class="logo_card">
-                                    <a href="panier?id=<?= $article['id_produit'] ?>"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+                                <a href="produit?id=<?= $article['id_produit'] ?>"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
                                     <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                                     <a href="article?id=<?= $article['id_produit'] ?>"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></a>
                                     <p>700 €</p>

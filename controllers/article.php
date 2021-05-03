@@ -4,11 +4,9 @@ require ('model/article.php');
 
 function article()
 {
-
     class C_article
     {
         private $id;
-
 
         public function getId()
         {
@@ -31,14 +29,8 @@ function article()
                         $_SESSION['nom']  = $articles['nom_model'];
                         $_SESSION['resum']  = $articles['resum'];
                         $_SESSION['img']  = $articles['img'];
-
-
         }
-
-
-
     }
-
     //Template
     $template = 'article';
     //Layout (contient header , footer)
