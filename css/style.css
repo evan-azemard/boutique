@@ -883,6 +883,10 @@ main{
 #art_sec1_art1_img{
     width: 30%;
 }
+#art_sec1_art1_img img{
+    height: 100%;
+    margin-left: 20%;
+}
 /*div de l'image*/
 #art1_img{
     width: 100%;

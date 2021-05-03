@@ -23,6 +23,8 @@ function article()
             $this->setId($id);
             $errors = array();
 
+
+
             $articles = article_info($this->id);
 
                         $_SESSION['marque']  = $articles['marque_model'];

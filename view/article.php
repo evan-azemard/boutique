@@ -9,11 +9,11 @@ if ($_GET['id']) {
 ?>
 
 
-<main id="article_main">
+<main id="article_main" xmlns="http://www.w3.org/1999/html">
     <section id="article_section1">
         <div id="art_section1_article1">
             <article id="art_sec1_art1_img">
-
+                <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($_SESSION['bin_img']) . '"  alt="mon image" title="image"/>';?>
             </article>
             <article id="art_sec1_art1_txt">
                 <div id="art1_texth1">

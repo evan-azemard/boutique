@@ -21,4 +21,5 @@ function article_vendeur_info($id)
     $vendeur = $sel->fetch();
 
     return $vendeur;
+
 }
