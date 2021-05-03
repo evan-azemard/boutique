@@ -223,7 +223,7 @@ if ($_GET['id']) {
     <div class="traimoyen"></div>
     <section id="article_section3">
         <article id="art1_art1">
-            <label for="select_art">Noter l'article</label>
+            <label for="select_art">Noter l'article !</label>
         </article>
         <article id="art1_art2">
             <form method="post">
