@@ -1,5 +1,3 @@
-
-
 <main id="produit_main">
     <!--Affiche produit par section-->
     <div class="produit_h1 banderole">
@@ -55,20 +53,10 @@
                                     </p>
                                 </div>
                                 <div class="logo_card">
-<<<<<<< HEAD
-                                            <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
-                                    <form method="post">
-                                        <input type="number" name="numberpanier" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
-                                    </form>
-
-                                        <a href="article?id=<?= $article['id_produit']?>"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></a>
-                                        <p>700 €</p>
-=======
                                     <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
                                     <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
                                     <a href="article?id=<?= $article['id_produit'] ?>"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></a>
                                     <p>700 €</p>
->>>>>>> 0af36cea3e660073ab027997b6f5cd8934eaae05
                                 </div>
                             </article>
                         <?php } ?>
