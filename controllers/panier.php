@@ -2,8 +2,7 @@
 
 function panier(){
 
-
-
+    
         //Template
     $template = 'panier';
     //Layout (contient header , footer)

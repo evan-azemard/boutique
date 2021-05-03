@@ -53,7 +53,7 @@ if(isset($_POST["submit"]))
             <article class="ajout_article">
                 <div class="article_rectangle">
                     <div class="ajout_1">
-                        <label for="systeme">Systeme :</label>
+                        <label for="systeme">Système :</label>
                     </div>
                     <div class="ajout_2">
                         <input type="text" <?php if (!empty($_POST['systeme'])){ ?>style="color: red"  value="<?php echo $_POST['systeme'] ?>"<?php ;}?>  placeholder="Ex: Android 10" maxlength="50" minlength="3" name="systeme" id="systeme">
@@ -61,7 +61,7 @@ if(isset($_POST["submit"]))
                 </div>
                 <div class="article_rectangle">
                      <div class="ajout_1">
-                         <label for="interface_utilisateur">Interface_utilisateur :</label>
+                         <label for="interface_utilisateur">Interface utilisateur :</label>
                      </div>
                     <div class="ajout_2">
                         <input type="text" <?php if (!empty($_POST['interface_utilisateur'])){ ?>style="color: red"  value="<?php echo $_POST['interface_utilisateur'] ?>"<?php ;}?>  maxlength="50" placeholder="Ex: OxygenOS"  minlength="3" name="interface_utilisateur" id="interface_utilisateur">
@@ -71,7 +71,7 @@ if(isset($_POST["submit"]))
             <article class="ajout_article">
                 <div class="article_rectangle">
                     <div class="ajout_1">
-                        <label for="resolution_ecran">Resolution de l'écran :</label>
+                        <label for="resolution_ecran">Résolution de l'écran :</label>
                     </div>
                     <div class="ajout_2">
                         <input type="text"  <?php if (!empty($_POST['resolution_ecran'])){ ?>style="color: red"  value="<?php echo $_POST['resolution_ecran'] ?>"<?php ;}?>  minlength="2" placeholder="Ex: 800 ppi." maxlength="20" name="resolution_ecran" id="resolution_ecran">
@@ -89,7 +89,7 @@ if(isset($_POST["submit"]))
             <article class="ajout_article">
                 <div class="article_rectangle">
                      <div class="ajout_1">
-                         <label for="luminosite">Luminositée en cd/m2 :</label>
+                         <label for="luminosite">Luminosité en cd/m2 :</label>
                      </div>
                     <div class="ajout_2">
                         <input type="number"  <?php if (!empty($_POST['luminosite'])){ ?>style="color: red"  value="<?php echo $_POST['luminosite'] ?>"<?php ;}?>  placeholder="Uniquement la valeur, ex: 600" required maxlength="1600" minlength="200" name="luminosite" id="luminosite">
@@ -164,7 +164,7 @@ if(isset($_POST["submit"]))
             <article class="ajout_article">
                 <div class="article_rectangle">
                      <div class="ajout_1">
-                         <label for="taille">Taile :</label>
+                         <label for="taille">Taille :</label>
                      </div>
                     <div class="ajout_2">
                         <input type="text" <?php if (!empty($_POST['taile'])){ ?>style="color: red"  value="<?php echo $_POST['taile'] ?>"<?php ;}?>  placeholder="Uniquement la valeur, ex: 6.6" required maxlength="8,5" name="taile" id="taille">
@@ -182,7 +182,7 @@ if(isset($_POST["submit"]))
             <article class="ajout_article">
                 <div class="article_rectangle">
                      <div class="ajout_1">
-                         <label for="definition_ecran">Definition de l'écran :</label>
+                         <label for="definition_ecran">Définition de l'écran :</label>
                      </div>
                     <div class="ajout_2">
                         <input type="text" <?php if (!empty($_POST['definition_ecran'])){ ?>style="color: red"  value="<?php echo $_POST['definition_ecran'] ?>"<?php ;}?>  placeholder="Exemple: HD/FHD/UHD/..." required minlength="2" maxlength="6" name="definition_ecran" id="definition_ecran">
@@ -208,7 +208,7 @@ if(isset($_POST["submit"]))
                 </div>
                 <div class="article_rectangle">
                      <div class="ajout_1">
-                         <label for="taile_gravure">Taile de la gravure :</label>
+                         <label for="taile_gravure">Taille de la gravure :</label>
                      </div>
                     <div class="ajout_2">
                         <input type="text" <?php if (!empty($_POST['taile_gravure'])){ ?>style="color: red"  value="<?php echo $_POST['taile_gravure'] ?>"<?php ;}?>  placeholder="Exemple: 4.55 nm" minlength="1" maxlength="15" name="taile_gravure" id="taile_gravure">
