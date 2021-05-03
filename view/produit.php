@@ -37,7 +37,6 @@
                                         <?php
 
                                         $t = strlen($article['resum']);
-                                        var_dump($t);
                                         if ($t > 150){
                                            $tt = substr($article['resum'],0,120) . '[...]';
                                         }
@@ -47,6 +46,7 @@
                                        $c = substr($tt,80,40);
                                        $d = substr($tt,120,40);
                                        $e = substr($tt,160,40);
+
 
                                         echo $a. "<br/>" . $b."<br/>".$c."<br/>".$d."<br/>".$e."<br/>";
 

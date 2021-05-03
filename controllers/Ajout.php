@@ -350,11 +350,11 @@ function ajout()
                 }
                 if (!empty($this->ratio))
                 {
-                    if (strlen($this->ratio) < 15) {
+                    if ($this->ratio < 15) {
                         array_push($errors, "Le ratio taille écran est trop petit:$this->ratio");
                     }
                 }
-                if (strlen($this->ratio) > 200) {
+                if ($this->ratio > 200) {
                     array_push($errors, "Le ratio taille écran est trop grand:$this->ratio");
                 }
                 if ($this->luminosite < 200) {
@@ -467,11 +467,11 @@ function ajout()
                 }
                  if (!empty($this->resolution_ecran))
                 {
-                    if (strlen($this->resolution_ecran) < 6) {
+                    if ($this->resolution_ecran < 6) {
                         array_push($errors, "La résolution de l'écran est trop faible:$this->resolution_ecran");
                  }
                 }
-                if (strlen($this->resolution_ecran) > 18) {
+                if ($this->resolution_ecran > 90000) {
                     array_push($errors, "La raisonlution de l'écran est trop haute:$this->resolution_ecran");
                 }
 
