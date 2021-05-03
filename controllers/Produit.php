@@ -30,6 +30,39 @@ function produit ()
  *
  */
 
+    class C_produit{
+
+        public $id;
+        public $number;
+
+        public function getId(){
+            return $this->id;
+        }
+         public function setId($id)
+        {
+            $this->id = $id;
+        }
+
+        public function getNumber(){
+            return $this->number;
+        }
+         public function setNumber($number)
+        {
+            $this->number = $number;
+        }
+
+        public function produit($id,$number){
+            $this->setNumber($number);
+            $this->setId($id);
+        }
+
+
+
+
+    }
+
+
+
     class cart
     {
 

@@ -1,3 +1,13 @@
+<?php
+if (isset($_POST['ppan'])){
+/*    header("refresh: 1");*/
+$user = new C_produit();
+    $errors = $user->produit($_POST['idppa'],$_POST['number']);
+} else {
+    $errors = array();
+}
+
+?>
 <main id="produit_main">
     <!--Affiche produit par section-->
     <div class="produit_h1 banderole">
@@ -53,9 +63,12 @@
                                     </p>
                                 </div>
                                 <div class="logo_card">
-                                    <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
-                                    <input type="number" class="number" id="number" placeholder="1" min="1" max="500"><label for="number"></label>
-                                    <a href="article?id=<?= $article['id_produit'] ?>"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></a>
+                                    <form method="post" style="display: flex">
+                                        <input type="submit" name="ppan" value="ajouter">
+                                        <input type="number" name="number" class="number" id="number" placeholder="1" value="<?php if (empty($_POST['number'])){echo 1;}?>" min="1" max="500"><label for="number"></label>
+                                        <input type="text" aria-label="pasID" name="idppa" value="<?=$article['id_produit']?>" style="display: none">
+                                    </form>
+                                        <a href="article?id=<?= $article['id_produit']?>"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></a>
                                     <p>700 €</p>
                                 </div>
                             </article>
