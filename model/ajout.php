@@ -2,10 +2,37 @@
 
 /*Pour ajouter un produit*/
 
-function ajouter($imgname,$imgsize,$imgtype,$imgtmp,$resum,$description,$systeme,$interface_utilisateur,
-                 $ratio,$luminosite,$puce_graphique,$ram,$memoire_flash,$dast,$dastr,$dasm,$double_sim,$taille,
-                 $type_ecran,$definition_ecran,$batterie,$nb_capteur,$taile_gravure,$nom,$marque,$number,$prix,$iduser,$resolution_ecran)
-{
+function ajouter(
+    $imgname,
+    $imgsize,
+    $imgtype,
+    $imgtmp,
+    $resum,
+    $description,
+    $systeme,
+    $interface_utilisateur,
+    $ratio,
+    $luminosite,
+    $puce_graphique,
+    $ram,
+    $memoire_flash,
+    $dast,
+    $dastr,
+    $dasm,
+    $double_sim,
+    $taille,
+    $type_ecran,
+    $definition_ecran,
+    $batterie,
+    $nb_capteur,
+    $taile_gravure,
+    $nom,
+    $marque,
+    $number,
+    $prix,
+    $iduser,
+    $resolution_ecran
+) {
     $time = date('Y-m-d H:i:s');
 
     $bdd = db_connect();
@@ -52,9 +79,5 @@ function ajouter($imgname,$imgsize,$imgtype,$imgtmp,$resum,$description,$systeme
         ':bin_img' => $imgtmp,
         ':id_vendeur' => $iduser,
         ':resolution_ecran' => $resolution_ecran
-        ));
+    ));
 }
-
-
-
-

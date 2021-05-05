@@ -1,10 +1,10 @@
 <?php
 
 /*Pour la page qui affiche les produits trié*/
-require ('model/produit.php');
-require ('library/fonctions.php');
+require('model/produit.php');
+require('library/fonctions.php');
 
-function produit ()
+function produit()
 {
 
     /*
@@ -16,47 +16,49 @@ function produit ()
      *
      * */
 
-    class C_produit{
+    class C_produit
+    {
 
         private $id;
         private $number;
 
-        public function getId(){
+        public function getId()
+        {
             return $this->id;
         }
-         public function setId($id)
+        public function setId($id)
         {
             $this->id = $id;
         }
 
-        public function getNumber(){
+        public function getNumber()
+        {
             return $this->number;
         }
-         public function setNumber($number)
+        public function setNumber($number)
         {
             $this->number = $number;
         }
 
-        public function produit($id,$number){
+        public function produit($id, $number)
+        {
             $this->setNumber($number);
             $this->setId($id);
             $errors = array();
 
 
 
-            if ($this->id < 1 || $this->id > 50)
-            {
+            if ($this->id < 1 || $this->id > 50) {
                 array_push($errors, "Vous pouvez sélectioner au maximum 50 même produit");
-
             }
 
             if (count($errors) < 1) {
 
-               $data_article = data_article($this->id);
+                $data_article = data_article($this->id);
 
                 foreach ($data_article as $item) {
                     $prix = $item['prix_article'];
-               }
+                }
 
 
                 $prixf =  (int)$prix * (int)$this->number;
@@ -64,22 +66,13 @@ function produit ()
                 $id_article = (int)$this->id;
                 $number_article = (int)$this->number;
 
-               ajout_panier($id_user,$id_article,$number_article,$prixf);
+                ajout_panier($id_user, $id_article, $number_article, $prixf);
 
-               unset($prixf);
+                unset($prixf);
 
-                 header("refresh: 1");
-
-
-
+                header("refresh: 1");
             }
-
-
         }
-
-
-
-
     }
 
 
@@ -192,4 +185,3 @@ function produit ()
     //Layout (contient header , footer)
     include('view/layout.php');
 }
-
