@@ -77,7 +77,7 @@
             <div id="header_lien_button">
                 <button><a href="disconnect">Déconexion</a> </button>
             </div>
-            <i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+            <a href="panier"><i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
         </div>
     </header>
 
