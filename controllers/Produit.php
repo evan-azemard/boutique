@@ -6,34 +6,20 @@ require ('library/fonctions.php');
 
 function produit ()
 {
-    $articles_model = article_model();
-
-    //Template
-    $template = 'produit';
-    //Layout (contient header , footer)
-    include('view/layout.php');
 
     /*
      *  Si il n'y a pas de nom d'article correspondant au nom_model,
      *  Alors on crée un nouvelle article avec le nom model
      *  on selectione les champs qui correspond au nom de l'article
-     *
      * Selectionner tout les nom de model
      * Les afficher
      *
      * */
 
-
-
-/**
- *  FICHIER : cart.class.php
- *
- */
-
     class C_produit{
 
-        public $id;
-        public $number;
+        private $id;
+        private $number;
 
         public function getId(){
             return $this->id;
@@ -54,6 +40,41 @@ function produit ()
         public function produit($id,$number){
             $this->setNumber($number);
             $this->setId($id);
+            $errors = array();
+
+
+
+            if ($this->id < 1 || $this->id > 50)
+            {
+                array_push($errors, "Vous pouvez sélectioner au maximum 50 même produit");
+
+            }
+
+            if (count($errors) < 1) {
+
+               $data_article = data_article($this->id);
+
+                foreach ($data_article as $item) {
+                    $prix = $item['prix_article'];
+               }
+
+
+                $prixf =  (int)$prix * (int)$this->number;
+                $id_user = (int)$_SESSION['id'];
+                $id_article = (int)$this->id;
+                $number_article = (int)$this->number;
+
+               ajout_panier($id_user,$id_article,$number_article,$prixf);
+
+               unset($prixf);
+
+                 header("refresh: 1");
+
+
+
+            }
+
+
         }
 
 
@@ -162,5 +183,13 @@ function produit ()
             return $total;
         }
     }
+
+
+    $articles_model = article_model();
+
+    //Template
+    $template = 'produit';
+    //Layout (contient header , footer)
+    include('view/layout.php');
 }
 

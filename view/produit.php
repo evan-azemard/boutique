@@ -1,13 +1,12 @@
 <?php
 if (isset($_POST['ppan'])){
-/*    header("refresh: 1");*/
 $user = new C_produit();
     $errors = $user->produit($_POST['idppa'],$_POST['number']);
 } else {
     $errors = array();
-}
+}?>
 
-?>
+
 <main id="produit_main">
     <!--Affiche produit par section-->
     <div class="produit_h1 banderole">
@@ -69,7 +68,7 @@ $user = new C_produit();
                                         <input type="text" aria-label="pasID" name="idppa" value="<?=$article['id_produit']?>" style="display: none">
                                     </form>
                                         <a href="article?id=<?= $article['id_produit']?>"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></a>
-                                    <p>700 €</p>
+                                    <p><?= $article['prix_article']?></p>
                                 </div>
                             </article>
                         <?php } ?>
