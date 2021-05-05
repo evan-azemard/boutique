@@ -18,7 +18,7 @@
 
 <body>
     <!--Header-->
-    <header>
+<!--    <header>
         <div id="header_menu">
             <div class="sectiondiv">
                 <div id="déroul" class="DEL" style="overflow: auto; min-height: 85%;">
@@ -80,7 +80,7 @@
             <a href="panier"><i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
         </div>
     </header>
-
+-->
     <!--Main-->
 
     <!--Template-->
