@@ -28,6 +28,7 @@ function remplaceV($nameA,$urlA){
           }
       }
 }
+
 /*Si tu n'est pa connecté tu à accé*/
 function remplaceRIEN($nameA,$urlA){
     if (empty($_SESSION['id'])){
@@ -37,7 +38,6 @@ function remplaceRIEN($nameA,$urlA){
         }else{
         echo '';
     }
-
 }
 /*Si tu est admin tu à accé*/
 function remplaceAd($nameA,$urlA){

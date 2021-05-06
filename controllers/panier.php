@@ -26,6 +26,7 @@ function panier(){
             /*Récupére l'id du panier*/
             $articles = article_panier($this->id);
 
+            var_dump($articles);
 
 /*$i = 0;
 while ($i < 20){
@@ -33,14 +34,18 @@ while ($i < 20){
 
     $i++;
 }*/
+
+
                 /*Selectione tout les produit du même panier*/
 
-              $articles_pp =  article_pp($articles);
+/*              $articles_pp =  article_pp($articles);*/
 
             /*Selectione l'article qui correspond à l'id */
-            $select_all = select_all((int)$articles_pp);
+/*            $articlekey = array_values($articles_pp);*/
+/*            var_dump($articlekey);*/
+/*            $select_all = select_all($articlekey);*/
 
-            var_dump($select_all['luminosite']);
+/*            var_dump($select_all['luminosite']);*/
             ?> <pre>
 
     <?php
