@@ -32,12 +32,10 @@ function remplace($nameA,$urlA){
     }
 }
 function remplace3($nameA,$urlA){
-    if(empty($_SESSION['rank'] = 2)){
+    if(empty($_SESSION['rank'] > 1)){
         echo "<a href='$urlA' class='colorlien'>";
         echo"$nameA";
         echo "</a>";
-    }else{
-        echo '';
     }
 }
 function remplace4($nameA,$urlA){
@@ -63,12 +61,16 @@ function remplace4($nameA,$urlA){
                     <?php remplace2("Connexion","login"); ?>
                     <?php remplace("Profil","profil"); ?>
                     <a class="colorlien" href="produit">Découvrer nos produits</a>
-                    <?php remplace("Ajouter un article","ajout"); ?>
-                    <?php remplace("Historique de vente","historique_vendeur"); ?>
+                    <?php remplace4("Ajouter un article","ajout"); ?>
+                    <?php remplace3("Ajouter un article","ajout"); ?>
+                    <?php remplace4("Historique de vente","historique_vendeur"); ?>
+                    <?php remplace3("Historique de vente","historique_vendeur"); ?>
                     <?php remplace("Historique des commandes","historique_commende"); ?>
                     <?php remplace("Panier","panier"); ?>
-                    <?php remplace("Admin","admin"); ?>
-                    <?php remplace("Gérant","gerant"); ?>
+                    <?php remplace4("Admin","admin"); ?>
+                    <?php remplace3("Admin","admin"); ?>
+                    <?php remplace4("Gérant","gerant"); ?>
+                    <?php remplace3("Gérant","gerant"); ?>
                     <?php remplace("Déconnexion","disconnect"); ?>
                 </div>
                 <span style="font-size:30px;" onclick="openNav()">
