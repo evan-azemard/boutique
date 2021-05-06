@@ -42,14 +42,14 @@ if (isset($_POST["submit"])) {
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="pseudo">Pseudo</label>
-                            <input type="text" name="pseudo" minlength="4" maxlength="12" id="pseudo" required>
+                            <input  <?php if (!empty($_POST['pseudo'])){ ?>style="color: red"  value="<?php echo $_POST['pseudo'] ?>"<?php ;}?> type="text" name="pseudo" minlength="4" maxlength="12" id="pseudo" required>
                         </div>
                         <div class="register_labput">
                             <label for="téléphone">Téléphone</label>
                             <div id="telregister">
                                 <p>+33</p>
                             </div>
-                            <input type="number" name="tel" maxlength="9" minlength="9" id="téléphone" required>
+                            <input type="number" <?php if (!empty($_POST['tel'])){ ?>style="color: red"  value="<?php echo $_POST['tel'] ?>"<?php ;}?> name="tel" maxlength="9" minlength="9" id="téléphone" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
@@ -59,7 +59,7 @@ if (isset($_POST["submit"])) {
                         </div>
                         <div class="register_labput">
                             <label for="email">Email</label>
-                            <input type="email" name="email" minlength="9" maxlength="35" id="email" required>
+                            <input type="email" <?php if (!empty($_POST['email'])){ ?>style="color: red"  value="<?php echo $_POST['email'] ?>"<?php ;}?> name="email" minlength="9" maxlength="35" id="email" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
@@ -69,23 +69,23 @@ if (isset($_POST["submit"])) {
                         </div>
                         <div class="register_labput">
                             <label for="age">Âge</label>
-                            <input type="number" name="age" minlength="13" maxlength="115" id="age" required>
+                            <input type="number" name="age" <?php if (!empty($_POST['age'])){ ?>style="color: red"  value="<?php echo $_POST['age'] ?>"<?php ;}?>  minlength="13" maxlength="115" id="age" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="prenom">Prénom</label>
-                            <input type="text" name="prenom" maxlength="12" min="3" id="prenom" required>
+                            <input type="text" name="prenom" <?php if (!empty($_POST['prenom'])){ ?>style="color: red"  value="<?php echo $_POST['prenom'] ?>"<?php ;}?> maxlength="12" min="3" id="prenom" required>
                         </div>
                         <div class="register_labput">
                             <label for="adresse">Adresse complète</label>
-                            <input type="text" minlength="20" maxlength="80" name="adresse" id="adresse" required>
+                            <input type="text" minlength="20" maxlength="80"  <?php if (!empty($_POST['adresse'])){ ?>style="color: red"  value="<?php echo $_POST['adresse'] ?>"<?php ;}?> name="adresse" id="adresse" required>
                         </div>
                     </div>
                     <div class="register_form_contient">
                         <div class="register_labput">
                             <label for="nom">Nom</label>
-                            <input type="text" name="nom" maxlength="15" min="3" id="nom" required>
+                            <input type="text" name="nom"  <?php if (!empty($_POST['nom'])){ ?>style="color: red"  value="<?php echo $_POST['nom'] ?>"<?php ;}?> maxlength="15" min="3" id="nom" required>
                         </div>
                         <div class="register_labput5">
                             <p id="labelcompte">Type de compte</p>

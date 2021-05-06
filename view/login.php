@@ -26,7 +26,7 @@ if (isset($_POST["submit"])) {
                     <label for="pseudo">Pseudo</label>
                 </div>
                 <div class="login_labput">
-                    <input type="text" name="pseudo" id="pseudo" required>
+                    <input <?php if (!empty($_POST['pseudo'])){ ?>style="color: red"  value="<?php echo $_POST['pseudo'] ?>"<?php ;}?> type="text" name="pseudo" id="pseudo" required>
                 </div>
             </article>
             <article class="login_article">
@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
 
                 </div>
                 <div class="login_labput">
-                    <input type="password" name="password" autocomplete="on" id="password" required>
+                    <input type="password"   name="password" autocomplete="on" id="password" required>
 
                 </div>
             </article>
@@ -45,7 +45,7 @@ if (isset($_POST["submit"])) {
 
                 </div>
                 <div class="login_labput">
-                    <input type="email" name="email" id="email" required>
+                    <input type="email"  <?php if (!empty($_POST['email'])){ ?>style="color: red"  value="<?php echo $_POST['email'] ?>"<?php ;}?> name="email" id="email" required>
 
                 </div>
             </article>
