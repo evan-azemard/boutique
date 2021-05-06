@@ -16,29 +16,53 @@
     <title>Smart Your Future</title>
 </head>
 <?php
-
-function remplace2($nameA,$urlA){
+/*Si tu est vendeur tu à accé*/
+function remplaceV($nameA,$urlA){
+      if (!empty($_SESSION['id'])) {
+          if ($_SESSION['rank'] == 2) {
+              echo "<a href='$urlA' class='colorlien'>";
+              echo "$nameA";
+              echo "</a>";
+          } else {
+              echo '';
+          }
+      }
+}
+/*Si tu n'est pa connecté tu à accé*/
+function remplaceRIEN($nameA,$urlA){
+    if (empty($_SESSION['id'])){
         echo "<a href='$urlA' class='colorlien'>";
         echo"$nameA";
         echo "</a>";
+        }else{
+        echo '';
+    }
 
 }
-function remplace($nameA,$urlA){
+/*Si tu est admin tu à accé*/
+function remplaceAd($nameA,$urlA){
+    if (!empty($_SESSION['id']))
+    {
+    if ($_SESSION['rank'] == 3) {
         echo "<a href='$urlA' class='colorlien'>";
-        echo"$nameA";
+        echo "$nameA";
         echo "</a>";
+    }else{
+        echo '';
+    }
+    }
+
 
 }
-function remplace3($nameA,$urlA){
+/*Si tu est connecté tu affiche*/
+function remplaceID($nameA,$urlA){
+    if (isset($_SESSION['id'])) {
         echo "<a href='$urlA' class='colorlien'>";
-        echo"$nameA";
+        echo "$nameA";
         echo "</a>";
-
-}
-function remplace4($nameA,$urlA){
-        echo "<a href='$urlA' class='colorlien'>";
-        echo"$nameA";
-        echo "</a>";
+    }else{
+        echo '';
+    }
 
 }
 ?>
@@ -53,21 +77,17 @@ function remplace4($nameA,$urlA){
                 <div id="déroul" class="DEL" style="overflow: auto; min-height: 85%;">
                     <a href="#" class="fermer" onclick="closeNav()">×</a>
                     <a class="colorlien" href="accueil">Accueil</a>
-                    <?php remplace2("Inscription","register"); ?>
-                    <?php remplace2("Connexion","login"); ?>
-                    <?php remplace("Profil","profil"); ?>
+                    <?php remplaceRIEN("Inscription","register"); ?>
+                    <?php remplaceRIEN("Connexion","login"); ?>
+                    <?php remplaceID("Profil","profil"); ?>
                     <a class="colorlien" href="produit">Découvrer nos produits</a>
-                    <?php remplace4("Ajouter un article","ajout"); ?>
-                    <?php remplace3("Ajouter un article","ajout"); ?>
-                    <?php remplace4("Historique de vente","historique_vendeur"); ?>
-                    <?php remplace3("Historique de vente","historique_vendeur"); ?>
-                    <?php remplace("Historique des commandes","historique_commende"); ?>
-                    <?php remplace("Panier","panier"); ?>
-                    <?php remplace4("Admin","admin"); ?>
-                    <?php remplace3("Admin","admin"); ?>
-                    <?php remplace4("Gérant","gerant"); ?>
-                    <?php remplace3("Gérant","gerant"); ?>
-                    <?php remplace("Déconnexion","disconnect"); ?>
+                    <?php remplacev("Ajouter un article","ajout"); ?>
+                    <?php remplacev("Historique de vente","historique_vendeur"); ?>
+                    <?php remplaceID("Historique des commandes","historique_commende"); ?>
+                    <?php remplaceID("Panier","panier"); ?>
+                    <?php remplaceAd("Admin","admin"); ?>
+                    <?php remplaceAd("Gérant","gerant"); ?>
+                    <?php remplaceID("Déconnexion","disconnect"); ?>
                 </div>
                 <span style="font-size:30px;" onclick="openNav()">
                     <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
@@ -121,7 +141,6 @@ function remplace4($nameA,$urlA){
     <!--Footer-->
     <footer>
         <div id="footer_div1">
-        <?php var_dump($_SESSION['rank']); ?>
             <div>
                 <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
                 <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
