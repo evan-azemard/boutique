@@ -1,16 +1,5 @@
 <?php
 require ('model/panier.php');
-
-function debug($variable,$color = null){
-if (!isset($color)){
-    $color = "gray";
-}
-    echo "<span style='color: $color; font-weight: bold; font-size: 1.2vh; '>";
-    echo '<pre>';
-    print_r($variable);
-    echo '</pre> <hr>';
-    echo '<span>';
-}
 function panier(){
 
     class C_affiche
@@ -28,27 +17,30 @@ function panier(){
             $this->id = $id;
         }
 
+
+
         public function affiche_panier($id)
         {
             $this->setId($id);
 
-
+            /*Récupére l'id du panier*/
             $articles = article_panier($this->id);
 
-            foreach ($articles as $tab) {
-                $id = $tab['id_panier'];
-            }
 
-            $articles_pp = article_pp($id);
+                /*Selectione tout les produit du même panier*/
 
-            debug($articles_pp,"red");
+              $articles_pp =  article_pp($articles);
 
-
+            /*Selectione l'article qui correspond à l'id */
+            $select_all = select_all((int)$articles_pp);
 
 
-           $articles_panier =  select_panier($id);
+            ?> <pre>
 
-
+    <?php
+    print_r($select_all['luminosite']);
+    ?>
+            </pre> <?php
 
         }
 
