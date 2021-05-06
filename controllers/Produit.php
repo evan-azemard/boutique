@@ -21,7 +21,8 @@ function produit()
 
         private $id;
         private $number;
-
+        
+        
         public function getId()
         {
             return $this->id;
