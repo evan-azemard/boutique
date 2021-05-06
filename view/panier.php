@@ -4,8 +4,8 @@ if (empty($_SESSION['id'])) {
 }
 ?>
 <?php
- $user = new C_affiche();
- $errors = $user->affiche_panier($_SESSION['id']);
+$user = new C_affiche();
+$errors = $user->affiche_panier($_SESSION['id']);
 ?>
 <main id="panier_main">
     <section id="panier_section">

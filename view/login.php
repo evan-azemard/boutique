@@ -51,7 +51,7 @@ if (isset($_POST["submit"])) {
             </article>
             <article class="login_article">
                 <div class="login_labput2">
-                    <p class="lolo2">Type de comtpe </p>
+                    <p class="lolo2">Type de compte </p>
                 </div>
                 <div id="login_labput_radio">
                     <div class="radio">

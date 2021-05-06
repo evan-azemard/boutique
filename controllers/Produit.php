@@ -1,10 +1,10 @@
 <?php
 
 /*Pour la page qui affiche les produits trié*/
-require ('model/produit.php');
-require ('library/fonctions.php');
+require('model/produit.php');
+require('library/fonctions.php');
 
-function produit ()
+function produit()
 {
 
     /*
@@ -21,12 +21,10 @@ function produit ()
 
         private $id;
         private $number;
-
         public function getId()
         {
             return $this->id;
         }
-
         public function setId($id)
         {
             $this->id = $id;
@@ -36,7 +34,6 @@ function produit ()
         {
             return $this->number;
         }
-
         public function setNumber($number)
         {
             $this->number = $number;
@@ -54,7 +51,6 @@ function produit ()
 
             if ($this->id < 1 || $this->id > 50) {
                 array_push($errors, "Vous pouvez sélectioner au maximum 50 même produit");
-
             }
 
             if (count($errors) < 1) {
@@ -77,10 +73,10 @@ function produit ()
 
                 header("refresh: 1");
 
+                unset($prixf);
 
+                header("refresh: 1");
             }
-
-
         }
 
 
@@ -95,4 +91,3 @@ function produit ()
     //Layout (contient header , footer)
     include('view/layout.php');
 }
-
