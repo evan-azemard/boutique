@@ -1,6 +1,8 @@
 <?php
-if (empty($_SESSION['id'] && !empty($_SESSION['rank'] < 2 ))){
+if (empty($_SESSION['id'])){
     header("Location: login");
+}elseif ( (!empty($_SESSION['rank'] = 1))){
+        header("Location: login");
 }
 ?>
 <main id="gerant_main">
