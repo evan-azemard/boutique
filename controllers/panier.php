@@ -34,11 +34,13 @@ function panier(){
             /*Selectione l'article qui correspond à l'id */
             $select_all = select_all((int)$articles_pp);
 
-
+        foreach ($select_all as $all){
+            $al = $all['luminosite'];
+        }
             ?> <pre>
 
     <?php
-    print_r($select_all['luminosite']);
+    print_r($all['luminosite']);
     ?>
             </pre> <?php
 

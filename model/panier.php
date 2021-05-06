@@ -32,8 +32,7 @@ function  select_all($data)
     $t = "21,22";
     $sel = $bdd->prepare('select * from articles INNER JOIN paniers ON ? = articles.id_produit  ');
     $sel->execute(array($t));
-    $select_all = $sel->fetch();
-    var_dump($select_all['luminosite']);
+    $select_all = $sel->fetchall();
     return $select_all;
 }
 
