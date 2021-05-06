@@ -20,8 +20,7 @@ function  article_pp($id)
 
     $sel = $bdd->prepare('select id_produit  from paniers  WHERE id_panier = ?');
     $sel->execute(array($id));
-    $articles_pp = $sel->fetchColumn();
-    var_dump($articles_pp);
+    $articles_pp = $sel->fetchall();
 
     return $articles_pp;
 }
@@ -30,10 +29,11 @@ function  article_pp($id)
 function  select_all($data)
 {
     $bdd =  db_connect();
-
-    $sel = $bdd->prepare('select * from articles WHERE id_produit = ? ');
-    $sel->execute(array($data));
+    $t = "21,22";
+    $sel = $bdd->prepare('select * from articles INNER JOIN paniers ON ? = articles.id_produit  ');
+    $sel->execute(array($t));
     $select_all = $sel->fetch();
+    var_dump($select_all['luminosite']);
     return $select_all;
 }
 
