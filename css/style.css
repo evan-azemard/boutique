@@ -1693,12 +1693,12 @@ option:focus {
                 Page de paiment
 \*-------------------------------------------*/
 #main_paiment {
-  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
+  margin-top: -2%;
 }
 /*logo color*/
 #main_paiment i {

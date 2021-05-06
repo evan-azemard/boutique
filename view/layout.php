@@ -159,5 +159,4 @@ function remplaceID($nameA,$urlA){
         </div>
     </footer>
 </body>
-
 </html>
