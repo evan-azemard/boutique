@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['rank'] <  2 ){
+if (empty($_SESSION['id'] && !empty($_SESSION['rank'] < 2 ))){
     header("Location: login");
 }
 ?>

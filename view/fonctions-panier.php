@@ -1,6 +1,6 @@
 <?php
 
-    header("Location: login");
+ /*   header("Location: login");*/
 
 //fonction creation panier
 

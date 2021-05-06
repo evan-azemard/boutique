@@ -15,27 +15,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <title>Smart Your Future</title>
 </head>
+<?php
+
+function remplace2($nameA,$urlA){
+    if(empty($_SESSION['id'])){
+        echo "<a href='$urlA' class='colorlien'>";
+        echo"$nameA";
+        echo "</a>";
+    }
+}
+function remplace($nameA,$urlA){
+    if(!empty($_SESSION['id'])){
+        echo "<a href='$urlA' class='colorlien'>";
+        echo"$nameA";
+        echo "</a>";
+    }
+}
+function remplace3($nameA,$urlA){
+    if(empty($_SESSION['rank'] = 2)){
+        echo "<a href='$urlA' class='colorlien'>";
+        echo"$nameA";
+        echo "</a>";
+    }else{
+        echo '';
+    }
+}
+function remplace4($nameA,$urlA){
+    if(empty($_SESSION['rank'] = 1)){
+        echo "<a href='$urlA' class='colorlien'>";
+        echo"$nameA";
+        echo "</a>";
+    }
+}
+?>
+
+
 
 <body>
     <!--Header-->
-<!--    <header>
+    <header>
         <div id="header_menu">
             <div class="sectiondiv">
                 <div id="déroul" class="DEL" style="overflow: auto; min-height: 85%;">
                     <a href="#" class="fermer" onclick="closeNav()">×</a>
                     <a class="colorlien" href="accueil">Accueil</a>
-                    <a class="colorlien" href="register">Inscription</a>
-                    <a class="colorlien" href="login">Connexion</a>
-                    <a class="colorlien" href="profil">Profil</a>
-                    <a class="colorlien" href="disconnect">Déconnexion</a>
-                    <a class="colorlien" href="ajout">Ajouter un article</a>
+                    <?php remplace2("Inscription","register"); ?>
+                    <?php remplace2("Connexion","login"); ?>
+                    <?php remplace("Profil","profil"); ?>
                     <a class="colorlien" href="produit">Découvrer nos produits</a>
-                    <a class="colorlien" href="admin">Administrateur</a>
-                    <a class="colorlien" href="gerant">Gérant</a>
-                    <a class="colorlien" href="panier">Panier</a>
-                    <a class="colorlien" href="paiment">Paiement</a>
-                    <a class="colorlien" href="historique_commende">Historique des commandes</a>
-                    <a class="colorlien" href="historique_vendeur">Historique de vente</a>
+                    <?php remplace("Ajouter un article","ajout"); ?>
+                    <?php remplace("Historique de vente","historique_vendeur"); ?>
+                    <?php remplace("Historique des commandes","historique_commende"); ?>
+                    <?php remplace("Panier","panier"); ?>
+                    <?php remplace("Admin","admin"); ?>
+                    <?php remplace("Gérant","gerant"); ?>
+                    <?php remplace("Déconnexion","disconnect"); ?>
                 </div>
                 <span style="font-size:30px;" onclick="openNav()">
                     <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
@@ -80,7 +114,7 @@
             <a href="panier"><i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
         </div>
     </header>
--->
+
     <!--Main-->
 
     <!--Template-->
