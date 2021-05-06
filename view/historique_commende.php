@@ -1,6 +1,6 @@
 <?php
 if (empty($_SESSION['id'])){
-    header("Location: login");
+    header("Location: accueil");
 }
 ?>
 <main id="historique_commende">

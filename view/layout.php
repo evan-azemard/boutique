@@ -1,5 +1,5 @@
-<?php session_start(); ?>
 <!--Template for full page -->
+<?php session_start();  ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,32 +18,28 @@
 <?php
 
 function remplace2($nameA,$urlA){
-    if(empty($_SESSION['id'])){
         echo "<a href='$urlA' class='colorlien'>";
         echo"$nameA";
         echo "</a>";
-    }
+
 }
 function remplace($nameA,$urlA){
-    if(!empty($_SESSION['id'])){
         echo "<a href='$urlA' class='colorlien'>";
         echo"$nameA";
         echo "</a>";
-    }
+
 }
 function remplace3($nameA,$urlA){
-    if(empty($_SESSION['rank'] > 1)){
         echo "<a href='$urlA' class='colorlien'>";
         echo"$nameA";
         echo "</a>";
-    }
+
 }
 function remplace4($nameA,$urlA){
-    if(empty($_SESSION['rank'] = 1)){
         echo "<a href='$urlA' class='colorlien'>";
         echo"$nameA";
         echo "</a>";
-    }
+
 }
 ?>
 
@@ -125,7 +121,7 @@ function remplace4($nameA,$urlA){
     <!--Footer-->
     <footer>
         <div id="footer_div1">
-
+        <?php var_dump($_SESSION['rank']); ?>
             <div>
                 <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
                 <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>

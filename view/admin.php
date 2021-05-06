@@ -1,9 +1,11 @@
 <?php
 if (empty($_SESSION['id'])){
-    header("Location: login");
-}elseif ($_SESSION['rank'] = 1){
-        header("Location: login");
+        header("Location: accueil");
 }
+if ($_SESSION['rank'] < 3){
+    header("Location: accueil");
+}
+
 ?>
 <main id="admin_main">
     <div class="admin_div">

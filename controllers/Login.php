@@ -107,6 +107,7 @@ function login()
 
 
                 if (count($errors) < 1) {
+
                     $_SESSION['password'] = "vide";
                     $_SESSION["user"] = $tab;
                     $_SESSION["id"] = $tab["id_user"];
@@ -120,6 +121,7 @@ function login()
                     $_SESSION["adresse"] = $tab["adresse"];
 
                     header('Location: accueil');
+
                 } else {
                     return $errors;
                 }
