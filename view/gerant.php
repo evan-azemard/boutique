@@ -1,3 +1,8 @@
+<?php
+if ($_SESSION['rank'] <  2 ){
+    header("Location: login");
+}
+?>
 <main id="gerant_main">
     <section class="gerant_section1">
         <h1>Les admin</h1>

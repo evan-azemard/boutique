@@ -1,4 +1,7 @@
 <?php
+if (empty($_SESSION['id'])){
+    header("Location: login");
+}
 //Affichage des erreurs PHP ( A mettre au début de tes scripts PHP )
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);

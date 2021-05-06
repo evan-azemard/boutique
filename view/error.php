@@ -1,4 +1,7 @@
 <?php
+    header("Location: login");
+
+
 /*Page error*/
 if (isset($errors)) {
     foreach ($errors as $error) {

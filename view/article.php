@@ -1,5 +1,10 @@
 <!--Afficher article prècis-->
 <?php
+if (empty($_SESSION['id'])){
+    header("Location: login");
+}
+?>
+<?php
 if ($_GET['id']) {
     $user = new C_article();
     $errors = $user->article($_GET['id']);

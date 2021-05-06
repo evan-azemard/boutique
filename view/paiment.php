@@ -1,3 +1,8 @@
+<?php
+if (empty($_SESSION['id'])){
+    header("Location: login");
+}
+?>
 <main id="main_paiment">
     <div id="titre_paiment">
         <h1>Paiment Sécurisé</h1>

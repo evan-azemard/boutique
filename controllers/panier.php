@@ -27,6 +27,12 @@ function panier(){
             $articles = article_panier($this->id);
 
 
+/*$i = 0;
+while ($i < 20){
+
+
+    $i++;
+}*/
                 /*Selectione tout les produit du même panier*/
 
               $articles_pp =  article_pp($articles);

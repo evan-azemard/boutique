@@ -1,3 +1,8 @@
+<?php
+if (empty($_SESSION['id'])){
+    header("Location: login");
+}
+?>
 <main id="historique_commende">
     <section id="commende_section">
         <article id="panier_h1">

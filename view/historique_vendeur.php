@@ -1,3 +1,9 @@
+<?php
+if (empty($_SESSION['id'] && empty($_SESSION['rank'] < 2 ))){
+    header("Location: login");
+}
+?>
+
 <main id="historiquev_main">
     <div id="historiquev_main_info">
         <div id="historiquev_main_info_titre">

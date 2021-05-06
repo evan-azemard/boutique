@@ -1,3 +1,8 @@
+<?php
+if (!empty($_SESSION['id'])){
+    header("Location: accueil");
+}
+?>
 <!--Page profil-->
 <?php
 

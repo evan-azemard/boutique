@@ -1,5 +1,10 @@
 <!--lOGIN PAGE-->
 <?php
+if (!empty($_SESSION['id'])){
+    header("Location: accueil");
+}
+?>
+<?php
 if (isset($_POST["submit"])) {
     $user = new C_Login();
     $errors = $user->loginF($_POST['pseudo'], $_POST['password'], $_POST['email'], $_POST['choix']);

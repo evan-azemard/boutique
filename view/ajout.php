@@ -1,5 +1,10 @@
 <!--Ajouter un produit-->
 <?php
+if (empty($_SESSION['id'] && empty($_SESSION['rank'] < 2 ))){
+    header("Location: login");
+}
+?>
+<?php
 
 if(isset($_POST["submit"]))
 {

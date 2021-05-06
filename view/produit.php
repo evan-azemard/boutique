@@ -1,3 +1,9 @@
+
+<?php
+if (empty($_SESSION['id'])){
+    header("Location: login");
+}
+?>
 <?php
 if (isset($_POST['ppan'])){
 $user = new C_produit();
