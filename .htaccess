@@ -5,7 +5,8 @@
 
 
 #Liens symboliques pour le serveur
-Options +FollowSymlinks
+
+#Options +FollowSymlinks
 
 #Activaiton du module de réécriture d'url
 RewriteEngine on
