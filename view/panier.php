@@ -50,8 +50,8 @@ $errors = $user->affiche_panier($_SESSION['id']);
                 <h3>Votre totale:</h3>
                 <p>750€ TTC</p>
             </div>
-            <form name="panier_valider" method="post">
-                <a href="paiment"><input type="submit" value="Passer au paiment" class="button_panier"></a>
+            <form name="panier_valider" method="post" action="paiment.php">
+                <input type="submit" value="Passer au paiment" class="button_panier">
             </form>
         </article>
     </section>

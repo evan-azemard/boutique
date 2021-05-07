@@ -15,16 +15,16 @@ if (empty($_SESSION['id'])){
             <div class="card_panier_text">
                 <div class="card_panier_text_div1">
                     <p>
-                        blablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablabl
-                    </p>
+                    2020 qui possède un écran rotatif (de 6.8 pouces)
+                    laissant apparaître un deuxième écran de 3.9 pouces.                    </p>
                 </div>
                 <div class="card_panier_text_div2">
                     <div class="panier_commende">
                         <h2>LG WING 5G</h2>
                     </div>
                     <div class="panier_commende2">
-                        <div>700 €</div>
-                        <div><p>5</p></div>
+                        <div>750 €</div>
+                        <div><p>1</p></div>
                     </div>
                     <div class="panier_commende">
                     </div>

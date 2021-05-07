@@ -18,7 +18,7 @@ if ($_SESSION['rank'] == 1 ){
         <div id="historiquev_main_info_argent">
             <span id="historiquev_color">
                 <p>Votre revenue : </p>
-                <p id="historiquev_argent">255 €</p>
+                <p id="historiquev_argent">2250 €</p>
             </span>
         </div>
     </div>
@@ -33,17 +33,17 @@ if ($_SESSION['rank'] == 1 ){
                 </div>
                 <form method="post">
                     <div class="card_historiquev_text_div1">
-                        <div class="card_label_historique_vendeur">300 vendus</div>
-                        <div class="card_label_historique_vendeur">800 en stock</div>
-                        <div class="card_label_historique_vendeur">700 €</div>
+                        <div class="card_label_historique_vendeur">3 vendus</div>
+                        <div class="card_label_historique_vendeur">39 en stock</div>
+                        <div class="card_label_historique_vendeur">750 €</div>
                     </div>
                     <div class="card_historiquev_text_div2">
                         <label for="historiquev_prix" class="card_label_historique_vendeur2">Changer le prix</label>
                         <label for="historiquev_stock" class="card_label_historique_vendeur2">Changer le nombre en stock</label>
                     </div>
                     <div class="card_historiquev_text_div2">
-                        <input type="number" id="historiquev_stock" placeholder="stock" class="card_label_historique_vendeur2">
-                        <input type="number" id="historiquev_prix" placeholder="prix" class="card_label_historique_vendeur2">
+                        <input type="number" id="historiquev_stock" placeholder="prix" class="card_label_historique_vendeur2">
+                        <input type="number" id="historiquev_prix" placeholder="stock" class="card_label_historique_vendeur2">
                     </div>
                     <div class="card_historiquev_text_div">
                         <input type="submit" name="valider" class="button" value="Valider">
