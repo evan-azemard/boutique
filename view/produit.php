@@ -51,9 +51,9 @@ $user = new C_produit();
                                         <?php
 
                                         $t = strlen($article['resum']);
-                                        if ($t > 150) {
+
                                             $tt = substr($article['resum'], 0, 120) . '[...]';
-                                        }
+
 
                                         $a = substr($tt, 0, 40);
                                         $b = substr($tt, 40, 40);

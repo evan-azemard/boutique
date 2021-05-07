@@ -111,17 +111,6 @@ if ($_GET['id']) {
                 <p class="des"><?= htmlspecialchars($_SESSION['type_ecran']) ?></p>
             </div>
             <div class="art_section2_1_ligne">
-                <p>Résolution d'écran</p>
-                <p class="des"><?php
-                                if (empty(htmlspecialchars($_SESSION['resolution_ecran']))) {
-                                    echo "nom renseignée";
-                                } elseif (!empty(htmlspecialchars($_SESSION['resolution_ecran']))) {
-                                    echo htmlspecialchars($_SESSION['resolution_ecran']);
-                                }
-                                ?>
-                </p>
-            </div>
-            <div class="art_section2_1_ligne">
                 <p>Définition d'écran</p>
                 <p class="des"><?php
                                 if (empty(htmlspecialchars($_SESSION['definition_ecran']))) {

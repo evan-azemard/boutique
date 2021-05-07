@@ -1549,7 +1549,7 @@ option:focus {
   min-height: 10vh;
   height: 20vh;
   max-height: 30vh;
-  width: 50%;
+  width: 80%;
   margin-left: 5%;
   margin-right: 15%;
   margin-bottom: 3%;
@@ -1579,6 +1579,7 @@ option:focus {
 }
 /*Résumé*/
 .card_panier_text_div1 {
+  text-align: center;
   max-width: 55vw;
   width: 60%;
   height: 100%;

@@ -21,7 +21,7 @@ function  article_pp($id)
     $sel = $bdd->prepare('select id_produit  from paniers REPLICATE  WHERE id_panier = ? ');
     $sel->execute(array($id));
     $articles_pp = $sel->fetchColumn();
-    var_dump($articles_pp);
+/*    var_dump($articles_pp);*/
     return $articles_pp;
 }
 

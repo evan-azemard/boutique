@@ -19,15 +19,18 @@ $errors = $user->affiche_panier($_SESSION['id']);
             <div class="card_panier_text">
                 <div class="card_panier_text_div1">
                     <p>
-                        blablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablablblablablablablablbalblablablablablabl
+
+                     2020 qui possède un écran rotatif (de 6.8 pouces)
+                    laissant apparaître un deuxième écran de 3.9 pouces.
+
                     </p>
                 </div>
                 <div class="card_panier_text_div2">
                     <div class="panier_commende">
-                        <h2>LG WING 5G</h2>
+                        <h2>LG Wing 5g</h2>
                     </div>
                     <div class="panier_commende2">
-                        <div>700 €</div>
+                        <div>750€</div>
                         <form name="panierform1" method="post">
                             <input name="numberpanier" aria-label="number" placeholder="1" type="number">
                         </form>
@@ -45,7 +48,7 @@ $errors = $user->affiche_panier($_SESSION['id']);
         <article id="commender_panier">
             <div id="totale_panier">
                 <h3>Votre totale:</h3>
-                <p>1400 € TTC</p>
+                <p>750€ TTC</p>
             </div>
             <form name="panier_valider" method="post">
                 <a href="paiment"><input type="submit" value="Passer au paiment" class="button_panier"></a>
