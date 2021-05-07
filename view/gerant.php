@@ -25,9 +25,9 @@ if ($_SESSION['rank'] < 3){
             </thead>
             <tbody>
                 <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
+                    <td>3</td>
+                    <td>Exemple</td>
+                    <td>Exemple</td>
                 </tr>
             </tbody>
         </table>
@@ -35,7 +35,7 @@ if ($_SESSION['rank'] < 3){
     <div class="traimoyen_admin"></div>
     <section class="gerant_section2">
         <article>
-            <form method="post">
+            <form method="post" action="accueil">
                 <div>
                     <label for="idgerant">Id de l'admin à supprimer</label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

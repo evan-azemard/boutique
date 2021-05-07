@@ -1,6 +1,6 @@
 <?php
 if (empty($_SESSION['id'])){
-        header("Location: accueil");
+    header("Location: accueil");
 }
 if ($_SESSION['rank'] < 3){
     header("Location: accueil");
@@ -11,15 +11,16 @@ if ($_SESSION['rank'] < 3){
     <div class="admin_div">
         <div class="admin_cont1">
             <div class="admin_cont1_text">
-                <div class="admin_label"><p>Nom :<span class="admin_gray"></span> </p></div>
-                <div class="admin_label"><p>Prénom : <span class="admin_gray"></span></p></div>
-                <div class="admin_label"><p>Id produit : <span class="admin_gray"></span> </p></div>
-                <div class="admin_label"><p>Email :<span class="admin_gray"></span> </p></div>
+                <div class="admin_label"><p>Nom : Exemple<span class="admin_gray"></span> </p></div>
+                <div class="admin_label"><p>Prénom : Exemple<span class="admin_gray"></span></p></div>
+                <div class="admin_label"><p>Id produit : Exemple<span class="admin_gray"></span> </p></div>
+                <div class="admin_label"><p>Email : Exemple<span class="admin_gray"></span> </p></div>
             </div>
             <div class="admin_cont1_textarea">
                 <div class="admin_cont_texta">
                     <p>
-
+                        ExempleExempleExempleExempleExempleExempleExempleExempleExempleExemple
+                        ExempleExempleExempleExempleExempleExempleExempleExempleExemple
                     </p>
                 </div>
             </div>

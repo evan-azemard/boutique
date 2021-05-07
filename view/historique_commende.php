@@ -24,7 +24,7 @@ if (empty($_SESSION['id'])){
                     </div>
                     <div class="panier_commende2">
                         <div>750 €</div>
-                        <div><p>1</p></div>
+                        <div><p>#8</p></div>
                     </div>
                     <div class="panier_commende">
                     </div>

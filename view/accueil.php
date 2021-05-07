@@ -23,8 +23,8 @@
             </div>
             <!--Description de la card-->
             <div class="card_description">
-                <h3>Wing</h3>
-                <p>Le LG Wing est un smartphone annoncé le 14 septembre
+                <h3>Exemple</h3>
+                <p>Le LG Exemple est un smartphone annoncé le 14 septembre
                     2020 qui possède un écran rotatif (de 6.8 pouces poled)
                     laissant apparaître
                     un deuxième écran de 3.9 pouces goled.</p>
@@ -43,8 +43,8 @@
                 <img src="img_docs/exemple.png.jpg" alt="exemple">
             </div>
             <div class="card_description">
-                <h3>Wing</h3>
-                <p>Le LG Wing est un smartphone annoncé le 14 septembre
+                <h3>Exemple</h3>
+                <p>Le LG Exemple est un smartphone annoncé le 14 septembre
                     2020 qui possède un écran rotatif (de 6.8 pouces poled)
                     laissant apparaître
                     un deuxième écran de 3.9 pouces goled.</p>
@@ -62,8 +62,8 @@
                 <img src="img_docs/exemple.png.jpg" alt="exemple">
             </div>
             <div class="card_description">
-                <h3>Wing</h3>
-                <p>Le LG Wing est un smartphone annoncé le 14 septembre
+                <h3>Exemple</h3>
+                <p>Le LG Exemple est un smartphone annoncé le 14 septembre
                     2020 qui possède un écran rotatif (de 6.8 pouces poled)
                     laissant apparaître
                     un deuxième écran de 3.9 pouces goled.</p>
@@ -88,8 +88,8 @@
                 <img src="img_docs/exemple.png.jpg" alt="exemple">
             </div>
             <div class="card_description">
-                <h3>Wing</h3>
-                <p>Le LG Wing est un smartphone annoncé le 14 septembre
+                <h3>Exemple</h3>
+                <p>Le LG Exemple est un smartphone annoncé le 14 septembre
                     2020 qui possède un écran rotatif (de 6.8 pouces poled)
                     laissant apparaître
                     un deuxième écran de 3.9 pouces goled.</p>
@@ -107,8 +107,8 @@
                 <img src="img_docs/exemple.png.jpg" alt="exemple">
             </div>
             <div class="card_description">
-                <h3>Wing</h3>
-                <p>Le LG Wing est un smartphone annoncé le 14 septembre
+                <h3>Exemple</h3>
+                <p>Le LG Exemple est un smartphone annoncé le 14 septembre
                     2020 qui possède un écran rotatif (de 6.8 pouces poled)
                     laissant apparaître
                     un deuxième écran de 3.9 pouces goled.</p>
@@ -126,8 +126,8 @@
                 <img src="img_docs/exemple.png.jpg" alt="exemple">
             </div>
             <div class="card_description">
-                <h3>Wing</h3>
-                <p>Le LG Wing est un smartphone annoncé le 14 septembre
+                <h3>Exemple</h3>
+                <p>Le LG Exemple est un smartphone annoncé le 14 septembre
                     2020 qui possède un écran rotatif (de 6.8 pouces poled)
                     laissant apparaître
                     un deuxième écran de 3.9 pouces goled.</p>

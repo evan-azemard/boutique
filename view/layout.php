@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/R8b9399dc465e6ade5afd8001ed17a012?rik=c%2fW8QQUaPwl%2fPA&riu=http%3a%2f%2fimages.clipartpanda.com%2fphone-icon-phone-512.png&ehk=nxS%2fIZTzi%2bOuaWlzTAP5khMCqyHyy%2fG0FlBqvfFhBhI%3d&risl=&pid=ImgRaw">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
@@ -126,11 +127,27 @@ function remplaceID($nameA,$urlA){
                     </label>
                 </form>
             </div>
-            <div id="header_lien_button">
+            <?php
+            if (isset($_SESSION['id'])){
+                ?>
+             <div id="header_lien_button">
                 <button><a href="disconnect">Déconexion</a> </button>
             </div>
+            <?php
+            }else{
+                echo '';
+            }
+            ?>
+            <?php
+            if (isset($_SESSION['id'])){
+                ?>
             <a href="panier"><i id="header_panier" class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
         </div>
+         <?php
+            }else{
+                echo '';
+            }
+            ?>
     </header>
 
     <!--Main-->
