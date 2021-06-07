@@ -8,7 +8,7 @@ if ($_SESSION['rank'] < 3){
 ?>
 <main id="gerant_main">
     <section class="gerant_section1">
-        <h1>Les admin</h1>
+        <h1>Les admins</h1>
         <table id="gerant_tabl">
             <thead>
                 <tr>

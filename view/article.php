@@ -80,7 +80,7 @@ if ($_GET['id']) {
                 <p>Système</p>
                 <p class="des"><?php
                                 if (empty(htmlspecialchars($_SESSION['systeme']))) {
-                                    echo "nom renseignée";
+                                    echo "non renseigné";
                                 } elseif (!empty(htmlspecialchars($_SESSION['systeme']))) {
                                     echo htmlspecialchars($_SESSION['systeme']);
                                 }
@@ -100,7 +100,7 @@ if ($_GET['id']) {
                 <p>Nombre de capteur</p>
                 <p class="des"><?php
                                 if (empty(htmlspecialchars($_SESSION['nb_capteur']))) {
-                                    echo "nom renseignée";
+                                    echo "non renseigné";
                                 } elseif (!empty(htmlspecialchars($_SESSION['nb_capteur']))) {
                                     echo htmlspecialchars($_SESSION['nb_capteur']);
                                 }
@@ -114,7 +114,7 @@ if ($_GET['id']) {
                 <p>Définition d'écran</p>
                 <p class="des"><?php
                                 if (empty(htmlspecialchars($_SESSION['definition_ecran']))) {
-                                    echo "nom renseignée";
+                                    echo "non renseigné";
                                 } elseif (!empty(htmlspecialchars($_SESSION['definition_ecran']))) {
                                     echo htmlspecialchars($_SESSION['definition_ecran']);
                                 } ?></p>
@@ -124,7 +124,7 @@ if ($_GET['id']) {
                 <p class="des"> <?php
 
                                 if (empty(htmlspecialchars($_SESSION['interface_utilisateur']))) {
-                                    echo "nom renseignée";
+                                    echo "non renseigné";
                                 } elseif (!empty(htmlspecialchars($_SESSION['interface_utilisateur']))) {
                                     echo htmlspecialchars($_SESSION['interface_utilisateur']);
                                 }
@@ -163,7 +163,7 @@ if ($_GET['id']) {
                 <p class="des"><?php
 
                                 if (empty(htmlspecialchars($_SESSION['taile']))) {
-                                    echo "nom renseignée";
+                                    echo "non renseigné";
                                 } elseif (!empty(htmlspecialchars($_SESSION['taile']))) {
                                     echo htmlspecialchars($_SESSION['taile']);
                                 }
@@ -175,7 +175,7 @@ if ($_GET['id']) {
                 <p>Ratio</p>
                 <p class="des"><?php
                                 if (empty(htmlspecialchars($_SESSION['ratio']))) {
-                                    echo "nom renseignée";
+                                    echo "non renseigné";
                                 } elseif (!empty(htmlspecialchars($_SESSION['ratio']))) {
                                     echo htmlspecialchars($_SESSION['ratio']);
                                 }

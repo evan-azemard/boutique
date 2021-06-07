@@ -17,7 +17,7 @@ if ($_SESSION['rank'] == 1 ){
         </div>
         <div id="historiquev_main_info_argent">
             <span id="historiquev_color">
-                <p>Votre revenue : </p>
+                <p>Votre revenu : </p>
                 <p id="historiquev_argent">2250 €</p>
             </span>
         </div>

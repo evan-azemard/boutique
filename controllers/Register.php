@@ -162,7 +162,7 @@ function register()
                 }
                 $password_required = preg_match('%^(?=[^A-Z]*+.)(?=[^a-z]*+.)(?=[^0-9]*+.)(?=[^\W]*+.)%', $this->password);
                 if (!$password_required) {
-                    array_push($errors, 'Il faut au moins: 1 caractère spéciale, majuscule, minuscule,  nombre. ');
+                    array_push($errors, 'Il faut au moins: 1 caractère spécial, majuscule, minuscule,  nombre. ');
                 }
                 $mail = (filter_var($this->email, FILTER_VALIDATE_EMAIL));
                 if (!$mail) {
